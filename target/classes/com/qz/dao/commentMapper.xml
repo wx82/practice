@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qz.dao.commentMapper">
+    <insert id="addcomment" parameterType="Comment">
+        insert into cityTownWeb.comment(uid,einfor,mid)
+        values uid=#{uid},einfor=#{einfor},mid=#{mid};
+    </insert>
+    <update id="updatecomment" parameterType="Comment">
+        update cityTownWeb.comment
+        set eminfor=#{eminfor}
+        where cid=#{cid};
+    </update>
+    <delete id="delcomment" parameterType="int">
+    delete from cityTownWeb.comment where cid=#{cid}
+    </delete>
+    <select id="queryAllComment" resultType="Comment">
+         select * from cityTownWeb.comment
+         where mid = #{mid}
+    </select>
+</mapper>

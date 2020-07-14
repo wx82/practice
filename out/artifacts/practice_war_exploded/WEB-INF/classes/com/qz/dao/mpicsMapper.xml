@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qz.dao.mpicsMapper">
+    <insert id="addMpic" parameterType="Mpics">
+        insert into cityTownWeb.mpics(mpaddr,mid)
+        values (#{mpaddr},#{mid});
+    </insert>
+    <delete id="delMpic" parameterType="int">
+        delete from cityTownWeb.mpics
+        where mpid = #{mpid}
+    </delete>
+    <select id="queryAllMerById" resultType="Mpics">
+         select * from cityTownWeb.mpics
+         where mid = #{mid}
+    </select>
+</mapper>

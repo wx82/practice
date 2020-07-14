@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="web">
+    <output-path>$PROJECT_DIR$/out/artifacts/web</output-path>
+    <root id="archive" name="web.war">
+      <element id="artifact" artifact-name="practice:war exploded" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
+    </root>
+  </artifact>
+</component>
