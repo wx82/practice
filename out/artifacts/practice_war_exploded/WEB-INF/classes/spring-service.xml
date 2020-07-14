@@ -22,6 +22,14 @@
     <bean id="MpiceServiceImp" class="com.qz.service.MpicsServiceImp">
         <property name="mpicsMapper" ref="mpicsMapper"/>
     </bean>
+    <!--UserServiceImpl注入到IOC容器中-->
+    <bean id="UserServiceImp" class="com.qz.service.UserServiceImp">
+        <property name="usermapper" ref="userMapper"/>
+    </bean>
+    <!--JobServiceImpl注入到IOC容器中-->
+    <bean id="JobServiceImp" class="com.qz.service.JobServiceImp">
+        <property name="jobmapper" ref="jobMapper"/>
+    </bean>
 
 
     <!-- 配置事务管理器 -->

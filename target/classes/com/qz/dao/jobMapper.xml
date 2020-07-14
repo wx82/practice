@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qz.dao.jobMapper">
+    <insert id="addJob" parameterType="Job">
+        insert into cityTownWeb.job(jname)
+        values (#{jname});
+    </insert>
+    <delete id="delJobById" parameterType="int">
+        delete from cityTownWeb.job where jid=#{jid}
+    </delete>
+    <update id="updateJob" parameterType="Job">
+        update cityTownWeb.job
+        set jname=#{jname}
+        where jid=#{jid};
+    </update>
+    <select id="queryJob" resultType="Job">
+        select * from cityTownWeb.job
+        where jid=#{jid}
+    </select>
+    <select id="queryAllJob" resultType="Job">
+        select * from cityTownWeb.job
+    </select>
+
+
+</mapper>

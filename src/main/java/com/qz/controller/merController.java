@@ -1,9 +1,11 @@
 package com.qz.controller;
 
 import com.qz.pojo.Comment;
+import com.qz.pojo.Job;
 import com.qz.pojo.Merchant;
 import com.qz.pojo.Mpics;
 import com.qz.service.*;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -120,6 +122,29 @@ public class merController {
     @RequestMapping("/updatecomment")
     int updatecomment(Comment cm){
         return com.updatecomment(cm);
+    }
+    //添加营业执照
+    @RequestMapping("/addMblicense")
+    Integer addMblicense(MultipartFile file, Merchant m, ModelMap map){ return merService.addMblicense(file,m,map);}
+
+    //岗位相关
+    private JobService jobService = new JobServiceImp();
+    //新增工作岗位
+    @RequestMapping("/addJob")
+    public Integer addJob(Job job) {
+        return jobService.addJob(job);
+    }
+    //编辑工作岗位
+    public Integer updateJob(Job job) {
+        return jobService.updateJob(job);
+    }
+    //查看职位信息
+    public Job queryJobByJid(@Param("jid") Integer id) {
+        return jobService.queryJobByJid(id);
+    }
+    //查看某商家的所有职业
+    public List<Job> queryAllJobByMid(@Param("mid") Integer id){
+        return jobService.queryAllJobByMid(id);
     }
 //    @RequestMapping("/updateMerBasic")
 //    @ResponseBody //将return的内容以json格式的字符串返回

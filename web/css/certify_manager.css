@@ -1,0 +1,94 @@
+body{
+	background-color: #fcfaf8;
+	color: #666;
+}
+ul{
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.head{
+	background-color: #fff;
+	padding: 20px;
+}
+.big-font{
+	position: relative;
+	color: #ff8357;
+	font-size: 2em;
+	font-weight: 700;
+	/*left: 40px;*/
+}
+.small-font{
+	position: relative;
+	color: #ff8357;
+	font-size: 0.5em;
+	/*left: 40px;*/
+}
+.img-head{
+	height: 100px;
+	width: 100px;
+	margin: 0 auto;
+	border-radius: 50%;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	line-height: 100px;
+}
+.main-box{
+	width: 1700px;
+}
+.choice-box{
+	background-color: #fcf5ef;
+}
+.choice{
+	text-align: center;
+	height: 30px;
+	color: #666;
+	margin: 30px;
+}
+.shop-name{
+	text-align: center;
+	color: #ff6531;
+}
+.sub{
+	width: 200px;
+	padding: 10px;
+	margin: 10px;
+	background-color: #ff8357;
+	color: #fff;
+	border: none;
+}
+.show-info{
+	background-color: #fff;
+	margin: 10px;
+	padding: 10px;
+}
+.show-box{
+	height: 300px;
+	padding:  20px;
+}
+.certify-title{
+	font-size: 1.8em;
+	color: #ff6531;
+	font-weight: 700;
+}
+.certify-info{
+	padding-left: 20px;
+	margin: 20px;
+}
+.up-certify{
+	width: 100px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+	background-color: #ccc;
+}
+.admin{
+	line-height: 55px;
+	color: #ff6531;
+}
+.certify-state{
+	position: relative;
+	text-align: center;
+	top: 60px;
+}

@@ -4,7 +4,7 @@ import com.qz.dao.commentMapper;
 import com.qz.pojo.Comment;
 
 import java.util.List;
-
+import com.qz.dao.commentMapper;
 public class CommentServiceImp implements CommentService {
     private commentMapper commentMapper;
     public int addcomment(Comment cm) {
@@ -21,5 +21,9 @@ public class CommentServiceImp implements CommentService {
 
     public List<Comment> queryAllComment() {
         return commentMapper.queryAllComment();
+    }
+
+    public void setCommentMapper(commentMapper commentMapper) {
+        this.commentMapper = commentMapper;
     }
 }

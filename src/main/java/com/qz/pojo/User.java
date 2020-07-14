@@ -11,5 +11,11 @@ public class User {
     private int uid;
     private String uname;
     private String usex;
-    private int unumber;
+    private String upassword;
+    private String uedu;
+    private String uskill;
+    private String utime;
+    private int uphone;
+    private String uintro;
+    private String upic;
 }
