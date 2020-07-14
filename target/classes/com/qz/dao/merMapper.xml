@@ -3,23 +3,69 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qz.dao.merMapper">
+
+<!--    对象中的属性可以直接取出来-->
     <insert id="addMer" parameterType="Merchant">
-        insert into qiuzhi.merchant(mname)
+        insert into cityTownWeb.merchant(mname)
         values (#{mname});
     </insert>
+<!--    上传营业执照-->
+    <insert id="addMblicense" parameterType="Merchant">
+        insert into cityTownWeb.merchant(mblicense)
+        values (#{mblicense});
+    </insert>
     <delete id="delMerById" parameterType="int">
-        delete from qiuzhi.merchant where mid = #{mid}
+        delete from cityTownWeb.merchant where mid = #{mid}
     </delete>
-    <update id="updateMer" parameterType="Merchant">
-        update qiuzhi.merchant
-        set mname=#{mname}
+<!--    <update id="updateMer" parameterType="Merchant">-->
+<!--        update cityTownWeb.merchant-->
+<!--        set mname=#{mnickname}-->
+<!--        where mid=#{mid};-->
+<!--    </update>-->
+    <update id="updateMerBasic" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set mname=#{mname},mscale=#{mscale} maddcity=#{maddcity},maddcounty=#{maddcounty},maddtown=#{maddtown},maddress=#{maddress}
         where mid=#{mid};
     </update>
-    <select id="queryMerById" resultType="Merchant">
-        select * from qiuzhi.merchant
+    <update id="updateMerInfor" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set dname=#{dname},dphone=#{dphone}
+        where mid=#{mid};
+    </update>
+    <update id="updateMerD" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set minfor=#{minfor}
+        where mid=#{mid};
+    </update>
+    <update id="updateMerPhone" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set dphone=#{dphone}
+        where mid=#{mid};
+    </update>
+    <update id="updateMerPsw" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set mpassword=#{mpassword}
+        where mid=#{mid};
+    </update>
+    <select id="queryMerById" parameterType="int" resultType="Merchant">
+        select * from cityTownWeb.merchant
         where mid=#{mid}
     </select>
+<!--&lt;!&ndash;====查找用户带展示图====&ndash;&gt;-->
+<!--    <select id="queryMerAndPic" resultMap="merMpics">-->
+<!--        select * from cityTownWeb.merchant-->
+<!--        where mid=#{mid}-->
+<!--    </select>-->
+<!--    <resultMap id="merMpics" type="Merchant">-->
+<!--        <collection property="mpics" javaType="ArrayList" ofType="Mpics"/>-->
+<!--    </resultMap>-->
+<!--    <select id="queryMerPicByMid" resultType="Mpics">-->
+<!--        select * from cityTownWeb.comment-->
+<!--        where mid=#{mid}-->
+<!--    </select>-->
+<!--&lt;!&ndash;=============结束==============&ndash;&gt;-->
+
     <select id="queryAllMer" resultType="Merchant">
-        select * from qiuzhi.merchant
+        select * from cityTownWeb.merchant
     </select>
 </mapper>
