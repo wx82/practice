@@ -24,4 +24,5 @@ public class Job {
     private String jage;
     private Integer mid;//商铺id
     private String jexperience;//经验要求
+    private String jcity;
 }

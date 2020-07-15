@@ -3,6 +3,7 @@ package com.qz.controller;
 import com.qz.pojo.Job;
 import com.qz.service.JobService;
 import com.qz.service.JobServiceImp;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -40,11 +41,28 @@ public class jobController {
 
         return jobs;
     }
-    @RequestMapping("/getjob")
+    @RequestMapping("/getjobbycity")
     @ResponseBody
-    public Object queryJob(@RequestBody Job job) {
-        Job info = jobService.queryJob(job);
-        return info;
+    public Object queryJobBycity(@RequestBody Job job) {
+        //List<Job> info = jobService.queryJobBycity(job);
+        HashMap jobs = new HashMap();
+        jobs.put("jobs",jobService.queryJobBycity(job));
+        return jobs;
     }
+//    @RequestMapping("/getjobbyjid")
+//    @ResponseBody
+//    public Object queryJobByJid(@Param("jid") Integer id) {
+//        Job info = jobService.queryJobByJid(id);
+//        return info;
+//    }
+//    @RequestMapping("/getjobbymid")
+//    @ResponseBody
+//    public Object queryJobBycity(@RequestBody Job job) {
+//        //List<Job> info = jobService.queryJobBycity(job);
+//        HashMap jobs = new HashMap();
+//        jobs.put("jobs",jobService.queryJobBycity(job));
+//        return jobs;
+//    }
+
 }
 

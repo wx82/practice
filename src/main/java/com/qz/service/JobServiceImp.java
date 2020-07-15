@@ -38,4 +38,8 @@ public class JobServiceImp implements JobService{
 
     //所有岗位信息
     public List<Job> queryAllJob(){return jobMapper.queryAllJob();}
+
+    public List<Job> queryJobBycity(Job job) {
+        return jobMapper.queryJobBycity(job);
+    }
 }

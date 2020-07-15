@@ -5,24 +5,23 @@
 
 <mapper namespace="com.qz.dao.jobMapper">
     <insert id="addJob" parameterType="Job">
-        insert into cityTownWeb.job(jname)
-        values (#{jname});
+        insert into cityTownWeb.job(jname,jedu,jexperience,jage,jsalary)
+        values jname=#{jname},jedu=#{jedu},jexperience=#{jexperience},jage=#{jage},jsalary=#{jsalary};
     </insert>
-    <delete id="delJobById" parameterType="int">
-        delete from cityTownWeb.job where jid=#{jid}
-    </delete>
     <update id="updateJob" parameterType="Job">
         update cityTownWeb.job
-        set jname=#{jname}
-        where jid=#{jid};
+        set eminfor=#{eminfor}
+        where cid=#{cid};
     </update>
-    <select id="queryJob" resultType="Job">
-        select * from cityTownWeb.job
-        where jid=#{jid}
+    <delete id="delcomment" parameterType="int">
+    delete from cityTownWeb.job
+    where jid=#{jid}
+    </delete>
+    <select id="queryAllJobByMid" resultType="Job">
+         select * from cityTownWeb.job
+         where jid = #{jid}
     </select>
     <select id="queryAllJob" resultType="Job">
         select * from cityTownWeb.job
     </select>
-
-
 </mapper>
