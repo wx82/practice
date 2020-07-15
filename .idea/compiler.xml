@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="practice" />
         <module name="qzDemo" />
+        <module name="practice" />
+        <module name="practice3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

@@ -120,6 +120,11 @@ public class merController {
     ///------------------------------------------------------------------------------
     //评论相关
     private CommentService com = new CommentServiceImp();
+    //用户评论
+    @RequestMapping("/addcomment")
+    Integer addcomment(Comment cm){
+        return com.addcomment(cm);
+    }
     //商家回复评论
     @RequestMapping("/updatecomment")
     Integer updatecomment(Comment cm){
@@ -131,10 +136,17 @@ public class merController {
     Integer delMercomment(@Param("cid") Integer id) {
         return com.delcomment(id);
     }
-    //查看该商家所有评论
+    //查看该商家所有评论,无头像
     @RequestMapping("/queryAllMerComment")
-    List<Comment> queryAllCommentByMid(@Param("mid") Integer id){
-        return com.queryAllCommentByMid(id);
+    public List queryAllCommentByMid(Integer mid){
+        List comments = com.queryAllCommentByMid(mid);
+        return comments;
+    }
+    //查看该商家所有评论,有头像
+    @RequestMapping("/allComment")
+    public List allCommentByMid(Integer mid){
+        List comments = com.queryAllComments(mid);
+        return comments;
     }
     //-----------------------------------------------------------------------------
     //添加营业执照
@@ -164,14 +176,22 @@ public class merController {
         return jobService.queryJobByJid(id);
     }
     //查看某商家的所有职业
+    @RequestMapping("/mAllJob")
+    public List<Job> queryAllJobByMid(Integer mid){
+        System.out.println(mid);
+        System.out.println("======调用获取商铺所有岗位=======");
+        List<Job> i = jobService.queryAllJobByMid(mid);
+        System.out.println(i);
+        return i;
+    }
 //    @RequestMapping("/queryAllJobByMid")
 //    public List<Job> queryAllJobByMid(@Param("mid") Integer id){
 //        return jobService.queryAllJobByMid(id);
 //    }
-    @RequestMapping("/queryAllJobByMid")
-    public List<Job> queryAllJobByMid(@Param("mid") Integer id){
-        return jobService.queryAllJobByMid(id);
-    }
+//    @RequestMapping("/queryAllJobByMid")
+//    public List<Job> queryAllJobByMid(@Param("mid") Integer id){
+//        return jobService.queryAllJobByMid(id);
+//    }
 //    @RequestMapping("/updateMerBasic")
 //    @ResponseBody //将return的内容以json格式的字符串返回
 //    public String updateMerBasic() throws JsonProcessingException {

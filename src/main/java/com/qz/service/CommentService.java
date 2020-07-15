@@ -12,7 +12,8 @@ public interface CommentService {
     Integer comment(Comment comment);
     Integer delcomment(@Param("cid") Integer id) ;
     Integer delMerComment(@Param("cid") Integer id);
-    List<Comment> queryAllCommentByMid(@Param("mid") Integer id);
     List<Comment> queryAllCommentByUid(User user);
+    List queryAllCommentByMid(@Param("mid") Integer id);
+    List queryAllComments(Integer id);
 
 }
