@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
-@Service
+@Service("MpicsServiceImp")
 public class MpicsServiceImp implements MpicsService {
     public void setMpicsMapper(com.qz.dao.mpicsMapper mpicsMapper) {
         this.mpicsMapper = mpicsMapper;

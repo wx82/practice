@@ -28,7 +28,15 @@ public class userController {
 //    //括号中填写-service中的beanID
     @Qualifier("UserServiceImp")
     private UserService userService = new UserServiceImp();
+    //    //controller层调用service层
+    @Autowired
+//    //括号中填写-service中的beanID
+    @Qualifier("CommentServiceImp")
     private CommentService commentService = new CommentServiceImp();
+    //    //controller层调用service层
+    @Autowired
+//    //括号中填写-service中的beanID
+    @Qualifier("InterestedServiceImp")
     private InterestedService interestedService = new InterestedServiceImp();
 
     //查询个人展示
@@ -102,11 +110,21 @@ public class userController {
         return commentService.queryAllCommentByUid(user);
     }
 
-//    //感兴趣
-//    @RequestMapping("/interested")
-//    Integer interested(Interested interested){
-//        String iid = in
-//        return interestedService(interested);
-//    }
+    //感兴趣
+    @RequestMapping("/interested")
+    Integer interested(Interested interested){
+        Integer iid = interested.getIid();
+        return iid;
+    }
+    //删除感兴趣
+    @RequestMapping("/delinterested")
+    Integer delInterested(Interested interested) {
+        return interestedService.delInterested(interested);
+    }
+    //查询用户感兴趣
+    @RequestMapping("/queryAllInterestedByUid")
+    List<Interested> queryAllInterestedByUid(User user) {
+        return interestedService.queryAllInterestedByUid(user);
+    }
 }
 

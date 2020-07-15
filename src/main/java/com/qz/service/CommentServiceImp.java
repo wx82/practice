@@ -11,7 +11,9 @@ import com.qz.dao.commentMapper;
 import com.qz.pojo.Merchant;
 import com.qz.pojo.User;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CommentServiceImp implements CommentService {
     private userMapper userMapper;
     private merMapper mermapper;

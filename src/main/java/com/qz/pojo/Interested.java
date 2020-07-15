@@ -11,4 +11,7 @@ public class Interested {
     private int iid;
     private int uid;
     private int jid;
+    public int getIid() {
+        return iid;
+    }
 }

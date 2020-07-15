@@ -4,9 +4,10 @@ import com.qz.dao.interestedMapper;
 import com.qz.pojo.Comment;
 import com.qz.pojo.Interested;
 import com.qz.pojo.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class InterestedServiceImp implements InterestedService {
     public void setInterestedMapper(interestedMapper interestedMapper) {
         this.interestedMapper = interestedMapper;
@@ -19,7 +20,7 @@ public class InterestedServiceImp implements InterestedService {
     public Integer delInterested(Interested interested) {
         return interestedMapper.delInterested(interested);
     }
-    public List<Comment> queryAllInterestedByUid(User user) {
+    public List<Interested> queryAllInterestedByUid(User user) {
         return interestedMapper.queryAllInterestedByUid(user);
     }
 }

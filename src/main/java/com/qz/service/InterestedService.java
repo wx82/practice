@@ -10,5 +10,5 @@ import java.util.List;
 public interface InterestedService {
     Integer setInterested(Interested interested);
     Integer delInterested(Interested interested);
-    List<Comment> queryAllInterestedByUid(User user);
+    List<Interested> queryAllInterestedByUid(User user);
 }

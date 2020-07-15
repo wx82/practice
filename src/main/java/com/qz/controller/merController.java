@@ -30,6 +30,7 @@ public class merController {
     private MerService merService = new MerServiceImp();
     //查询商家展示
     @RequestMapping("/allmer")
+    @ResponseBody
     public String list(Model model){
         List<Merchant> list = merService.queryAllMer();
         model.addAttribute("list",list);
@@ -102,7 +103,10 @@ public class merController {
         return merService.updateMerPsw(m);
     }
     //===========商铺展示图图片操作=================
-    private MpicsService mpicsService;
+    @Autowired
+    //括号中填写-service中的beanID
+    @Qualifier("MpicsServiceImp")
+    private MpicsService mpicsService = new MpicsServiceImp();
     //1、增加商铺展示图片
     @RequestMapping("/addMpic")
     public int addMpic(MultipartFile file, Mpics mp, ModelMap map){
@@ -112,13 +116,18 @@ public class merController {
     Integer delMpic(Integer id){
         return mpicsService.delMpic(id);
     }
+
     @RequestMapping("/queryAllMerById")
+    @ResponseBody
     List<Mpics> queryAllMerById(Integer id){
         return mpicsService.queryAllMerById(id);
     }
 
     ///------------------------------------------------------------------------------
-    //评论相关
+    //=========================评论相关===================================
+    @Autowired
+    //括号中填写-service中的beanID
+    @Qualifier("CommentServiceImp")
     private CommentService com = new CommentServiceImp();
     //用户评论
     @RequestMapping("/addcomment")
@@ -138,22 +147,30 @@ public class merController {
     }
     //查看该商家所有评论,无头像
     @RequestMapping("/queryAllMerComment")
+
     public List queryAllCommentByMid(Integer mid){
         List comments = com.queryAllCommentByMid(mid);
         return comments;
     }
     //查看该商家所有评论,有头像
     @RequestMapping("/allComment")
+
     public List allCommentByMid(Integer mid){
         List comments = com.queryAllComments(mid);
         return comments;
     }
     //-----------------------------------------------------------------------------
-    //添加营业执照
+    //========================添加营业执照=====================================
     @RequestMapping("/addMblicense")
     Integer addMblicense(MultipartFile file, Merchant m, ModelMap map){ return merService.addMblicense(file,m,map);}
+    //===============================================================
 
-    //岗位相关
+    //------------------------------------------
+
+    //===================岗位相关===============
+    @Autowired
+    //括号中填写-service中的beanID
+    @Qualifier("JobServiceImp")
     private JobService jobService = new JobServiceImp();
     //新增工作岗位
     @RequestMapping("/addJob")
@@ -177,6 +194,7 @@ public class merController {
     }
     //查看某商家的所有职业
     @RequestMapping("/mAllJob")
+    @ResponseBody
     public List<Job> queryAllJobByMid(Integer mid){
         System.out.println(mid);
         System.out.println("======调用获取商铺所有岗位=======");
