@@ -73,22 +73,22 @@ public class merController {
     //修改商铺基本信息
     @RequestMapping(value="/updateMerBasic",method = RequestMethod.POST)
     @ResponseBody
-    public int updateMerBasic(@RequestBody Merchant m){
+    public Integer updateMerBasic(@RequestBody Merchant m){
         return merService.updateMerBasic(m);
     }
     @RequestMapping("/updateMerInfor")
     @ResponseBody
-    int updateMerInfor(Merchant m){
+    Integer updateMerInfor(Merchant m){
         return merService.updateMerInfor(m);
     }
     @RequestMapping("/updateMerD")
     @ResponseBody
-    int updateMerD(Merchant m){
+    Integer updateMerD(Merchant m){
         return merService.updateMerD(m);
     }
     //修改手机号
     @RequestMapping("/updateMerPhone")
-    int updateMerPhone(Merchant m){
+    Integer updateMerPhone(Merchant m){
         //先调用获取验证码，返回验证码
         //再输入手机号，返回验证码成功后
         //存入数据库
@@ -96,7 +96,7 @@ public class merController {
     }
     //修改密码
     @RequestMapping("/updateMerPsw")
-    int updateMerPsw(Merchant m){
+    Integer updateMerPsw(Merchant m){
         //先获取验证码，返回验证码
         //存入数据库
         return merService.updateMerPsw(m);
@@ -109,20 +109,34 @@ public class merController {
         return mpicsService.addMpic(file, mp, map);
     }
     @RequestMapping("/delMpic")
-    int delMpic(int id){
+    Integer delMpic(Integer id){
         return mpicsService.delMpic(id);
     }
     @RequestMapping("/queryAllMerById")
-    List<Mpics> queryAllMerById(int id){
+    List<Mpics> queryAllMerById(Integer id){
         return mpicsService.queryAllMerById(id);
     }
 
-    //回复商家评论
+    ///------------------------------------------------------------------------------
+    //评论相关
     private CommentService com = new CommentServiceImp();
+    //商家回复评论
     @RequestMapping("/updatecomment")
-    int updatecomment(Comment cm){
+    Integer updatecomment(Comment cm){
         return com.updatecomment(cm);
     }
+
+    //删除商家评论
+    @RequestMapping("/delMerComment")
+    Integer delcomment(@Param("cid") Integer id) {
+        return com.delcomment(id);
+    }
+    //查看该商家所有评论
+    @RequestMapping("/queryAllMerComment")
+    List<Comment> queryAllCommentByMid(@Param("mid") Integer id){
+        return com.queryAllCommentByMid(id);
+    }
+    //-----------------------------------------------------------------------------
     //添加营业执照
     @RequestMapping("/addMblicense")
     Integer addMblicense(MultipartFile file, Merchant m, ModelMap map){ return merService.addMblicense(file,m,map);}

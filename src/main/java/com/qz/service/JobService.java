@@ -8,8 +8,8 @@ import java.util.List;
 public interface JobService {
     Integer addJob(Job job);
     Integer updateJob(Job job);
-    Integer delJob(@Param("jid") Integer id);
-    List<Job> queryAllJobByMid(@Param("mid") Integer id);
-    Job queryJobByJid(@Param("jid") Integer id);
+    Integer delJob(Integer jid);
+    List<Job> queryAllJobByMid(Integer mid);
+    Job queryJobByJid(Integer jid);
     List<Job> queryAllJob();
 }

@@ -28,12 +28,12 @@ public class JobServiceImp implements JobService{
     }
 
     //一个商家的所有岗位
-    public List<Job> queryAllJobByMid(@Param("mid") Integer id) {
-        return jobMapper.queryAllJobByMid(id);
+    public List<Job> queryAllJobByMid(Integer mid) {
+        return jobMapper.queryAllJobByMid(mid);
     }
     //某一个岗位的信息
-    public Job queryJobByJid(@Param("jid") Integer id) {
-        return jobMapper.queryJobByJid(id);
+    public Job queryJobByJid(Integer jid) {
+        return jobMapper.queryJobByJid(jid);
     }
 
     //所有岗位信息

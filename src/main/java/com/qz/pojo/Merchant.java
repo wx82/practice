@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor  //有参构造
 @NoArgsConstructor   //无参构造
 public class Merchant {
-    private int mid;
+    private Integer mid;
     private String mname;//公司名称
     private String mnickname;//账户昵称
     private String mpassword;//z=注册密码
@@ -31,11 +31,11 @@ public class Merchant {
     private Boolean minputpic;//是否提交营业执照
     private List<Mpics> mpic;//店铺展示 一个店铺拥有多个展示图片
 
-    public int getMid() {
+    public Integer getMid() {
         return mid;
     }
 
-    public void setMid(int mid) {
+    public void setMid(Integer mid) {
         this.mid = mid;
     }
 

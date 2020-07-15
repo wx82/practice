@@ -20,11 +20,11 @@ public class MerServiceImp implements MerService{
         this.mermapper = mermapper;
     }
 
-    public int addMer(Merchant m) {
+    public Integer addMer(Merchant m) {
         return mermapper.addMer(m);
     }
 
-    public int addMblicense(MultipartFile file, Merchant m, ModelMap map) {
+    public Integer addMblicense(MultipartFile file, Merchant m, ModelMap map) {
         //基础路径
         String filePath = "";
         // 获取原始图片的扩展名
@@ -41,35 +41,42 @@ public class MerServiceImp implements MerService{
         return mermapper.addMblicense(m);
     }
 
-    public int delMerById(int id) {
+    public Integer delMerById(Integer id) {
         return mermapper.delMerById(id);
     }
 
-//    public int updateMer(Merchant m,int id) {
-//        return mermapper.updateMer(m,id);
-//    }
+    public Integer delMerById(int id) {
+        return mermapper.delMerById(id);
+    }
 
-    public int updateMerBasic(Merchant m) {
+
+    public Integer updateMerBasic(Merchant m) {
+        System.out.println("======执行Servuce修改商家基本信息==========");
+        System.out.println(mermapper.updateMerBasic(m));
         return mermapper.updateMerBasic(m);
     }
 
-    public int updateMerInfor(Merchant m) {
+    public Integer updateMerInfor(Merchant m) {
         return mermapper.updateMerInfor(m);
     }
 
-    public int updateMerD(Merchant m) {
+    public Integer updateMerD(Merchant m) {
         return mermapper.updateMerD(m);
     }
 
-    public int updateMerPhone(Merchant m) {
+    public Integer updateMerWel(Merchant m) {
+        return mermapper.updateMerWel(m);
+    }
+
+    public Integer updateMerPhone(Merchant m) {
         return mermapper.updateMerPhone(m);
     }
 
-    public int updateMerPsw(Merchant m) {
+    public Integer updateMerPsw(Merchant m) {
         return mermapper.updateMerPsw(m);
     }
 
-    public Merchant queryMerById(int id) {
+    public Merchant queryMerById(Integer id) {
         return mermapper.queryMerById(id);
     }
 

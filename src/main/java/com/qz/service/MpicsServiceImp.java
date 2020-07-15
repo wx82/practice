@@ -19,7 +19,7 @@ public class MpicsServiceImp implements MpicsService {
 
     private mpicsMapper mpicsMapper;
 
-    public int addMpic(MultipartFile file, Mpics mp, ModelMap map){
+    public Integer addMpic(MultipartFile file, Mpics mp, ModelMap map){
         //基础路径
         String filePath = "";
         // 获取原始图片的扩展名
@@ -38,11 +38,11 @@ public class MpicsServiceImp implements MpicsService {
         return mpicsMapper.addMpic(mp);
     }
 
-    public int delMpic(int id) {
-        return mpicsMapper.delMpic(id);
+    public Integer delMpic(Integer mpid) {
+        return mpicsMapper.delMpic(mpid);
     }
 
-    public List<Mpics> queryAllMerById(int id) {
-        return mpicsMapper.queryAllMerById(id);
+    public List<Mpics> queryAllMerById(Integer mid) {
+        return mpicsMapper.queryAllMerById(mid);
     }
 }

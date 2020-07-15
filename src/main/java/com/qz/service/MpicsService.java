@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 public interface MpicsService {
-    int addMpic(MultipartFile file, Mpics mp, ModelMap map);
-    int delMpic(int id);
-    List<Mpics> queryAllMerById(int id);
+    Integer addMpic(MultipartFile file, Mpics mp, ModelMap map);
+    Integer delMpic(Integer mpid);
+    List<Mpics> queryAllMerById(Integer mid);
 }

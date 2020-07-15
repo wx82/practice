@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface mpicsMapper {
-    int addMpic(Mpics mp);
-    int delMpic(@Param("mpid") int id);
-    List<Mpics> queryAllMerById(int id);
+    Integer addMpic(Mpics mp);
+    Integer delMpic(@Param("mpid") Integer id);
+    List<Mpics> queryAllMerById(Integer id);
 }

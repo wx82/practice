@@ -11,22 +11,23 @@ import java.util.List;
 
 public interface MerService {
     //增加商家
-    int addMer(Merchant m);
+    Integer addMer(Merchant m);
     //上传营业执照
-    int addMblicense(MultipartFile file, Merchant m, ModelMap map);
+    Integer addMblicense(MultipartFile file, Merchant m, ModelMap map);
     //删除商家
-    int delMerById(int id);
+    Integer delMerById(Integer id);
     //修改商家
-//    int updateMer(Merchant m,int id);
-    int updateMerBasic(Merchant m);
-    int updateMerInfor(Merchant m);
-    int updateMerD(Merchant m);
+    Integer updateMerBasic(Merchant m);
+    Integer updateMerInfor(Merchant m);
+    Integer updateMerD(Merchant m);
+    //修改优势福利
+    Integer updateMerWel(Merchant m);
     //修改手机号
-    int updateMerPhone(Merchant m);
+    Integer updateMerPhone(Merchant m);
     //修改密码
-    int updateMerPsw(Merchant m);
+    Integer updateMerPsw(Merchant m);
     //查找商家
-    Merchant queryMerById(int id);
+    Merchant queryMerById(Integer id);
     //查询所有商家
     List<Merchant> queryAllMer();
 

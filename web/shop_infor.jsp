@@ -80,15 +80,15 @@
             $("#saveBasic").on({
                 click:function () {
                     alert("点击了");
-                    // var m={
-                    //     'mid':1,
-                    //     'mname':$("#mname").val().toString(),
-                    //     'mscale': $("#mscale").find("option:selected").text(),
-                    //     'maddcity':$("#maddcity").find("option:selected").text(),
-                    //     'maddcounty':$("#maddcounty").find("option:selected").text(),
-                    //     'maddtown':$("#maddtown").find("option:selected").text(),
-                    //     'maddress':$("#maddress").val().toString(),
-                    // };
+                    var m={
+                        'mid':1,
+                        'mname':$("#mname").val().toString(),
+                        'mscale': $("#mscale").find("option:selected").text(),
+                        'maddcity':$("#maddcity").find("option:selected").text(),
+                        'maddcounty':$("#maddcounty").find("option:selected").text(),
+                        'maddtown':$("#maddtown").find("option:selected").text(),
+                        'maddress':$("#maddress").val().toString(),
+                    };
                     // console.log(m.mid);
                     // console.log(m.maddcity);
                     // console.log(m.maddress);
@@ -97,9 +97,9 @@
                         url: "/merchant/updateMerBasic", //后台url
                         type: "post",
                         dataType: "text",
-                        //contentType:"application/json;charset=UTF-8",  //请求以创建对象形式需要-----json格式需要  以表单不需要
-                        // data: JSON.stringify(m), //创建对象
-                        data:$('#basMerInfor').serialize(),//表单数据直接传
+                        // contentType:"application/json;charset=UTF-8",  //请求以创建对象形式需要-----json格式需要  以表单不需要
+                        //  data: JSON.stringify(m), //创建对象
+                         data:$('#basMerInfor').serialize(),//表单数据直接传
                         success: function(data) {
                             console.log(data);
                            if(data == 1){
@@ -108,7 +108,6 @@
                                alert("修改基础信息失败");
                            }
                         },
-
                         error: function(er) {          //失败，回调函数
                             //  alert('保存失败');
                             alert(er)

@@ -8,9 +8,10 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface commentMapper {
-    int addcomment(Comment cm);
-    int updatecomment(Comment cm);
-    int delcomment(@Param("cid") int id) ;
-    List<Comment> queryAllComment();
+    Integer addcomment(Comment cm);
+    Integer updatecomment(Comment cm);
+    Integer delcomment(@Param("cid") Integer id) ;
+    Integer delMerComment(@Param("cid") Integer id);
+    List<Comment> queryAllCommentByMid(@Param("mid") Integer id);
 
 }

@@ -15,7 +15,13 @@
     <delete id="delcomment" parameterType="int">
     delete from cityTownWeb.comment where cid=#{cid}
     </delete>
-    <select id="queryAllComment" resultType="Comment">
+
+    <delete id="delMerComment" parameterType="int">
+    delete eminfor
+    from cityTownWeb.comment
+    where cid=#{cid}
+    </delete>
+    <select id="queryAllCommentByMid" resultType="Comment">
          select * from cityTownWeb.comment
          where mid = #{mid}
     </select>
