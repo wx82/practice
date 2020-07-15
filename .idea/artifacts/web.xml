@@ -7,6 +7,7 @@
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>
       <element id="dir-copy" path="$PROJECT_DIR$/web" />
+      <element id="file-copy" path="$PROJECT_DIR$/web/index.jsp" />
     </root>
   </artifact>
 </component>

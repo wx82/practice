@@ -15,5 +15,7 @@ huanying
 <a href="${pageContext.request.contextPath}/merchant/allmer">进入商家界面</a>
 <a href="${pageContext.request.contextPath}/user/alluser">进入个人界面</a>
 <a href="${pageContext.request.contextPath}/job/alljob">进入职位界面</a>
+<a href="shop_infor.jsp">进入商铺信息界面</a>
+<a href="shop_offer_manage.jsp">进入职业管理界面</a>
 </body>
 </html>
