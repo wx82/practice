@@ -5,6 +5,7 @@ import com.qz.pojo.User;
 import com.qz.pojo.Mpics;
 import com.qz.pojo.User;
 import com.qz.service.*;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,7 @@ public class userController {
 //    //括号中填写-service中的beanID
     @Qualifier("UserServiceImp")
     private UserService userService = new UserServiceImp();
+    private CommentService commentService = new CommentServiceImp();
 
     //查询商家展示
     @RequestMapping("/alluser")
@@ -83,6 +85,21 @@ public class userController {
         HashMap hashMap = new HashMap();
         hashMap.put("status",userService.updatePasswd(user));
         return hashMap;
+    }
+    //评论
+    @RequestMapping("/comment")
+    Integer comment(Comment comment){
+        return commentService.addcomment(comment);
+    }
+    //删除评论
+    @RequestMapping("/delComment")
+    Integer delcomment(@Param("cid") Integer id) {
+        return commentService.delcomment(id);
+    }
+    //查看所有评论
+    @RequestMapping("/queryAllComment")
+    List<Comment> queryAllCommentByUid(User user){
+        return commentService.queryAllCommentByUid(user);
     }
 }
 

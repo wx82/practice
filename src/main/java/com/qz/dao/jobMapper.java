@@ -11,6 +11,6 @@ public interface jobMapper {
     Integer delJob(@Param("jid") int id);
     List<Job> queryAllJobByMid(@Param("mid") Integer id);
     Job queryJobByJid(@Param("jid") Integer id);
-    List<Job> queryJobBycity(Job user);
+    List<Job> queryJobBycity(Job job);
     List<Job> queryAllJob();
 }

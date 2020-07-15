@@ -9,19 +9,27 @@
         values jname=#{jname},jedu=#{jedu},jexperience=#{jexperience},jage=#{jage},jsalary=#{jsalary};
     </insert>
     <update id="updateJob" parameterType="Job">
-        update cityTownWeb.job
-        set eminfor=#{eminfor}
-        where cid=#{cid};
+        update cityTownWeb.job(jname,jedu,jexperience,jage,jsalary)
+        set jname=#{jname},jedu=#{jedu},jexperience=#{jexperience},jage=#{jage},jsalary=#{jsalary}
+        where jid=#{jid};
     </update>
-    <delete id="delcomment" parameterType="int">
+    <delete id="delJob" parameterType="int">
     delete from cityTownWeb.job
     where jid=#{jid}
     </delete>
     <select id="queryAllJobByMid" resultType="Job">
-         select * from cityTownWeb.job
-         where jid = #{jid}
+    select * from cityTownWeb.job
+    where mid = #{mid}
+    </select>
+    <select id="queryAllJobByJid" resultType="Job">
+    select * from cityTownWeb.job
+    where jid = #{jid}
     </select>
     <select id="queryAllJob" resultType="Job">
+    select * from cityTownWeb.job
+    </select>
+    <select id="queryJobBycity" resultType="Job">
         select * from cityTownWeb.job
+        where jcity=#{jcity}
     </select>
 </mapper>

@@ -5,6 +5,7 @@ import com.qz.pojo.Comment;
 
 import java.util.List;
 import com.qz.dao.commentMapper;
+import com.qz.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 public class CommentServiceImp implements CommentService {
@@ -15,6 +16,9 @@ public class CommentServiceImp implements CommentService {
     private commentMapper commentMapper;
     public Integer addcomment(Comment cm) {
         return commentMapper.addcomment(cm);
+    }
+    public Integer comment(Comment comment) {
+        return commentMapper.addcomment(comment);
     }
     //商家回复
     public Integer updatecomment(Comment cm) {
@@ -33,5 +37,7 @@ public class CommentServiceImp implements CommentService {
     public List<Comment> queryAllCommentByMid(Integer id) {
         return commentMapper.queryAllCommentByMid(id);
     }
-
+    public List<Comment> queryAllCommentByUid(User user) {
+        return commentMapper.queryAllCommentByUid(user);
+    }
 }

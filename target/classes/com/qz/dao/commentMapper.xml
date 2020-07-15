@@ -7,6 +7,10 @@
         insert into cityTownWeb.comment(uid,einfor,mid)
         values uid=#{uid},einfor=#{einfor},mid=#{mid};
     </insert>
+    <insert id="comment" parameterType="Comment">
+        insert into cityTownWeb.comment(uid,einfor,mid)
+        values uid=#{uid},einfor=#{einfor},mid=#{mid};
+    </insert>
     <update id="updatecomment" parameterType="Comment">
         update cityTownWeb.comment
         set eminfor=#{eminfor}
@@ -24,5 +28,9 @@
     <select id="queryAllCommentByMid" resultType="Comment">
          select * from cityTownWeb.comment
          where mid = #{mid}
+    </select>
+    <select id="queryAllCommentByUid" resultType="Comment">
+         select * from cityTownWeb.comment
+         where uid = #{uid}
     </select>
 </mapper>

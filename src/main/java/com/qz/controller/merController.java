@@ -128,7 +128,7 @@ public class merController {
 
     //删除商家评论
     @RequestMapping("/delMerComment")
-    Integer delcomment(@Param("cid") Integer id) {
+    Integer delMercomment(@Param("cid") Integer id) {
         return com.delcomment(id);
     }
     //查看该商家所有评论
@@ -148,6 +148,11 @@ public class merController {
     public Integer addJob(Job job) {
         return jobService.addJob(job);
     }
+    //删除工作岗位
+    @RequestMapping("/delJob")
+    public Integer delJob(@Param("jid") Integer id) {
+        return jobService.delJob(id);
+    }
     //编辑工作岗位
     @RequestMapping("/updateJob")
     public Integer updateJob(Job job) {
@@ -159,6 +164,10 @@ public class merController {
         return jobService.queryJobByJid(id);
     }
     //查看某商家的所有职业
+//    @RequestMapping("/queryAllJobByMid")
+//    public List<Job> queryAllJobByMid(@Param("mid") Integer id){
+//        return jobService.queryAllJobByMid(id);
+//    }
     @RequestMapping("/queryAllJobByMid")
     public List<Job> queryAllJobByMid(@Param("mid") Integer id){
         return jobService.queryAllJobByMid(id);
