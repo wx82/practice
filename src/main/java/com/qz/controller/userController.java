@@ -35,8 +35,8 @@ public class userController {
     //查询商家展示
     @RequestMapping("/alluser")
     public String list(Model model) {
-//        List<User> list = userService.queryAllUser();
-//        model.addAttribute("list", list);
+        List<User> list = userService.queryAllUser();
+        model.addAttribute("list", list);
         return "alluser";
 //        return "testpage";
     }
