@@ -149,14 +149,17 @@ public class merController {
         return jobService.addJob(job);
     }
     //编辑工作岗位
+    @RequestMapping("/updateJob")
     public Integer updateJob(Job job) {
         return jobService.updateJob(job);
     }
     //查看职位信息
+    @RequestMapping("/queryJobByJid")
     public Job queryJobByJid(@Param("jid") Integer id) {
         return jobService.queryJobByJid(id);
     }
     //查看某商家的所有职业
+    @RequestMapping("/queryAllJobByMid")
     public List<Job> queryAllJobByMid(@Param("mid") Integer id){
         return jobService.queryAllJobByMid(id);
     }

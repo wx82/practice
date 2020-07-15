@@ -47,6 +47,11 @@
         set mpassword=#{mpassword}
         where mid=#{mid};
     </update>
+    <update id="updateMerWel" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set mwelfare=#{mwelfare}
+        where mid=#{mid};
+    </update>
     <select id="queryMerById" parameterType="int" resultType="Merchant">
         select * from cityTownWeb.merchant
         where mid=#{mid}
