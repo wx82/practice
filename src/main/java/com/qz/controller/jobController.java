@@ -49,6 +49,14 @@ public class jobController {
         jobs.put("jobs",jobService.queryJobBycity(job));
         return jobs;
     }
+    @RequestMapping("/getjobbycity")
+    @ResponseBody
+    public Object queryJobByitems(@RequestBody Job job) {
+        //List<Job> info = jobService.queryJobBycity(job);
+        HashMap jobs = new HashMap();
+        jobs.put("jobs",jobService.queryJobBycity(job));
+        return jobs;
+    }
 //    @RequestMapping("/getjobbyjid")
 //    @ResponseBody
 //    public Object queryJobByJid(@Param("jid") Integer id) {

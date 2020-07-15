@@ -13,4 +13,5 @@ public interface jobMapper {
     Job queryJobByJid(@Param("jid") Integer id);
     List<Job> queryJobBycity(Job job);
     List<Job> queryAllJob();
+    List<Job> queryJobByitems(Job job);
 }

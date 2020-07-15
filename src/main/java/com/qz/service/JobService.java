@@ -13,4 +13,5 @@ public interface JobService {
     Job queryJobByJid(Integer jid);
     List<Job> queryAllJob();
     List<Job> queryJobBycity(Job job);
+    List<Job> queryJobByitems(Job job);
 }

@@ -33,6 +33,10 @@
     <bean id="JobServiceImp" class="com.qz.service.JobServiceImp">
         <property name="jobMapper" ref="jobMapper"/>
     </bean>
+    <!--InterestedServiceImpl注入到IOC容器中-->
+    <bean id="InterestedServiceImp" class="com.qz.service.InterestedServiceImp">
+        <property name="interestedMapper" ref="interestedMapper"/>
+    </bean>
 
 
     <!-- 配置事务管理器 -->

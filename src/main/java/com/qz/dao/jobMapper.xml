@@ -30,6 +30,10 @@
     </select>
     <select id="queryJobBycity" resultType="Job">
         select * from cityTownWeb.job
-        where jcity=#{jcity}
+        where jcity=#{jcity},jsalary=#{jsalary},jtime=#{jtime},jedu=#{jedu}
+    </select>
+    <select id="queryJobByitem" resultType="Job">
+        select * from cityTownWeb.job
+        where jtype=#{jtype},
     </select>
 </mapper>
