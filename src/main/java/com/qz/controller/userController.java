@@ -1,8 +1,6 @@
 package com.qz.controller;
 
-import com.qz.pojo.Comment;
-import com.qz.pojo.User;
-import com.qz.pojo.Mpics;
+import com.qz.pojo.*;
 import com.qz.pojo.User;
 import com.qz.service.*;
 import org.apache.ibatis.annotations.Param;
@@ -31,8 +29,9 @@ public class userController {
     @Qualifier("UserServiceImp")
     private UserService userService = new UserServiceImp();
     private CommentService commentService = new CommentServiceImp();
+    private InterestedService interestedService = new InterestedServiceImp();
 
-    //查询商家展示
+    //查询个人展示
     @RequestMapping("/alluser")
     public String list(Model model) {
         List<User> list = userService.queryAllUser();
@@ -86,6 +85,7 @@ public class userController {
         hashMap.put("status",userService.updatePasswd(user));
         return hashMap;
     }
+
     //评论
     @RequestMapping("/comment")
     Integer comment(Comment comment){
@@ -101,5 +101,12 @@ public class userController {
     List<Comment> queryAllCommentByUid(User user){
         return commentService.queryAllCommentByUid(user);
     }
+
+//    //感兴趣
+//    @RequestMapping("/interested")
+//    Integer interested(Interested interested){
+//        String iid = in
+//        return interestedService(interested);
+//    }
 }
 
