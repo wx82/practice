@@ -33,6 +33,9 @@
         set upassword=#{upassword}
         where uid=#{uid};
     </update>
-
+    <select id="queryUserByUphone" resultType="User">
+        select * from cityTownWeb.user
+        where uphone=#{uphone}
+    </select>
 
 </mapper>

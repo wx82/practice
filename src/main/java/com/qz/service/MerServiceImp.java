@@ -83,4 +83,6 @@ public class MerServiceImp implements MerService{
     public List<Merchant> queryAllMer() {
         return mermapper.queryAllMer();
     }
+
+    public Merchant queryMerByMrphone(String mrphone){return mermapper.queryMerByMrphone(mrphone);}
 }

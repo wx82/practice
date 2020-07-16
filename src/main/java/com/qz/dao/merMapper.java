@@ -41,4 +41,6 @@ public interface merMapper {
 //    int updateMerInfor(Merchant m,@Param("mid") int id);
 //    int updateMerD(Merchant m,@Param("mid") int id);
 ////
+    //根据注册手机号查找商家
+    Merchant queryMerByMrphone(String mrphone);
 }

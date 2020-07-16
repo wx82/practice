@@ -5,6 +5,7 @@
       <element id="artifact" artifact-name="practice:war exploded" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <element id="dir-copy" path="$PROJECT_DIR$/web" />
       </element>
       <element id="dir-copy" path="$PROJECT_DIR$/web" />
       <element id="file-copy" path="$PROJECT_DIR$/web/index.jsp" />

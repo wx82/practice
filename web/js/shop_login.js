@@ -153,8 +153,8 @@ $(document).ready(function() {
             //表单格式正确提交
             // alert("提交数据");
 
-            var uname = $("#phone").val();
-            var upassword = $.trim($("#password").val());
+            var mrphone = $("#phone").val();
+            var mpassword = $.trim($("#password").val());
             // if (uname == "") {
             //     alert("请输入用户名");
             //     return false;
@@ -163,18 +163,18 @@ $(document).ready(function() {
             //     return false;
             // }
             //ajax去服务器端校验
-            var data = { uname: uname, upassword: upassword };
+            var data = { mrphone: mrphone, mpassword: mpassword,type:"merchant"};
 
             $.ajax({
                 type: "POST",
-                url: 'user/userLogin', //商家登录的url
+                url: 'passwordLogin', //商家登录的url
                 data: data,
                 dataType: 'json',
                 success: function(data) {
                     //alert(msg);
-                    if (data.uname == uname && data.upassword == upassword) {
+                    if (data.mrphone == mrphone && data.mpassword == mpassword) {
                         alert("登录成功！")
-                    } else if (data.uname == uname && data.upassword != upassword) {
+                    } else if (data.mrphone == mrphone && data.mpassword != mpassword) {
                         alert("密码错误")
                     } else {
                         alert("该用户不存在")

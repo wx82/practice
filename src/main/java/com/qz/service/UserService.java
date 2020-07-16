@@ -19,4 +19,6 @@ public interface UserService {
     int updatePhone(User user);
     //passwd
     int updatePasswd(User user);
+    //根据注册手机号来查询用户
+    User queryUserByUphone(String uphone);
 }

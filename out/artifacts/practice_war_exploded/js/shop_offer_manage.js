@@ -2,7 +2,6 @@ $(document).ready(function() {
 
     //获取职业信息
     var jobs;
-    var data = {id:1};
     //获取职业信息
     // var jobs;
     $.ajax({

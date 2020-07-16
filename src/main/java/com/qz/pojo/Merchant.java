@@ -15,7 +15,7 @@ public class Merchant {
     private String mnickname;//账户昵称
     private String mpassword;//z=注册密码
     private String mlogo;
-    private String mrphone;
+    private String mrphone;//注册手机号
     private String maddcity;//市
     private String maddcounty;//县
     private String maddtown;//镇

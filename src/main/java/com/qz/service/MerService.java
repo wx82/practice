@@ -30,5 +30,7 @@ public interface MerService {
     Merchant queryMerById(Integer id);
     //查询所有商家
     List<Merchant> queryAllMer();
+    //根据注册手机号查询商家
+    Merchant queryMerByMrphone(String mrphone);
 
 }

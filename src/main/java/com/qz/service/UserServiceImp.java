@@ -41,4 +41,5 @@ public class UserServiceImp implements UserService{
     public int updatePasswd(User user){
         return usermapper.updatePasswd(user);
     }
+    public User queryUserByUphone(String uphone){return usermapper.queryUserByUphone(uphone);}
 }

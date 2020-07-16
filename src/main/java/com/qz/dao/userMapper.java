@@ -20,4 +20,6 @@ public interface userMapper {
     int updatePhone(User user);
     //修改密码
     int updatePasswd(User user);
+    //根据注册手机号来查询用户
+    User queryUserByUphone(String uphone);
 }

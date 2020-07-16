@@ -153,7 +153,7 @@ $(document).ready(function() {
             //表单格式正确提交
             // alert("提交数据");
 
-            var uname = $("#phone").val();
+            var uphone = $("#phone").val();
             var upassword = $.trim($("#password").val());
             // if (uname == "") {
             //     alert("请输入用户名");
@@ -163,18 +163,18 @@ $(document).ready(function() {
             //     return false;
             // }
             //ajax去服务器端校验
-            var data = { uname: uname, upassword: upassword };
+            var data = { uphone: uphone, upassword: upassword,type:"user"};
 
             $.ajax({
                 type: "POST",
-                url: 'user/userLogin', //求职者登录的url
+                url: 'passwordLogin', //求职者登录的url
                 data: data,
                 dataType: 'json',
                 success: function(data) {
                     //alert(msg);
-                    if (data.uname == uname && data.upassword == upassword) {
+                    if (data.uphone == uphone && data.upassword == upassword) {
                         alert("登录成功！")
-                    } else if (data.uname == uname && data.upassword != upassword) {
+                    } else if (data.uphone == uphone && data.upassword != upassword) {
                         alert("密码错误")
                     } else {
                         alert("该用户不存在")
