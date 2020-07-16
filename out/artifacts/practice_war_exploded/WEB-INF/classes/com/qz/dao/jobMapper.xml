@@ -34,9 +34,6 @@
     </select>
     <select id="queryJobByitems" resultType="Job">
         select * from cityTownWeb.job
-        where jname=case when #{jname} is null or #{jname}='' then jname else #{jname} end
-        and jsalary=case when #{jsalary} is null or #{jsalary}='' then jsalary else #{jsalary} end
-        and jtime=case when #{jtime} is null or #{jtime}='' then jtime else #{jtime} end
-        and jedu=case when #{jedu} is null or #{jedu}='' then jedu else #{jedu} end
+        where jtype=case when #{jtype} is null or #{jtype}='' then jtype else #{jtype} end and jsalary=case when #{jsalary} is null or #{jsalary}='' then jsalary else #{jsalary} end and jtime=case when #{jtime} is null or #{jtime}='' then jtime else #{jtime} end and jedu=case when #{jedu} is null or #{jedu}='' then jedu else #{jedu} end
     </select>
 </mapper>
