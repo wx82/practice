@@ -122,7 +122,7 @@ public class userController {
 //        System.out.println(res);
         Integer iid = interested.getIid();
         HashMap hashMap = new HashMap();
-        hashMap.put("status",interested.getIid());
+        hashMap.put("iid",interested.getIid());
         return hashMap;
 //        return iid;
     }
