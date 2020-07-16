@@ -43,6 +43,6 @@ public class JobServiceImp implements JobService{
         return jobMapper.queryJobBycity(job);
     }
     public List<Job> queryJobByitems(Job job) {
-        return jobMapper.queryJobBycity(job);
+        return jobMapper.queryJobByitems(job);
     }
 }

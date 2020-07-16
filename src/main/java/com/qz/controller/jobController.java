@@ -52,9 +52,11 @@ public class jobController {
     @RequestMapping("/getjobbyitems")
     @ResponseBody
     public Object queryJobByitems(@RequestBody Job job) {
-        //List<Job> info = jobService.queryJobBycity(job);
+        List<Job> info = jobService.queryJobByitems(job);
+        System.out.println("====================================");
+        System.out.println(info);
         HashMap jobs = new HashMap();
-        jobs.put("jobs",jobService.queryJobBycity(job));
+        jobs.put("jobs",jobService.queryJobByitems(job));
         return jobs;
     }
 //    @RequestMapping("/getjobbyjid")
