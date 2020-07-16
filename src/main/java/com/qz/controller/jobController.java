@@ -49,7 +49,7 @@ public class jobController {
         jobs.put("jobs",jobService.queryJobBycity(job));
         return jobs;
     }
-    @RequestMapping("/getjobbycity")
+    @RequestMapping("/getjobbyitems")
     @ResponseBody
     public Object queryJobByitems(@RequestBody Job job) {
         //List<Job> info = jobService.queryJobBycity(job);

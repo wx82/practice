@@ -29,8 +29,12 @@
     select * from cityTownWeb.job
     </select>
     <select id="queryJobBycity" resultType="Job">
-        select * from cityTownWeb.job
-        where jcity=#{jcity},jsalary=#{jsalary},jtime=#{jtime},jedu=#{jedu}
+        select * from cityTownWeb.job a
+        where 1 = 1 and
+        IF (jcity is NULL, 0 = 0, a.title like CONCAT('%'+jcity+'%'));
+--         where ( @jcity is null or jcity = @jcity)
+--         and ( @jsalary is null or jsalary = @jsalary)
+--         where jcity=#{jcity},jsalary=#{jsalary},jtime=#{jtime},jedu=#{jedu}
     </select>
     <select id="queryJobByitem" resultType="Job">
         select * from cityTownWeb.job

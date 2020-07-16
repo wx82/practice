@@ -96,33 +96,39 @@ public class userController {
 
     //评论
     @RequestMapping("/comment")
+    @ResponseBody
     Integer comment(Comment comment){
         return commentService.addcomment(comment);
     }
     //删除评论
     @RequestMapping("/delComment")
+    @ResponseBody
     Integer delcomment(@Param("cid") Integer id) {
         return commentService.delcomment(id);
     }
     //查看所有评论
     @RequestMapping("/queryAllComment")
+    @ResponseBody
     List<Comment> queryAllCommentByUid(User user){
         return commentService.queryAllCommentByUid(user);
     }
 
     //感兴趣
     @RequestMapping("/interested")
+    @ResponseBody
     Integer interested(Interested interested){
         Integer iid = interested.getIid();
         return iid;
     }
     //删除感兴趣
     @RequestMapping("/delinterested")
+    @ResponseBody
     Integer delInterested(Interested interested) {
         return interestedService.delInterested(interested);
     }
     //查询用户感兴趣
     @RequestMapping("/queryAllInterestedByUid")
+    @ResponseBody
     List<Interested> queryAllInterestedByUid(User user) {
         return interestedService.queryAllInterestedByUid(user);
     }
