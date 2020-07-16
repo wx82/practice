@@ -777,7 +777,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="240" name="einfo">
+    <column id="248" parent="240" name="einfor">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -798,7 +798,7 @@
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="240" name="eminfo">
+    <column id="252" parent="240" name="eminfor">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -831,6 +831,7 @@
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="259" parent="241" name="uid">

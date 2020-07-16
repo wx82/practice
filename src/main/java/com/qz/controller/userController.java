@@ -117,6 +117,9 @@ public class userController {
     @RequestMapping("/interested")
     @ResponseBody
     Integer interested(Interested interested){
+        Integer res = interestedService.setInterested(interested);
+        System.out.println("===============");
+        System.out.println(res);
         Integer iid = interested.getIid();
         return iid;
     }
