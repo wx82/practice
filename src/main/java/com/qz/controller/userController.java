@@ -116,24 +116,33 @@ public class userController {
     //感兴趣
     @RequestMapping("/interested")
     @ResponseBody
-    Integer interested(Interested interested){
+    Object interested(Interested interested){
         Integer res = interestedService.setInterested(interested);
-        System.out.println("===============");
-        System.out.println(res);
+//        System.out.println("===============");
+//        System.out.println(res);
         Integer iid = interested.getIid();
-        return iid;
+        HashMap hashMap = new HashMap();
+        hashMap.put("status",interested.getIid());
+        return hashMap;
+//        return iid;
     }
     //删除感兴趣
     @RequestMapping("/delinterested")
     @ResponseBody
-    Integer delInterested(Interested interested) {
-        return interestedService.delInterested(interested);
+    Object delInterested(Interested interested) {
+        HashMap hashMap = new HashMap();
+        hashMap.put("status",interestedService.delInterested(interested));
+        return hashMap;
+//        return interestedService.delInterested(interested);
     }
     //查询用户感兴趣
     @RequestMapping("/queryAllInterestedByUid")
     @ResponseBody
-    List<Interested> queryAllInterestedByUid(User user) {
-        return interestedService.queryAllInterestedByUid(user);
+    Object queryAllInterestedByUid(User user) {
+        HashMap hashMap = new HashMap();
+        hashMap.put("interested",interestedService.queryAllInterestedByUid(user));
+        return hashMap;
+//        return interestedService.queryAllInterestedByUid(user);
     }
 }
 
