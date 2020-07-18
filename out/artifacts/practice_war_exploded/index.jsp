@@ -9,7 +9,6 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="./css/test.css">
 </head>
 <body>
 huanying

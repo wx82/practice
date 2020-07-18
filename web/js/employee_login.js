@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     //改为使用密码登录
     $("#login_form").on('click', '#password_login', function() {
-        var code = "<div class=\"row\"><input id=\"phone\" placeholder=\"输入手机号\" type=\"text\"><span class=\"error_tip\"></span></div><div class=\"row\"><input id=\"password\" placeholder=\"输入密码\" type=\"password\"><span class=\"error_tip\"></span></div><div class=\"row\" style=\"margin-top:18px;\"><input id=\"login_button2\" type=\"button\" value=\"求职者登录\"><a id=\"phone_login\">使用手机登录</a></div>"
+        var code = "<div class=\"row\"><input id=\"phone\" placeholder=\"输入手机号\" type=\"text\"><span class=\"error_tip\"></span></div><div class=\"row\"><input id=\"password\" placeholder=\"输入密码\" type=\"password\"><span class=\"error_tip\"></span></div><div class=\"row\" style=\"margin-top:18px;\"><input id=\"login_button2\" type=\"button\" value=\"商家登录\"><a id=\"phone_login\">使用手机登录</a></div>"
         $("#login_form").html(code);
         //console.log("ok1");
     });
@@ -154,7 +154,7 @@ $(document).ready(function() {
             // alert("提交数据");
 
             var uphone = $("#phone").val();
-            var upassword = $.trim($("#password").val());
+            var upassword = $("#password").val();
             // if (uname == "") {
             //     alert("请输入用户名");
             //     return false;

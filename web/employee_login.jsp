@@ -112,7 +112,7 @@
             </div>
 
             <div class="center-block text-center">
-                <button class="submit" onclick="window.open('shop_login.html')">
+                <button class="submit" onclick="window.open('shop_login.jsp')">
                     我要招聘>>
                 </button>
             </div>

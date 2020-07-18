@@ -5,11 +5,11 @@
 
 <head>
     <title>C&T招聘网登录</title>
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/web/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/web/css/shop_login.css">
-    <script type="text/javascript" src="<%=request.getContextPath()%>/web/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/web/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/web/js/shop_login.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/shop_login.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/shop_login.js"></script>
 </head>
 
 <body>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="center-block text-center">
-            <button onclick="window.open('employee_login.html')" class="submit">
+            <button onclick="window.open('employee_login.jsp')" class="submit">
                 我要求职>>
             </button>
         </div>
