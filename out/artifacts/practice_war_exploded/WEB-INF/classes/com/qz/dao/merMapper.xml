@@ -73,7 +73,7 @@
     <select id="queryAllMer" resultType="Merchant">
         select * from cityTownWeb.merchant
     </select>
-    <select id="queryMerById" resultType="Merchant">
+    <select id="queryMerByMrPhone" resultType="Merchant">
         select * from cityTownWeb.merchant
         where mrphone=#{mrphone}
     </select>
