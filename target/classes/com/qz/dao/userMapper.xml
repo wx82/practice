@@ -20,6 +20,10 @@
         select * from cityTownWeb.user
         where uid=#{uid}
     </select>
+    <select id="queryPasswd" resultType="string">
+        select upassword from cityTownWeb.user
+        where uid=#{uid}
+    </select>
     <select id="queryAllUser" resultType="User">
         select * from cityTownWeb.user
     </select>
@@ -28,9 +32,9 @@
         set uphone=#{uphone}
         where uid=#{uid};
     </update>
-    <update id="updatePasswd" parameterType="User">
+    <update id="updatePasswd" parameterType="Map">
         update cityTownWeb.user
-        set upassword=#{upassword}
+        set upassword=#{newpasswd}
         where uid=#{uid};
     </update>
     <select id="queryUserByUphone" resultType="User">

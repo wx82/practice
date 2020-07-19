@@ -88,10 +88,34 @@ public class userController {
     //修改密码
     @RequestMapping("/updatepasswd")
     @ResponseBody
-    public Object updatePasswd(@RequestBody User user){
+//    public Object updatePasswd(@RequestBody User user){
+//        HashMap hashMap = new HashMap();
+//        hashMap.put("status",userService.updatePasswd(user));
+//        return hashMap;
+//    }
+//    public Object updatePasswd(Integer uid, String upasswd, String newpasswd){
+    public Object updatePasswd(Integer uid, String upasswd, String newpasswd){
         HashMap hashMap = new HashMap();
-        hashMap.put("status",userService.updatePasswd(user));
-        return hashMap;
+        HashMap newinfo = new HashMap();
+        newinfo.put("uid",uid);
+        newinfo.put("newpasswd", newpasswd);
+//        System.out.println(userService.queryPasswd(uid));
+//        System.out.println(upasswd);
+//        System.out.println(upasswd.equalsIgnoreCase(userService.queryPasswd(uid)));
+        if (upasswd.equalsIgnoreCase(userService.queryPasswd(uid))){
+            int res = userService.updatePasswd(newinfo);
+            if(res == 1) {
+                hashMap.put("status", 0);
+            }else {
+                hashMap.put("status", 1);
+            }
+            return hashMap;
+        }else {
+            hashMap.put("status", 2);
+            return hashMap;
+        }
+
+
     }
 
     //评论

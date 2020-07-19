@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="cityTownWeb@39.102.38.113" uuid="e1cbb690-cf8a-44b2-aae2-f060de0ef3c0">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://39.102.38.113:3306/cityTownWeb</jdbc-url>
+    </data-source>
+  </component>
+</project>
