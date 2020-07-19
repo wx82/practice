@@ -1,0 +1,180 @@
+body{
+	background-color: #fcfaf8;
+}
+li{
+	list-style: none;
+	display: inline-block;
+}
+
+.test{
+	height: 200px;
+	border: solid black 1px;
+}
+.box{
+	width: 100%;
+}
+.main-box{
+	width: 1700px;
+}
+.headline{
+	background-color: #ff8357;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.big-font{
+	font-size: 2em;
+}
+.small-font{
+	font-size: 0.5em;
+}
+.top-font{
+	color: #ffffff;
+}
+.ad{
+	height: 218px;
+	background-size: 100%;
+}
+
+.choice{
+	background-color: #fcf5ef;
+	height: 40px;	
+	position: relative;
+}
+.choice-box{
+	position: relative;
+	top: 10px;
+}
+
+.center-info{
+	position: relative;
+	top: 15px;
+	height: 300px;
+	background-color: #fff;
+}
+.left-img{
+	background-size: 100%;
+	height: 300px;
+
+}
+.photo{
+	border-radius: 50%;
+	line-height: 100px;
+	text-align: center;
+	height: 100px;
+	width: 100px;
+	border: solid grey 1px;
+}
+.person-name{
+	line-height: 100px;
+	height: 100px;
+	text-align: center;
+}
+.org-font{
+	font-size: 3em;
+	color: #ff6531;
+
+}
+.line{
+	position: relative;
+	top: 18px;
+	width: 300px;
+	margin: 0 auto;
+	border: 1px solid #e5e5e5;
+}
+.goto-self{
+	background-color: #ff6531;
+	color: #ccc;
+	text-align: center;
+	position: relative;
+	top: 40px;
+	height: 40px;
+	width: 150px;
+	margin: 0 auto;
+	line-height: 40px;
+
+}
+.short-box{
+	position: relative;
+	top: 50px;
+	padding: 30px;
+	background-color: #fff;
+}
+.urge-box{
+	top: 10px;
+	height: 160px;
+	width: 30%;
+	background-color: #fcfaf8;
+	padding:  10px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.work-box{
+	position: relative;
+	top: 90px;
+	background-color: #fff;
+
+}
+.work{
+	font-size: 1.5em;
+
+	color: #666;
+}
+.main-info{
+	position: relative;
+	top: 10px;
+
+}
+.main-info-font{
+	color: #999;
+}
+.money-font{
+	color: #ff6531;
+	font-weight: 700;
+
+}
+.property-box{
+	position: relative;
+	top: 10px;
+	left: 10px;
+	margin:  10px; 
+	color: #999;
+}
+.show-all{
+	position: relative;
+	float: right;
+	top: 20px;
+	right: 90px;
+	color: #ff6531;
+}
+.all-box{
+	width: 23%;
+	top: 10px;
+	height: 160px;
+	background-color: #fcfaf8;
+	padding:  10px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.all-work{
+	color: #ff6531;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+.center-font{
+	position: relative;
+	top: 16px;
+}
+.range{
+	display: inline-block;
+	margin-left: 30px;
+	margin-right: 30px;
+	text-align: center;
+}
+/*#choosen-money{
+	display: none;
+}*/
+.choosen-list{
+	display: none;
+}

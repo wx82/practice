@@ -1,9 +1,6 @@
 package com.qz.controller;
 
-import com.qz.pojo.Comment;
-import com.qz.pojo.Job;
-import com.qz.pojo.Merchant;
-import com.qz.pojo.Mpics;
+import com.qz.pojo.*;
 import com.qz.service.*;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +8,17 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/merchant")
@@ -28,80 +29,69 @@ public class merController {
     //括号中填写-service中的beanID
     @Qualifier("MerServiceImp")
     private MerService merService = new MerServiceImp();
-    //查询商家展示
-    @RequestMapping("/allmer")
-    @ResponseBody
-    public String list(Model model){
-        List<Merchant> list = merService.queryAllMer();
-        model.addAttribute("list",list);
-        return "allmer";
-    }
-    //所有商家所有信息
+    //查信息部分
+    //=============所有商家所有信息=============
     @RequestMapping("/allmerTT")
     @ResponseBody
     List<Merchant> queryAllMer(){
         return merService.queryAllMer();
     }
 
-//    跳转到某个页面
-//    @RequestMapping("/to")
-//    public String to(){
-//        return "allmer";
-//    }
-    //添加商铺
-//    public String addMer(Merchant m){
-//        System.out.println("添加商铺=》"+m);
-//        merService.addMer(m);
-//        return "redirect:/merchant/allmer";//重定向到allmer请求或者直接写return "allmer";
-//    }
-    //跳转到修改界面
-//    public String edit(int id,Model model){
-//        Merchant m = merService.queryMerById(id);
-//        model.addAttribute("Merchant",m);//这个Merchant是前端取值的时候用 在表单中添加value="${Merchant.属性}" 用于填写编辑界面的默认子
-//        return "updateMer";
-//    }
-    //修改商铺信息
-//    @RequestMapping("/updateMer")
-//    public String updateMer(Merchant m){
-//        System.out.println("updateMer="+m);
-//        int i = merService.updateMer(m);
-//        if(i>0){
-//            System.out.println("添加成功"+m);
-//        }
-////        List<Merchant>
-//        return "redirect:/merchant/allmer";
-//    }
+    //===============查询一个商家信息==============
+    @RequestMapping("/oneMer")
+    @ResponseBody
+    Merchant queryMerById(Integer mid){
+        return merService.queryMerById(mid);
+    }
+    //========================添加营业执照=====================================
+    @RequestMapping("/addMblicense")
+    String addMblicense(@RequestParam( value = "license",required = false) CommonsMultipartFile file, HttpSession session, Merchant m) {
+        System.out.println("调用添加营业执照");
+        System.out.println("文件：" + file);
+        System.out.println(m.getMid());
+        Integer i = merService.addMblicense(file,session,m);
+        if(i == 1){
+            return "redirect:/certify_manager.jsp";
+        }else {
+            return "上传失败";
+        }
+
+    }
+
+
+
     //修改商铺基本信息
     @RequestMapping(value="/updateMerBasic",method = RequestMethod.POST)
     @ResponseBody
-    public Integer updateMerBasic(@RequestBody Merchant m){
+    public Integer updateMerBasic(Merchant m){
         return merService.updateMerBasic(m);
     }
+
     @RequestMapping("/updateMerInfor")
     @ResponseBody
     Integer updateMerInfor(Merchant m){
         return merService.updateMerInfor(m);
     }
+
+    @RequestMapping("/updateMerWel")
+    @ResponseBody
+    public Integer updateMerWel(Merchant m){
+        return merService.updateMerWel(m);
+    }
+
     @RequestMapping("/updateMerD")
     @ResponseBody
     Integer updateMerD(Merchant m){
         return merService.updateMerD(m);
     }
-    //修改手机号
-    @RequestMapping("/updateMerPhone")
-    Integer updateMerPhone(Merchant m){
-        //先调用获取验证码，返回验证码
-        //再输入手机号，返回验证码成功后
-        //存入数据库
-        return merService.updateMerPhone(m);
-    }
+
     //修改密码
     @RequestMapping("/updateMerPsw")
-    Integer updateMerPsw(Merchant m){
-        //先获取验证码，返回验证码
-        //存入数据库
+    @ResponseBody
+    Integer updateMerPsw(@RequestBody Merchant m){
         return merService.updateMerPsw(m);
     }
+
     //===========商铺展示图图片操作=================
     @Autowired
     //括号中填写-service中的beanID
@@ -131,39 +121,52 @@ public class merController {
     private CommentService com = new CommentServiceImp();
     //用户评论
     @RequestMapping("/addcomment")
-    Integer addcomment(Comment cm){
-        return com.addcomment(cm);
+    @ResponseBody
+    Integer addcomment(@RequestBody Comment cm){
+        System.out.println("======添加评论=========");
+        System.out.println("获取的cm："+cm);
+        Integer i = com.addcomment(cm);
+        System.out.println("controller的结果"+i);
+        return i;
     }
     //商家回复评论
+
     @RequestMapping("/updatecomment")
-    Integer updatecomment(Comment cm){
+    @ResponseBody
+    Integer updatecomment(@RequestBody Comment cm){
+        System.out.println("controller收到的comment数据："+cm);
         return com.updatecomment(cm);
     }
 
     //删除商家评论
     @RequestMapping("/delMerComment")
-    Integer delMercomment(@Param("cid") Integer id) {
-        return com.delcomment(id);
+    @ResponseBody
+    Integer delMercomment(Integer cid) {
+        System.out.println("controller收到的id数据："+cid);
+        return com.delMerC(cid);
+//        return com.delcomment(id);
     }
     //查看该商家所有评论,无头像
-    @RequestMapping("/queryAllMerComment")
-
-    public List queryAllCommentByMid(Integer mid){
-        List comments = com.queryAllCommentByMid(mid);
-        return comments;
+    @RequestMapping("/allMerComment")
+    @ResponseBody
+    public Object queryAllCommentByMid(Integer mid){
+        System.out.println("=========调用获取商家所以评论的方法==========");
+        HashMap allcomment = new HashMap();
+        allcomment.put("comments",com.queryAllCommentByMid(mid));
+        System.out.println(allcomment);
+        return allcomment;
     }
     //查看该商家所有评论,有头像
     @RequestMapping("/allComment")
-
-    public List allCommentByMid(Integer mid){
-        List comments = com.queryAllComments(mid);
-        return comments;
+    @ResponseBody
+    public Object allCommentByMid(Integer mid){
+        System.out.println("=========调用获取商家所以评论的方法==========");
+        HashMap allcomment = new HashMap();
+        allcomment.put("comments",com.queryAllComments(mid));
+        System.out.println(allcomment);
+        return allcomment;
     }
     //-----------------------------------------------------------------------------
-    //========================添加营业执照=====================================
-    @RequestMapping("/addMblicense")
-    Integer addMblicense(MultipartFile file, Merchant m, ModelMap map){ return merService.addMblicense(file,m,map);}
-    //===============================================================
 
     //------------------------------------------
 
@@ -179,8 +182,8 @@ public class merController {
     }
     //删除工作岗位
     @RequestMapping("/delJob")
-    public Integer delJob(@Param("jid") Integer id) {
-        return jobService.delJob(id);
+    public Integer delJob(Integer jid) {
+        return jobService.delJob(jid);
     }
     //编辑工作岗位
     @RequestMapping("/updateJob")
@@ -189,18 +192,24 @@ public class merController {
     }
     //查看职位信息
     @RequestMapping("/queryJobByJid")
-    public Job queryJobByJid(@Param("jid") Integer id) {
-        return jobService.queryJobByJid(id);
+    @ResponseBody
+    public Job queryJobByJid(Integer jid) {
+        System.out.println("jonController获取的数据："+jid);
+        Job j = jobService.queryJobByJid(jid);
+        System.out.println(j);
+        return j;
     }
     //查看某商家的所有职业
     @RequestMapping("/mAllJob")
     @ResponseBody
-    public List<Job> queryAllJobByMid(Integer mid){
+    public Object queryAllJobByMid(Integer mid){
         System.out.println(mid);
         System.out.println("======调用获取商铺所有岗位=======");
-        List<Job> i = jobService.queryAllJobByMid(mid);
-        System.out.println(i);
-        return i;
+        HashMap jobs = new HashMap();
+        jobs.put("jobs",jobService.queryAllJobByMid(mid));
+
+        System.out.println(jobs);
+        return jobs;
     }
 //    @RequestMapping("/queryAllJobByMid")
 //    public List<Job> queryAllJobByMid(@Param("mid") Integer id){
@@ -232,5 +241,65 @@ public class merController {
 //
 //        Date date = new Date();
 //        return JsonUtils.gettJson(date);
+//    }
+//查询商家展示
+//@RequestMapping("/allmer")
+//@ResponseBody
+//public String list(Model model){
+//    List<Merchant> list = merService.queryAllMer();
+//    model.addAttribute("list",list);
+//    return "allmer";
+//}
+    //=================================================================
+//    跳转到某个页面
+//    @RequestMapping("/to")
+//    public String to(){
+//        return "allmer";
+//    }
+    //添加商铺
+//    public String addMer(Merchant m){
+//        System.out.println("添加商铺=》"+m);
+//        merService.addMer(m);
+//        return "redirect:/merchant/allmer";//重定向到allmer请求或者直接写return "allmer";
+//    }
+    //跳转到修改界面
+//    public String edit(int id,Model model){
+//        Merchant m = merService.queryMerById(id);
+//        model.addAttribute("Merchant",m);//这个Merchant是前端取值的时候用 在表单中添加value="${Merchant.属性}" 用于填写编辑界面的默认子
+//        return "updateMer";
+//    }
+    //修改商铺信息
+//    @RequestMapping("/updateMer")
+//    public String updateMer(Merchant m){
+//        System.out.println("updateMer="+m);
+//        int i = merService.updateMer(m);
+//        if(i>0){
+//            System.out.println("添加成功"+m);
+//        }
+////        List<Merchant>
+//        return "redirect:/merchant/allmer";
+//    }
+    //    Object updateMerPsw(@RequestBody merchantInfor m) {
+//        System.out.println("开始修改密码");
+//        System.out.println(m);
+//        //先获取密码
+//        HashMap hashMap = new HashMap();
+//
+//        //return hashMap;
+//        int mid = m.getMid();
+//        String psw = merService.queryPsw(mid);
+//        System.out.println("原始密码："+psw);
+//        if (m.getMpassword().equals(psw)) {
+//            Merchant mer = new Merchant();
+//            mer.setMid(mid);
+//            mer.setMassword(m.getMpassword2());
+//            int i =  merService.updateMerPsw(mer);
+//            System.out.println(i);
+//            hashMap.put("status",i);
+//            return hashMap;
+//        } else {
+//            hashMap.put("status", 2);
+//            return hashMap;
+//        }
 //    }
 }

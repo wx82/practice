@@ -3,6 +3,8 @@ package com.qz.service;
 import com.qz.dao.jobMapper;
 import com.qz.pojo.Job;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,18 +15,19 @@ public class JobServiceImp implements JobService{
     public void setJobMapper(jobMapper jobMapper) {
         this.jobMapper = jobMapper;
     }
-
+    @Autowired
+    @Qualifier("jobMapper")
     private jobMapper jobMapper;
     public Integer addJob(Job job) {
         return jobMapper.addJob(job);
     }
 
     public Integer updateJob(Job job) {
-        return 0;
+        return jobMapper.updateJob(job);
     }
 
     public Integer delJob(Integer id) {
-        return 0;
+        return jobMapper.delJob(id);
     }
 
     //一个商家的所有岗位
@@ -33,7 +36,9 @@ public class JobServiceImp implements JobService{
     }
     //某一个岗位的信息
     public Job queryJobByJid(Integer jid) {
-        return jobMapper.queryJobByJid(jid);
+        System.out.println("jobService获取的jid："+jid);
+        Job j = jobMapper.queryJobByJid(jid);
+        return j;
     }
 
     //所有岗位信息

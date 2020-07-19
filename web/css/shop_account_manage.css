@@ -1,0 +1,171 @@
+/* 白色标题栏 */
+
+body {
+    background-color: #fcfaf8;
+}
+
+.headline {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+.big-font {
+    font-size: 2em;
+}
+
+.small-font {
+    font-size: 0.9em;
+}
+
+.top-font {
+    color: #ff8357;
+}
+
+.center-font {
+    position: relative;
+    top: 16px;
+}
+
+.content {
+    margin-top: 20px;
+    width: 90%;
+}
+
+
+/* 左侧导航 */
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.choice-box {
+    background-color: #fcf5ef;
+    padding-top: 30px;
+}
+
+.img-head {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 100px;
+}
+
+.head_image {
+    width: 100px;
+    height: 100px;
+}
+
+.shop-name {
+    text-align: center;
+    color: #ff6531;
+}
+
+.choice {
+    text-align: center;
+    height: 30px;
+    color: #666;
+    margin: 30px;
+}
+
+#chosen {
+    color: #ff6531;
+}
+
+
+/* 右侧内容 */
+
+.right-part {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    padding-left: 30px;
+}
+
+.cube {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #ff8357;
+    box-shadow: 2px 2px 0 0 #ccc;
+}
+
+.line-title {
+    font-size: 1.3em;
+    color: #ff6531;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#account_msg {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* 选项卡 */
+
+.title {
+    display: flex;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+#myTab .active a {
+    font-size: 1.3em;
+    padding-right: 5px;
+    color: #ff6531;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.title a {
+    padding: 5px;
+    color: #999999;
+    padding-right: 5px;
+    font-size: 1.3em;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/* 修改手机卡片 */
+
+input[type="password"] {
+    margin-top: 5px;
+    color: #666666;
+    height: 30px;
+    width: 350px;
+    border: #666 1px solid;
+    background-color: #fff;
+    padding-left: 10px;
+    height: 40px;
+}
+
+
+/* 求职者注册 */
+
+#change_password_button {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #ff6531;
+    color: #fff;
+    border: none;
+    height: 40px;
+    width: 200px;
+}
+
+.error_tip {
+    padding-left: 20px;
+    color: red;
+    font-size: 0.9em;
+}

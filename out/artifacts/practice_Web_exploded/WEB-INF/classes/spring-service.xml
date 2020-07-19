@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/aop
+   http://www.springframework.org/schema/aop/spring-aop.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.springframework.org/schema/tx
+   https://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- 扫描service相关的bean -->
+    <context:component-scan base-package="com.qz.service" />
+
+    <!--MerServiceImpl注入到IOC容器中-->
+    <bean id="MerServiceImp" class="com.qz.service.MerServiceImp">
+        <property name="mermapper" ref="merMapper"/>
+    </bean>
+    <bean id="MpiceServiceImp" class="com.qz.service.MpicsServiceImp">
+        <property name="mpicsMapper" ref="mpicsMapper"/>
+    </bean>
+    <bean id="CommentServiceImp" class="com.qz.service.CommentServiceImp">
+        <property name="commentMapper" ref="commentMapper"/>
+    </bean>
+    <!--UserServiceImpl注入到IOC容器中-->
+    <bean id="UserServiceImp" class="com.qz.service.UserServiceImp">
+        <property name="usermapper" ref="userMapper"/>
+    </bean>
+    <!--JobServiceImpl注入到IOC容器中-->
+    <bean id="JobServiceImp" class="com.qz.service.JobServiceImp">
+        <property name="jobMapper" ref="jobMapper"/>
+    </bean>
+    <!--InterestedServiceImpl注入到IOC容器中-->
+    <bean id="InterestedServiceImp" class="com.qz.service.InterestedServiceImp">
+        <property name="interestedMapper" ref="interestedMapper"/>
+    </bean>
+
+
+    <!-- 配置事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!-- 注入数据库连接池 -->
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+<!--    oop事务支持  tx是事务的开头  advice配置事务通知-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+<!--        给哪些方法配置事务-->
+<!--        配置事务的传播特性
+        propagation="REQUIRED" 默认选择，支持当前事务，若无就新建一个-->
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+<!--配置事务切入 dao下所有类所有方法都配置事务-->
+    <aop:config>
+        <aop:pointcut id="txPointCut" expression="execution(* com.qz.dao.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
+    </aop:config>
+</beans>

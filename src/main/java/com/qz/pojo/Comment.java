@@ -13,6 +13,14 @@ public class Comment {
     private int mid;//商铺id
     private String einfor;//用户评价
     private String eminfor;//商家回复
+    private float estar;//评分
+    public float getEstar() {
+        return estar;
+    }
+
+    public void setEstar(float estar) {
+        this.estar = estar;
+    }
 
     public int getCid() {
         return cid;

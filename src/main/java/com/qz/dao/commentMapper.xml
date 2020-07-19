@@ -19,7 +19,11 @@
     <delete id="delcomment" parameterType="int">
     delete from cityTownWeb.comment where cid=#{cid}
     </delete>
-
+    <update id="delMerC" parameterType="int">
+        update cityTownWeb.comment
+        set eminfor=null
+        where cid=#{cid};
+    </update>
     <delete id="delMerComment" parameterType="int">
     delete eminfor
     from cityTownWeb.comment

@@ -21,7 +21,7 @@
     select * from cityTownWeb.job
     where mid = #{mid}
     </select>
-    <select id="queryAllJobByJid" resultType="Job">
+    <select id="queryJobByJid" resultType="Job">
     select * from cityTownWeb.job
     where jid = #{jid}
     </select>

@@ -5,15 +5,19 @@ import com.qz.pojo.Mpics;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 public interface MerService {
     //增加商家
     Integer addMer(Merchant m);
     //上传营业执照
-    Integer addMblicense(MultipartFile file, Merchant m, ModelMap map);
+    Integer addMblicense(CommonsMultipartFile upload, HttpSession session, Merchant m);
+   // public Integer addMblicense(Merchant m);
+//    Integer addMblicense(MultipartFile file, Merchant m, ModelMap map);
     //删除商家
     Integer delMerById(Integer id);
     //修改商家
