@@ -19,5 +19,6 @@ huanying
 <a href="shop_offer_manage.jsp">进入职业管理界面</a>
 <a href="employee_login.jsp">进入个人登录/注册界面</a>
 <a href="shop_login.jsp">进入商家登录/注册界面</a>
+<a href="employee_account_manage.jsp">进入个人账号管理界面</a>
 </body>
 </html>
