@@ -67,7 +67,7 @@ public class CommentServiceImp implements CommentService {
 
 
 
-    public List<Comment> queryAllCommentByUid(User user) {
+    public List<HashMap> queryAllCommentByUid(User user) {
         return commentMapper.queryAllCommentByUid(user);
     }
     //查看所有评论信息，无头像

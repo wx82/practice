@@ -6,15 +6,88 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="">
+    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="修正了用户兴趣查找、评论查找以及兴趣数量查找的接口">
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/registerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/managerMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/managerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/pojo/Manager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/ManagerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/ManagerServiceImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/admin_login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/admin_login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/user_info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/registerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/managerMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/managerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/pojo/Manager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/service/ManagerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/service/ManagerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/employee_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/employee_login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/shop_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/shop_login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/userController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/commentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/commentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/commentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/commentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/interestedMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/interestedMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/interestedMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/interestedMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/CommentServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/CommentServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/InterestedService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/InterestedService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/InterestedServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/InterestedServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/userController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/commentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/commentMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/commentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/commentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/interestedMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/interestedMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/interestedMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/interestedMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/CommentServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/CommentServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/InterestedService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/InterestedService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/InterestedServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/InterestedServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/userController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/commentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/commentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/commentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/commentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/interestedMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/interestedMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/interestedMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/interestedMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/CommentServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/CommentServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/InterestedService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/InterestedService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/InterestedServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/InterestedServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,10 +96,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
         <option value="Interface" />
         <option value="Xml File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -43,7 +116,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$USER_HOME$/maven/apache-maven-3.5.4" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../../software/apache-maven-3.5.4-bin/apache-maven-3.5.4" />
         <option name="userSettingsFile" value="E:\software\apache-maven-3.5.4-bin\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -63,7 +136,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,6 +149,11 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
+      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\target" />
+      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web\WEB-INF" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.qz.pojo" />
     </key>
@@ -86,18 +164,6 @@
       <recent name="D:\webProject\20200718\practice\web" />
       <recent name="D:\webProject\20200718\practice\web\js" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
@@ -191,6 +257,8 @@
       <workItem from="1595139438603" duration="8545000" />
       <workItem from="1595227979282" duration="11355000" />
       <workItem from="1595240998303" duration="228000" />
+      <workItem from="1595242194149" duration="536000" />
+      <workItem from="1595242759141" duration="9679000" />
     </task>
     <task id="LOCAL-00001" summary="增加了个人和商家用户的登陆注册以及后台管理员的登录功能">
       <created>1595237836108</created>
@@ -203,31 +271,31 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了几个页面的整合" />
     <MESSAGE value="增加了个人和商家用户的登陆注册以及后台管理员的登录功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了个人和商家用户的登陆注册以及后台管理员的登录功能" />
+    <MESSAGE value="修正了用户兴趣查找、评论查找以及兴趣数量查找的接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正了用户兴趣查找、评论查找以及兴趣数量查找的接口" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="331" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595141124801">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595242975508">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="331" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595141124801" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595242975508" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595129234899" />
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1595151064982">
       <screen x="0" y="0" width="1536" height="824" />
@@ -237,79 +305,83 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="755" y="496" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1920.1040@0.0.1920.1040" timestamp="1595063342748" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595256868747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1595256868747" />
     <state x="711" y="344" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1595064474202">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="711" y="344" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595064474202" />
-    <state x="419" y="10" width="802" height="769" key="CommitChangelistDialog2" timestamp="1595139999673">
+    <state x="419" y="10" width="802" height="769" key="CommitChangelistDialog2" timestamp="1595256269163">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="419" y="10" width="802" height="769" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595139999673" />
+    <state x="419" y="10" width="802" height="769" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595256269163" />
     <state x="524" y="13" width="929" height="970" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595131699085" />
-    <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1595139507336">
+    <state x="298" y="178" key="FileChooserDialogImpl" timestamp="1595242972057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595139507336" />
+    <state x="298" y="178" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595242972057" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595064940982" />
-    <state width="1024" height="206" key="GridCell.Tab.0.bottom" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.0.bottom" timestamp="1595256350449">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595256350449" />
     <state width="1430" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.0.center" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.0.center" timestamp="1595256350449">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595256350449" />
     <state width="1430" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.0.left" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.0.left" timestamp="1595256350449">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595256350449" />
     <state width="1430" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.0.right" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.0.right" timestamp="1595256350449">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595256350449" />
     <state width="1430" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.1.bottom" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.1.bottom" timestamp="1595255737196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595255737196" />
     <state width="1430" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.1.center" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.1.center" timestamp="1595255737196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595255737196" />
     <state width="1430" height="275" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.1.left" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.1.left" timestamp="1595255737196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595255737196" />
     <state width="1430" height="275" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.1.right" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.1.right" timestamp="1595255737196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595255737196" />
     <state width="1430" height="275" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.2.bottom" timestamp="1595153344528">
+    <state width="1024" height="201" key="GridCell.Tab.2.bottom" timestamp="1595255737196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595153344528" />
+    <state width="1024" height="201" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595255737196" />
     <state width="1430" height="275" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.2.center" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.2.center" timestamp="1595255737196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1595255737196" />
     <state width="1430" height="275" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.2.left" timestamp="1595153344527">
+    <state width="1024" height="201" key="GridCell.Tab.2.left" timestamp="1595255737196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1595153344527" />
+    <state width="1024" height="201" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1595255737196" />
     <state width="1430" height="275" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="206" key="GridCell.Tab.2.right" timestamp="1595153344528">
+    <state width="1024" height="201" key="GridCell.Tab.2.right" timestamp="1595255737196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1595153344528" />
+    <state width="1024" height="201" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1595255737196" />
     <state width="1430" height="275" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
     <state width="1293" height="491" key="GridCell.Tab.3.bottom" timestamp="1595063115703">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -343,11 +415,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="491" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595063115142" />
-    <state x="369" y="114" key="SettingsEditor" timestamp="1595139468861">
+    <state x="-38" y="88" width="1038" height="736" key="SettingsEditor" timestamp="1595242965739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="369" y="114" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595139468861" />
+    <state x="-38" y="88" width="1038" height="736" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595242965739" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595131734600" />
+    <state x="468" y="144" width="600" height="536" key="find.popup" timestamp="1595253221874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="468" y="144" width="600" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1595253221874" />
+    <state x="469" y="199" key="git4idea.merge.GitPullDialog" timestamp="1595256342530">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="469" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1595256342530" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1595125928054">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

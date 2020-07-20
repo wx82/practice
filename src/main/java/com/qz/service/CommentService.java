@@ -4,6 +4,7 @@ import com.qz.pojo.Comment;
 import com.qz.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface CommentService {
@@ -13,7 +14,7 @@ public interface CommentService {
     Integer delcomment(@Param("cid") Integer id) ;
     Integer delMerComment(@Param("cid") Integer id);
     Integer delMerC(Integer cid);
-    List<Comment> queryAllCommentByUid(User user);
+    List<HashMap> queryAllCommentByUid(User user);
     List queryAllCommentByMid(@Param("mid") Integer id);
     List queryAllComments(Integer id);
 

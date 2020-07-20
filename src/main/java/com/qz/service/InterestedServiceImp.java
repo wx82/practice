@@ -6,6 +6,7 @@ import com.qz.pojo.Interested;
 import com.qz.pojo.User;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 @Service
 public class InterestedServiceImp implements InterestedService {
@@ -20,7 +21,7 @@ public class InterestedServiceImp implements InterestedService {
     public Integer delInterested(Interested interested) {
         return interestedMapper.delInterested(interested);
     }
-    public List<Interested> queryAllInterestedByUid(User user) {
+    public List<HashMap> queryAllInterestedByUid(User user) {
         return interestedMapper.queryAllInterestedByUid(user);
     }
     public  Integer queryAllInterestedNum(User user){

@@ -10,8 +10,13 @@
     <delete id="delInterested" parameterType="int">
     delete from cityTownWeb.interested where iid=#{iid}
     </delete>
-    <select id="queryAllInterestedByUid" resultType="Interested">
-         select * from cityTownWeb.interested
-         where uid = #{uid}
+    <select id="queryAllInterestedByUid" resultType="map">
+        select i.iid,j.jintro,j.jsalary,j.jmethod,j.jrtime from cityTownWeb.interested as i,cityTownWeb.job as j
+        where i.uid=#{uid} and i.jid=j.jid
+    </select>
+    <select id="queryAllInterestedNum" resultType="int">
+        select count(*)from
+        (select * from cityTownWeb.interested
+        where uid=#{uid})assum
     </select>
 </mapper>

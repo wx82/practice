@@ -1,5 +1,6 @@
 package com.qz.controller;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.qz.pojo.*;
 import com.qz.pojo.User;
 import com.qz.service.*;
@@ -133,8 +134,11 @@ public class userController {
     //查看所有评论
     @RequestMapping("/queryAllComment")
     @ResponseBody
-    List<Comment> queryAllCommentByUid(User user){
-        return commentService.queryAllCommentByUid(user);
+    Object queryAllCommentByUid(User user){
+        HashMap hashMap = new HashMap();
+        hashMap.put("comments",commentService.queryAllCommentByUid(user));
+        return hashMap;
+//        return commentService.queryAllCommentByUid(user);
     }
 
     //感兴趣
@@ -162,6 +166,7 @@ public class userController {
     //查询用户感兴趣
     @RequestMapping("/queryAllInterestedByUid")
     @ResponseBody
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     Object queryAllInterestedByUid(User user) {
         HashMap hashMap = new HashMap();
         hashMap.put("interested",interestedService.queryAllInterestedByUid(user));
