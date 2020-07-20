@@ -3,6 +3,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>C&T招聘网登录</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/employee_login.css">
@@ -12,112 +13,94 @@
 </head>
 
 <body>
-    <!-- 标题栏 -->
-    <div class="row headline top-font">
-        <!-- 左侧文字 -->
-        <div class="col-lg-2">
-            <div class="big-font">
-                C&T招聘网
-            </div>
-            <div class="small-font">
-                city and town recruitment
-            </div>
+<!-- 标题栏 -->
+<div class="row headline top-font">
+    <!-- 左侧文字 -->
+    <div class="col-lg-2">
+        <div class="big-font">
+            C&T招聘网
         </div>
-        <!-- 占位 -->
-        <div class="col-lg-8">
-
+        <div class="small-font">
+            city and town recruitment
         </div>
-
-        <div class="col-lg-2 center-font">
-            <span>吉首市</span>
-            <span>[更换位置]</span>
-        </div>
+    </div>
+    <!-- 占位 -->
+    <div class="col-lg-8">
 
     </div>
 
-    <!-- 登录表单 -->
-    <div class="container card">
+    <div class="col-lg-2 center-font">
+        <span>吉首市</span>
+        <span>[更换位置]</span>
+    </div>
 
-        <!-- 左边部分 -->
-        <div class="col-lg-8 left-part">
+</div>
 
-            <!-- 选项卡组件（菜单项nav-tabs）登录注册-->
-            <ul id="myTab" class="title" id="title" role="tablist">
-                <li class="active"><a href="#login" role="tab" data-toggle="tab">登录</a></li>
-                <li><a href="#register" role="tab" data-toggle="tab">注册</a></li>
-            </ul>
+<!-- 登录表单 -->
+<div class="container card">
 
-            <!-- 选项卡面板 -->
-            <div id="myTabContent" class="tab-content">
+    <!-- 左边部分 -->
+    <div class="col-lg-8 left-part">
 
-                <!-- 求职者登录面板 -->
-                <div class="tab-pane active container login_pane" id="login">
-                    <form action="" id="login_form">
+        <!-- 选项卡组件（菜单项nav-tabs）登录注册-->
+        <ul id="myTab" class="title" id="title" role="tablist">
+            <li class="active"><a href="#login" role="tab" data-toggle="tab">登录</a></li>
+            <li><a href="#register" role="tab" data-toggle="tab">注册</a></li>
+        </ul>
 
-                        <div class="row">
-                            <input id="phone" placeholder="输入手机号" type="text"><span class="error_tip"></span>
-                        </div>
+        <!-- 选项卡面板 -->
+        <div id="myTabContent" class="tab-content">
 
-                        <div class="row">
-                            <input id="identify_code" placeholder="输入验证码" type="text">
-                            <input id="identify_code_button" type="button" value="获取验证码">
-                            <span class="error_tip"></span>
-                        </div>
+            <!-- 求职者登录面板 -->
+            <div class="tab-pane active container login_pane" id="login">
+                <form action="" id="login_form">
 
-                        <div class="row" style="margin-top:18px;">
-                            <input id="login_button" type="button" value="求职者登录">
-                            <a id="password_login">使用密码登录</a>
-                        </div>
+                    <div class="row"><input id="account" placeholder="输入账号" type="text"><span class="error_tip"></span></div>
+                    <div class="row"><input id="password" placeholder="输入密码" type="password"><span class="error_tip"></span></div>
+                    <div class="row" style="margin-top:18px;"><input id="login_button2" type="button" value="求职者登录"></div>
 
-                    </form>
-                </div>
-
-                <!-- 求职者注册面板 -->
-                <div class="tab-pane container" id="register">
-                    <form action="" id="register_form">
-
-                        <div class="row">
-                            <input id="phone2" placeholder="输入手机号" type="text"><span class="error_tip"></span>
-                        </div>
-
-                        <div class="row">
-                            <input id="identify_code2" placeholder="输入验证码" type="text">
-                            <input id="identify_code_button2" type="button" value="获取验证码"><span class="error_tip"></span>
-                        </div>
-
-                        <div class="row">
-                            <input id="password2" placeholder="密码为6-12位，只能输入字母、数字和下滑线" type="password"><span class="error_tip"></span>
-                        </div>
-                        <div class="row">
-                            <input id="password3" placeholder="再次输入密码" type="password"><span class="error_tip"></span>
-                        </div>
-
-                        <input id="register_button" type="button" value="求职者注册">
-
-                    </form>
-                </div>
-
+                </form>
             </div>
+
+            <!-- 求职者注册面板 -->
+            <div class="tab-pane container" id="register">
+                <form action="" id="register_form">
+
+                    <div class="row">
+                        <input id="account2" placeholder="输入账号" type="text"><span class="error_tip"></span>
+                    </div>
+                    <div class="row">
+                        <input id="password2" placeholder="密码为6-12位，只能输入字母、数字和下滑线" type="password"><span class="error_tip"></span>
+                    </div>
+                    <div class="row">
+                        <input id="password3" placeholder="再次输入密码" type="password"><span class="error_tip"></span>
+                    </div>
+                    <input id="register_button" type="button" value="求职者注册">
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 右边部分 -->
+    <dic class="col-lg-4 right-part">
+
+        <div class="big-font text-center">
+            C&T招聘网
         </div>
 
-        <!-- 右边部分 -->
-        <dic class="col-lg-4 right-part">
+        <div class="small-font text-center">
+            city and town recruitment
+        </div>
 
-            <div class="big-font text-center">
-                C&T招聘网
-            </div>
-
-            <div class="small-font text-center">
-                city and town recruitment
-            </div>
-
-            <div class="center-block text-center">
-                <button class="submit" onclick="window.open('shop_login.jsp')">
-                    我要招聘>>
-                </button>
-            </div>
-        </dic>
-    </div>
+        <div class="center-block text-center">
+            <button class="submit" onclick="window.open('shop_login.jsp')">
+                我要招聘>>
+            </button>
+        </div>
+    </dic>
+</div>
 
 </body>
 

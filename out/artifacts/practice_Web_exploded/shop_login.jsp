@@ -4,6 +4,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>C&T招聘网登录</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/shop_login.css">
@@ -69,20 +70,9 @@
             <div class="tab-pane active container login_pane" id="login">
                 <form action="" id="login_form">
 
-                    <div class="row">
-                        <input id="phone" placeholder="输入手机号" type="text"><span class="error_tip"></span>
-                    </div>
-
-                    <div class="row">
-                        <input id="identify_code" placeholder="输入验证码" type="text">
-                        <input id="identify_code_button" type="button" value="获取验证码">
-                        <span class="error_tip"></span>
-                    </div>
-
-                    <div class="row" style="margin-top:18px;">
-                        <input id="login_button" type="button" value="商家登录">
-                        <a id="password_login">使用密码登录</a>
-                    </div>
+                    <div class="row"><input id="account" placeholder="输入账号" type="text"><span class="error_tip"></span></div>
+                    <div class="row"><input id="password" placeholder="输入密码" type="password"><span class="error_tip"></span></div>
+                    <div class="row" style="margin-top:18px;"><input id="login_button2" type="button" value="商家登录"></div>
 
                 </form>
 
@@ -94,22 +84,16 @@
                 <form action="" id="register_form">
 
                     <div class="row">
-                        <input id="phone2" placeholder="输入手机号" type="text"><span class="error_tip"></span>
+                        <input id="account2" placeholder="输入账号" type="text"><span class="error_tip"></span>
                     </div>
-
-                    <div class="row">
-                        <input id="identify_code2" placeholder="输入验证码" type="text">
-                        <input id="identify_code_button2" type="button" value="获取验证码"><span class="error_tip"></span>
-                    </div>
-
                     <div class="row">
                         <input id="password2" placeholder="密码为6-12位，只能输入字母、数字和下滑线" type="password"><span class="error_tip"></span>
                     </div>
                     <div class="row">
                         <input id="password3" placeholder="再次输入密码" type="password"><span class="error_tip"></span>
                     </div>
-
                     <input id="register_button" type="button" value="商家注册">
+
 
                 </form>
             </div>

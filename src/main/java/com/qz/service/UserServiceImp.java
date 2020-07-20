@@ -53,5 +53,9 @@ public class UserServiceImp implements UserService{
     return usermapper.updatePasswd(map);
 }
 
-    public User queryUserByUphone(String uphone){return usermapper.queryUserByUphone(uphone);}
+    public User queryUserByUaccount(String uaccount){return usermapper.queryUserByUaccount(uaccount);}
+
+    public void addUser2(User user){
+        usermapper.addUser2(user);
+    }
 }

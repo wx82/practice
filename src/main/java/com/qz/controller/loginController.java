@@ -1,10 +1,11 @@
 package com.qz.controller;
 
+import com.qz.pojo.Manager;
 import com.qz.pojo.Merchant;
 import com.qz.pojo.User;
+import com.qz.service.ManagerService;
 import com.qz.service.MerService;
 import com.qz.service.UserService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -19,48 +20,102 @@ public class loginController {
     @Autowired
     @Qualifier("UserServiceImp")
     private UserService userService;
+    @Autowired
     @Qualifier("MerServiceImp")
     private MerService merService;
+    @Autowired
+    @Qualifier("ManagerServiceImp")
+    private ManagerService managerService;
 
-    //个人和商家密码登录
-    @RequestMapping("/passwordLogin")
+
+    //个人和商家登录
+    @RequestMapping("/normalLogin")
     @ResponseBody
-    public Object passwordLogin(String phone,String password, String type,HttpSession session){
-        System.out.println(phone);
+    public Object normalLogin(String account,String password, String type,HttpSession session){
+        System.out.println(account);
         System.out.println(password);
         System.out.println(type);
-        //个人用户登录
-        if(type=="user"){
-            User user = userService.queryUserByUphone(phone);
+
+        HashMap hashMap = new HashMap();
+        if(type.equals("user")){ //个人用户登录
+            User user = userService.queryUserByUaccount(account);
             if(user != null){
-                //登录成功
-                if(user.getUphone().equals(phone)){
+                //用户存在
+                hashMap.put("isAccountExist",true);
+                if(user.getUpassword().equals(password)){
+                    //登录成功
+                    hashMap.put("isSuccess",true);
+                    hashMap.put("isPasswordCorrect",true);
                     session.setAttribute("user_session", user);
-                    return user;
+                    return hashMap;
                 }else{
                     //密码错误
-                    return user;
+                    hashMap.put("isSuccess",false);
+                    hashMap.put("isPasswordCorrect",false);
+                    return hashMap;
                 }
+            }else{
+                //用户不存在
+                hashMap.put("isAccountExist",false);
+                hashMap.put("isSuccess",false);
+                hashMap.put("isPasswordCorrect",false);
+                return hashMap;
             }
-            //用户不存在
-            HashMap hashMap = new HashMap();
-            hashMap.put("isExist",false);
-            return hashMap;
-        }else{ //商家登录
-            Merchant merchant = merService.queryMerByMrphone(phone);
+        }else if(type.equals("merchant")){ //商家登录
+            Merchant merchant = merService.queryMerByMaccount(account);
             if(merchant != null){
-                //登录成功
-                if(merchant.getMrphone().equals(phone)){
+                //商家用户存在
+                hashMap.put("isAccountExist",true);
+                if(merchant.getMassword().equals(password)){
+                    //登录成功
+                    hashMap.put("isSuccess",true);
+                    hashMap.put("isPasswordCorrect",true);
                     session.setAttribute("merchant_session", merchant);
-                    return merchant;
+                    return hashMap;
                 }else{
                     //密码错误
-                    return merchant;
+                    hashMap.put("isSuccess",false);
+                    hashMap.put("isPasswordCorrect",false);
+                    return hashMap;
                 }
             }
+            //商家用户不存在
+            hashMap.put("isAccountExist",false);
+            hashMap.put("isSuccess",false);
+            hashMap.put("isPasswordCorrect",false);
+            return hashMap;
+        }
+        return null;
+    }
+
+    //管理员登录
+    @RequestMapping("/adminLogin")
+    @ResponseBody
+    public Object adminLogin(String maname,String mapassword){
+        System.out.println(maname);
+        System.out.println(mapassword);
+
+        HashMap hashMap = new HashMap();
+        Manager manager = managerService.queryManagerByManame(maname);
+        if(manager != null){
+            //用户存在
+            hashMap.put("isAccountExist",true);
+            if(manager.getMapassword().equals(mapassword)){
+                //登录成功
+                hashMap.put("isSuccess",true);
+                hashMap.put("isPasswordCorrect",true);
+                return hashMap;
+            }else{
+                //密码错误
+                hashMap.put("isSuccess",false);
+                hashMap.put("isPasswordCorrect",false);
+                return hashMap;
+            }
+        }else{
             //用户不存在
-            HashMap hashMap = new HashMap();
-            hashMap.put("isExist",false);
+            hashMap.put("isAccountExist",false);
+            hashMap.put("isSuccess",false);
+            hashMap.put("isPasswordCorrect",false);
             return hashMap;
         }
     }

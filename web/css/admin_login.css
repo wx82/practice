@@ -1,4 +1,4 @@
-/* 标题栏 */
+/* /* 标题栏  */
 
 .headline {
     background-color: #ff8357;
@@ -92,8 +92,7 @@
 
 /* 登录卡片 */
 
-#login_button,
-#login_button2 {
+#login_button {
     margin-top: 10px;
     padding: 5px;
     background-color: #ff6531;
@@ -103,8 +102,7 @@
     width: 200px;
 }
 
-#identify_code_button,
-#identify_code_button2 {
+#identify_code_button {
     padding: 5px;
     width: 80px;
     margin-top: 5px;
@@ -115,7 +113,7 @@
 }
 
 #login_form input[type="text"] {
-    margin-top: 30px;
+    margin-top: 20px;
     color: #666666;
     height: 30px;
     width: 350px;
@@ -125,19 +123,9 @@
     height: 40px;
 }
 
-input[type="text"] {
-    margin-top: 10px;
-    color: #666666;
-    height: 30px;
-    width: 350px;
-    border: none;
-    background-color: #fcfaf8;
-    padding-left: 10px;
-    height: 40px;
-}
-
+input[type="text"],
 input[type="password"] {
-    margin-top: 10px;
+    margin-top: 5px;
     color: #666666;
     height: 30px;
     width: 350px;

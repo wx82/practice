@@ -73,8 +73,12 @@
     <select id="queryAllMer" resultType="Merchant">
         select * from cityTownWeb.merchant
     </select>
-    <select id="queryMerByMrPhone" resultType="Merchant">
+    <select id="queryMerByMaccount" resultType="Merchant">
         select * from cityTownWeb.merchant
-        where mrphone=#{mrphone}
+        where maccount=#{maccount}
     </select>
+    <insert id="addMerchant" parameterType="Merchant">
+        insert into cityTownWeb.merchant(maccount,mpassword)
+        values (#{maccount},#{mpassword});
+    </insert>
 </mapper>

@@ -33,7 +33,7 @@
     justify-content: center;
     background-color: #ff8357;
     color: #fff;
-    height: 330px;
+    height: 300px;
     text-align: center;
 }
 
@@ -126,7 +126,7 @@
 }
 
 input[type="text"] {
-    margin-top: 5px;
+    margin-top: 10px;
     color: #666666;
     height: 30px;
     width: 350px;
@@ -137,7 +137,7 @@ input[type="text"] {
 }
 
 input[type="password"] {
-    margin-top: 5px;
+    margin-top: 10px;
     color: #666666;
     height: 30px;
     width: 350px;

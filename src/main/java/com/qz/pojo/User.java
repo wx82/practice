@@ -15,6 +15,16 @@ public class User {
     private String uedu;
     private String uphone;
 
+    public String getUaccount() {
+        return uaccount;
+    }
+
+    public void setUaccount(String uaccount) {
+        this.uaccount = uaccount;
+    }
+
+    private String uaccount;
+
     public String getUphone() {
         return uphone;
     }

@@ -37,9 +37,12 @@
         set upassword=#{newpasswd}
         where uid=#{uid};
     </update>
-    <select id="queryUserByUphone" resultType="User">
+    <select id="queryUserByUaccount" resultType="User">
         select * from cityTownWeb.user
-        where uphone=#{uphone}
+        where uaccount=#{uaccount}
     </select>
-
+    <insert id="addUser2" parameterType="User">
+        insert into cityTownWeb.user(uaccount,upassword)
+        values (#{uaccount},#{upassword});
+    </insert>
 </mapper>

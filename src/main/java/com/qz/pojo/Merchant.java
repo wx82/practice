@@ -31,6 +31,16 @@ public class Merchant {
     private Boolean minputpic;//是否提交营业执照
     private List<Mpics> mpic;//店铺展示 一个店铺拥有多个展示图片
 
+    public String getMaccount() {
+        return maccount;
+    }
+
+    public void setMaccount(String maccount) {
+        this.maccount = maccount;
+    }
+
+    private String maccount;
+
     public Integer getMid() {
         return mid;
     }
@@ -59,7 +69,7 @@ public class Merchant {
         return mpassword;
     }
 
-    public void setMassword(String mpassword) {
+    public void setMpassword(String mpassword) {
         this.mpassword = mpassword;
     }
 

@@ -95,7 +95,7 @@ public class MerServiceImp implements MerService{
         return mermapper.queryAllMer();
     }
 
-    public Merchant queryMerByMrphone(String mrphone){return mermapper.queryMerByMrphone(mrphone);}
+    public Merchant queryMerByMaccount(String maccount){return mermapper.queryMerByMaccount(maccount);}
     /* 上传文件 */
     private String uploadPic(CommonsMultipartFile upload, HttpSession session){
         /* 上传图片 */
@@ -122,4 +122,5 @@ public class MerServiceImp implements MerService{
         }
         return fileName;
     }
+    public void addMerchant(Merchant merchant){mermapper.addMerchant(merchant);}
 }

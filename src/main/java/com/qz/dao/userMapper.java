@@ -25,6 +25,8 @@ public interface userMapper {
 //    int updatePasswd(User user);
 //    int updatePasswd(Integer id, String newpasswd);
     int updatePasswd(HashMap map);
-    //根据注册手机号来查询用户
-    User queryUserByUphone(String uphone);
+    //根据用户名来查询用户
+    User queryUserByUaccount(String uaccount);
+    //注册时添加用户
+    void addUser2(User user);
 }
