@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-huanying
+
 <a href="${pageContext.request.contextPath}/merchant/allmer">进入商家界面</a>
 <a href="${pageContext.request.contextPath}/user/alluser">进入个人界面</a>
 <a href="${pageContext.request.contextPath}/job/alljob">进入职位界面</a>
@@ -19,7 +19,8 @@ huanying
 <a href="shop_offer_manage.jsp">进入职业管理界面</a>
 <a href="employee_login.jsp">进入个人登录/注册界面</a>
 <a href="shop_login.jsp">进入商家登录/注册界面</a>
-<a href="admin_login.jsp">进入管理员登录界面</a>
-<%--<a href="user_info.jsp">进入个人信息界面</a>--%>
+<a href="employee_account_manage.jsp">进入个人账号管理界面</a>
+<a href="employee_interested.jsp">进入个人感兴趣界面</a>
+<a href="employee_remark.jsp">进入个人评论界面</a>
 </body>
 </html>
