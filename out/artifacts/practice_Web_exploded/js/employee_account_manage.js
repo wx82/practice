@@ -5,7 +5,9 @@ $(document).ready(function() {
         // url: "http://39.102.38.113:3000/mock/11/user/getuser",
         url: "user/getuser",
         type: "post",
-        data: { "uid": uid }, //uid在html头部写了
+        data: JSON.stringify({ "uid": uid }), //uid在html头部写了
+        headers:  { 'Content-Type':   'application/json' },
+        contentType: "application/json;charset=UTF-8",
         datatype: "json",
         success: function(result) {
             console.log(result);
@@ -103,6 +105,7 @@ $(document).ready(function() {
                 // url: 'http://39.102.38.113:3000/mock/11/user/updatepasswd', //求职者改密码的url
                 url: 'user/updatepasswd',
                 data: data,
+
                 dataType: 'json',
                 success: function(data) {
                     console.log(data);
