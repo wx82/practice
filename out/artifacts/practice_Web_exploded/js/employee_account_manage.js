@@ -14,7 +14,6 @@ $(document).ready(function() {
             account = result.uaccount;
             uname = result.uname;
             $("#account_msg").html("账号：" + account);
-
         }
     });
 
@@ -104,8 +103,9 @@ $(document).ready(function() {
                 type: "POST",
                 // url: 'http://39.102.38.113:3000/mock/11/user/updatepasswd', //求职者改密码的url
                 url: 'user/updatepasswd',
-                data: data,
-
+                data: JSON.stringify(data),
+                headers:  { 'Content-Type':   'application/json' },
+                contentType: "application/json;charset=UTF-8",
                 dataType: 'json',
                 success: function(data) {
                     console.log(data);

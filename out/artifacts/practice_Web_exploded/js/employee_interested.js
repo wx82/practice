@@ -36,8 +36,10 @@ $(document).ready(function() {
         //console.log(jid)
         data = { iid: iid }
         $.ajax({
-            url: "http://39.102.38.113:3000/mock/11/user/delinterested",
+            // url: "http://39.102.38.113:3000/mock/11/user/delinterested",
+            url: "user/delinterested",
             type: "post",
+            headers:  { 'Content-Type':'application/json' },
             contentType: "application/json;charset=UTF-8",
             data: JSON.stringify(data),
             dataType: "json",
