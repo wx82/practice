@@ -6,107 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="增加了几个页面的整合">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/registerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/managerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/managerMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/ManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/ManagerServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin_login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/admin_login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/admin_login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" afterDir="false" />
+    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/loginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/pojo/Merchant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/pojo/Merchant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/CommentServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/CommentServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/spring-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/employee_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/employee_login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/shop_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/shop_login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/employee_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/employee_login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/employee_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/employee_login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/jquery-3.1.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/jquery-3.1.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/shop_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/shop_login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Merchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/UserServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/loginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/pojo/Merchant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/pojo/Merchant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/CommentServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/CommentServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/UserServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/employee_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/employee_login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/shop_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/shop_login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/employee_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/employee_login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/employee_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/employee_login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/jquery-3.1.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/jquery-3.1.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/shop_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/shop_login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/shop_login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/commentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/commentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/interestedMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/interestedMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/interestedMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/interestedMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -283,8 +189,17 @@
       <workItem from="1595062927995" duration="7258000" />
       <workItem from="1595124577677" duration="7087000" />
       <workItem from="1595139438603" duration="8545000" />
-      <workItem from="1595227979282" duration="9418000" />
+      <workItem from="1595227979282" duration="11355000" />
+      <workItem from="1595240998303" duration="228000" />
     </task>
+    <task id="LOCAL-00001" summary="增加了个人和商家用户的登陆注册以及后台管理员的登录功能">
+      <created>1595237836108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595237836108</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +210,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -303,7 +220,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了几个页面的整合" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了几个页面的整合" />
+    <MESSAGE value="增加了个人和商家用户的登陆注册以及后台管理员的登录功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了个人和商家用户的登陆注册以及后台管理员的登录功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="331" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595141124801">

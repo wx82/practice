@@ -14,4 +14,13 @@
          select * from cityTownWeb.interested
          where uid = #{uid}
     </select>
+    <select id="queryAllInterestedByUid" resultType="Interested">
+        select i.iid,j.jname,j.jsalary,j.jmethod,j.jrtime from cityTownWeb.interested as i,cityTownWeb.job as j
+        where i.jid=j.jid and i.uid=#{uid}
+    </select>
+    <select id="queryAllInterestedNum" resultType="int">
+        select count(*)from
+        (select * from cityTownWeb.interested
+        where uid=#{uid})assum
+    </select>
 </mapper>

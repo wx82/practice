@@ -168,5 +168,15 @@ public class userController {
         return hashMap;
 //        return interestedService.queryAllInterestedByUid(user);
     }
+
+    //查询用户感兴趣的数量
+    @RequestMapping("/queryAllInterestedNum")
+    @ResponseBody
+    Object queryAllInterestedNum(User user){
+        HashMap hashMap=new HashMap();
+        hashMap.put("interestedNum",interestedService.queryAllInterestedNum(user));
+        return hashMap;
+        //returninterestedService.queryAllInterestedByUid(user);
+    }
 }
 

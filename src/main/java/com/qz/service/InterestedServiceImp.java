@@ -23,4 +23,7 @@ public class InterestedServiceImp implements InterestedService {
     public List<Interested> queryAllInterestedByUid(User user) {
         return interestedMapper.queryAllInterestedByUid(user);
     }
+    public  Integer queryAllInterestedNum(User user){
+        return interestedMapper.queryAllInterestedNum(user);
+    }
 }

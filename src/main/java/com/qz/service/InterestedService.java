@@ -11,4 +11,5 @@ public interface InterestedService {
     Integer setInterested(Interested interested);
     Integer delInterested(Interested interested);
     List<Interested> queryAllInterestedByUid(User user);
+    Integer queryAllInterestedNum(User user);
 }

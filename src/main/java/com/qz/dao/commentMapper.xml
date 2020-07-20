@@ -37,4 +37,8 @@
          select * from cityTownWeb.comment
          where uid = #{uid}
     </select>
+    <select id="queryAllCommentByUid" resultType="Comment">
+        select c.cid,c.einfor,c.eminfor,c.estar,u.uname,m.mname from cityTownWeb.comment as c,cityTownWeb.user as u,cityTownWeb.merchant as m
+        where c.uid=#{uid} and c.uid=u.uid and c.mid=m.mid
+    </select>
 </mapper>

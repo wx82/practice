@@ -234,8 +234,6 @@ $(document).ready(function() {
                     if (data.isAccountExist) {
                         alert("该账号已存在，请重新输入");
                         $("#account2").val('');
-                        $("#password2").val('');
-                        $("#password3").val('');
                         return;
                     }
                 },
