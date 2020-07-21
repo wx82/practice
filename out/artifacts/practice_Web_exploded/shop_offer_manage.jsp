@@ -72,13 +72,25 @@
             </div>
             <button class="delet_button">删除</button>
         </div>
+         -->
 
-        <div class="offer">
-            <a class="offer_name">扫描员扫描员扫描员</a>
-            <span class="person_number small-text">需400人</span>
-            <div class="small-text">发布于:2020-07-02</div>
-            <button class="delet_button">删除</button>
-        </div> -->
+        <table class="table">
+
+            <tbody id="offer_list">
+
+            <!-- <tr class="offer">
+                    <td><a class="offer_name">洗碗工</a></td>
+                    <td><span class="person_number small-text">1小时50元</span></td>
+                    <td>
+                        <div class="small-text">发布于:5354732</div>
+                    </td>
+                    <td><button class="delet_button" id="49711927.34381357">删除</button></td>
+                </tr>
+
+             -->
+
+            </tbody>
+        </table>
     </div>
 </div>
 </body>

@@ -88,27 +88,32 @@
             </div>
             <button class="delet_button">删除</button>
         </div> -->
-        <!-- 岗位 -->
-        <!-- <div class="offer">
-            <a class="offer_name">扫描员扫描员扫描员</a>
-            <span class="person_number small-text">需400人</span>
-            <div class="inform">
-                <span class="small-text">吉首|5星</span>
-            </div>
-            <div class="salary">
-                500/天
-            </div>
-            <div class="history">
-                <div class="visits">
-                    <img class="icon" src="image/look.png">
-                    <span class="small-text">3000人浏览</span>
-                </div>
-                <div class="small-text">发布于:2020-07-02</div>
-            </div>
-            <button class="delet_button">删除</button>
-        </div> -->
 
 
+        <table class="table">
+
+            <tbody id="offer_list">
+
+            <!-- <tr class="offer">
+                <td><a class="employee_name">包包子包子包子包子子</a></td>
+                <td><span class="person_number small-text">ametet/eu teur</span></td>
+                <td>
+                    <div class="small-text">发布于:5354732</div>
+                </td>
+                <td><button class="delet_button" id="49711927.34381357">不再感兴趣</button></td>
+            </tr>
+
+            <tr class="offer">
+                <td><a class="employee_name">包子</a></td>
+                <td><span class="person_number small-text">am et/eu Ut nullr</span></td>
+                <td>
+                    <div class="small-text">发布于:53547323.43127048</div>
+                </td>
+                <td><button class="delet_button" id="49711927.34381357">不再感兴趣</button></td>
+            </tr> -->
+
+            </tbody>
+        </table>
     </div>
 </div>
 </body>

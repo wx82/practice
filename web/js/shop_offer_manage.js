@@ -30,8 +30,8 @@ $(document).ready(function() {
                 // "jphone": 123456,
                 // "jname": null,
                 // "jage": null
-                var code = "<div class=\"offer\"><a class=\"offer_name\">" + job.jintro + "</a><span class=\"person_number small-text\">" + job.jsalary + "</span><div class=\"small-text\">发布于:" + job.jrtime + "</div><button class=\"delet_button\" id=\"" + job.jid + "\">删除</button></div>"
-                $(".right-part").append(code);
+                var code = "<tr class=\"offer\"><td><a class=\"offer_name\">" + job.jintro + "</a></td><td><span class=\"person_number small-text\">" + job.jsalary + "</span></td><td><div class=\"small-text\">发布于:" + job.jrtime + "</div></td><td><button class=\"delet_button\" id=\"" + job.jid + "\">删除</button></td></tr>";
+                $("#offer_list").append(code);
             });
         }
     });
