@@ -178,3 +178,13 @@ li{
 .choosen-list{
 	display: none;
 }
+
+#choose-city{
+	color: #000;
+	width: 400px;
+	position: absolute;
+	display: none;
+}
+#change-city{
+	cursor: pointer;
+}

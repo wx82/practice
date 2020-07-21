@@ -60,7 +60,7 @@
 						type: 'POST',
 						dataType: 'json',
 						contentType: 'application/json;charset=UTF-8',
-						data: JSON.stringify({city: city}),
+						data: JSON.stringify({jcity: city}),
 					})
 					.done(function(result) {
 						// console.log(result)
