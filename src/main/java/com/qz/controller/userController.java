@@ -148,8 +148,11 @@ public class userController {
     //删除评论
     @RequestMapping("/delComment")
     @ResponseBody
-    Integer delcomment(@Param("cid") Integer id) {
-        return commentService.delcomment(id);
+    Object delcomment(Integer id) {
+        HashMap hashMap = new HashMap();
+        hashMap.put("status",commentService.delcomment(id));
+        return hashMap;
+//        return commentService.delcomment(id);
     }
     //查看所有评论
     @RequestMapping("/queryAllComment")
@@ -186,7 +189,7 @@ public class userController {
     //查询用户感兴趣
     @RequestMapping("/queryAllInterestedByUid")
     @ResponseBody
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+//    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     Object queryAllInterestedByUid(User user) {
         HashMap hashMap = new HashMap();
         hashMap.put("interested",interestedService.queryAllInterestedByUid(user));
