@@ -50,6 +50,7 @@
 					var mcity = $("#mcity").val()
 					// city = mprovince+mcity
 					city = mcity
+					console.log(city);
 					$("#city").text(mprovince+mcity)
 					//隐藏
 					$("#choose-city").hide()
@@ -58,9 +59,17 @@
 						url: '/job/getjobbycity',
 						type: 'POST',
 						dataType: 'json',
-						data: {city: city},
+						contentType: 'application/json;charset=UTF-8',
+						data: JSON.stringify({city: city}),
 					})
-					.done(function() {
+					.done(function(result) {
+						// console.log(result)
+						$("#urge").empty()//清空子元素
+						jobs = result.jobs;
+						console.log(jobs);
+						$.grep(jobs,function(job){//重新添加子元素
+							$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>					</div>  ')
+						})
 						console.log("success");
 					})
 					.fail(function() {
@@ -81,7 +90,8 @@
 				url: '/job/getjobbycity',
 				type: 'POST',
 				dataType: 'json',
-				data: {jcity: jcity},
+				data: JSON.stringify({jcity: jcity}),
+				contentType: 'application/json;charset=UTF-8',
 				success:function (res) {
 					console.log(res)
 				}
@@ -132,6 +142,7 @@
 
 			$('.money-range').click(function(event) {
 				$(this).css('color', 'blue').siblings('.money-range').css('color', '#000');
+				console.log("==========salary=========")
 				console.log($(this).text())
 				jsalary = $(this).text()
 				/* Act on the event */
@@ -158,19 +169,26 @@
 				// 	var salary2 = $('#salary2').val()
 				// 	jsalary = salary1+'——'+salary2
 				// }
+				console.log("================筛选===============")
 				console.log(jsalary)
 				console.log(jedu)
 				console.log(jtime)
 				$.ajax({
 					//发送筛选信息
-					url: '/path/to/file',
+					url: '/job/getjobbyitems',
 					type: 'POST',
 					dataType: 'JSON',
-					data: {jsalary: jsalary,
+					contentType: 'application/json;charset=UTF-8',
+					data: JSON.stringify({jsalary: jsalary,
 						   jedu : jedu,
-						   jtime : jtime},
+						   jtime : jtime}),
 				})
-				.done(function() {
+				.done(function(result) {
+					jobs = result.jobs;
+					$("#all-work").empty()
+					$.grep(jobs,function(job){
+						$("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>				</div>')
+					})
 					console.log("success");
 				})
 				.fail(function() {
@@ -244,13 +262,15 @@
 		</div>	
 		<ul class="choosen choice">
 				<li id="choosen-money" class="choosen-list">
-					<span class="money-range range">1000-2000元/月</span>
-					<span class="money-range range" >2000-3000元/月</span>
-					<span class="money-range range">3000-4000元/月</span>
-					<span class="money-range range">4000+元/月</span>
-					<span class="money-range range">50-100元/天</span>
-					<span class="money-range range">100-200元/天</span>
-					<span class="money-range range">200+元/天</span>
+					<span class="money-range range">按月支付</span>
+					<span class="money-range range">1000-2000</span>
+					<span class="money-range range" >2000-3000</span>
+					<span class="money-range range">3000-4000</span>
+					<span class="money-range range">4000+</span>
+					<span class="money-range range">按小时支付</span>
+					<span class="money-range range">50-100</span>
+					<span class="money-range range">100-200</span>
+					<span class="money-range range">200+</span>
 					
 <!-- 					<span class="money-range range">自定义</span> -->
 <!-- 					<span class="range">
@@ -263,10 +283,10 @@
 					
 				</li>
 				<li id="choosen-time" class="choosen-list">
-					<span class="jtime range">不限</span>
-					<span class="jtime range">在校生</span>
-					<span class="jtime range">应届生</span>
-					<span class="jtime range">1年以内</span>
+					<span class="jtime range">1-3小时</span>
+					<span class="jtime range">3-6小时</span>
+					<span class="jtime range">6-12小时</span>
+					<span class="jtime range">1周</span>
 					<span class="jtime range">1-3年</span>
 					<span class="jtime range">3-5年</span>
 					<span class="jtime range">5-10年</span>
@@ -344,7 +364,7 @@
 					<div class="col-lg-3 col-md-3 urge-box">
 						<div class="row">
 							<div class="col-lg-10 col-md-10">
-								<span class="work">扫描员</span></div>							
+								<span class="work">扫描员</span></div>
 						</div>
 
 						<div class="row main-info">
@@ -362,9 +382,9 @@
 					<div class="col-lg-3 urge-box">
 						<div class="row">
 							<div class="col-lg-10 col-md-10">
-								<span class="work">扫描员</span></div>							
+								<span class="work">扫描员</span></div>
 						</div>
-						
+
 						<div class="row main-info">
 							<div class="col-lg-8 col-md-8 main-info-font">
 								<span>吉首|</span><span>5星</span>
@@ -380,9 +400,9 @@
 					<div class="col-lg-3 col-md-3 urge-box">
 						<div class="row">
 							<div class="col-lg-10 col-md-10">
-								<span class="work">扫描员</span></div>							
+								<span class="work">扫描员</span></div>
 						</div>
-						
+
 						<div class="row main-info">
 							<div class="col-lg-8 col-md-8 main-info-font">
 								<span>吉首|</span><span>5星</span>
