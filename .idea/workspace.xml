@@ -6,23 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="">
+    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="增加了userinfo界面的接口">
+      <change afterPath="$PROJECT_DIR$/web/user_show.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web_index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/userController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserServiceImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/employee_account_manage.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/employee_account_manage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/practice.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/userController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/UserServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user_info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +74,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
       <recent name="D:\ideaWorkspace\practice\web\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -91,10 +82,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
+      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web\WEB-INF" />
       <recent name="D:\ideaWorkspace\practice\web\js" />
       <recent name="D:\ideaWorkspace\practice\web\css" />
       <recent name="D:\ideaWorkspace\practice\web\img" />
-      <recent name="D:\webProject\20200718\practice\web" />
     </key>
   </component>
   <component name="RunManager">
@@ -183,7 +174,7 @@
       <updated>1595062924000</updated>
       <workItem from="1595062927995" duration="7258000" />
       <workItem from="1595124577677" duration="7087000" />
-      <workItem from="1595295069157" duration="20196000" />
+      <workItem from="1595295069157" duration="24547000" />
     </task>
     <task id="LOCAL-00001" summary="增加用户技能和介绍的更改">
       <created>1595309499522</created>
@@ -192,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595309499522</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加了userinfo界面的接口">
+      <created>1595318569265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595318569265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +225,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了几个页面的整合" />
     <MESSAGE value="增加用户技能和介绍的更改" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加用户技能和介绍的更改" />
+    <MESSAGE value="增加了userinfo界面的接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了userinfo界面的接口" />
   </component>
   <component name="WindowStateProjectService">
     <state x="331" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595295130825">
@@ -247,75 +246,75 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="711" y="344" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595064474202" />
-    <state x="419" y="10" width="802" height="769" key="CommitChangelistDialog2" timestamp="1595309495635">
+    <state x="74" y="18" width="802" height="769" key="CommitChangelistDialog2" timestamp="1595320556131">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="419" y="10" width="802" height="769" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595309495635" />
+    <state x="74" y="18" width="802" height="769" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595320556131" />
     <state x="524" y="13" width="929" height="970" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595131699085" />
     <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1595257659554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595257659554" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595064940982" />
-    <state width="1024" height="153" key="GridCell.Tab.0.bottom" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.0.bottom" timestamp="1595322710897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595322710897" />
     <state width="1430" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.0.center" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.0.center" timestamp="1595322710896">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595322710896" />
     <state width="1430" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.0.left" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.0.left" timestamp="1595322710896">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595322710896" />
     <state width="1430" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.0.right" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.0.right" timestamp="1595322710896">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595322710896" />
     <state width="1430" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.1.bottom" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.1.bottom" timestamp="1595322279490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595322279490" />
     <state width="1430" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.1.center" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.1.center" timestamp="1595322279490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595322279490" />
     <state width="1430" height="275" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.1.left" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.1.left" timestamp="1595322279490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595322279490" />
     <state width="1430" height="275" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.1.right" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.1.right" timestamp="1595322279490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595322279490" />
     <state width="1430" height="275" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.2.bottom" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.2.bottom" timestamp="1595322279490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595322279490" />
     <state width="1430" height="275" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.2.center" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.2.center" timestamp="1595322279490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1595322279490" />
     <state width="1430" height="275" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.2.left" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.2.left" timestamp="1595322279490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1595322279490" />
     <state width="1430" height="275" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
-    <state width="1024" height="153" key="GridCell.Tab.2.right" timestamp="1595318319158">
+    <state width="1024" height="153" key="GridCell.Tab.2.right" timestamp="1595322279490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="153" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1595318319158" />
+    <state width="1024" height="153" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1595322279490" />
     <state width="1430" height="275" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595130858606" />
     <state width="1293" height="491" key="GridCell.Tab.3.bottom" timestamp="1595063115703">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -354,10 +353,10 @@
     </state>
     <state x="369" y="114" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595257616831" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595131734600" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1595309502609">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1595318574263">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595309502609" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595318574263" />
     <state x="469" y="199" key="git4idea.merge.GitPullDialog" timestamp="1595311525824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
