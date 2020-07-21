@@ -13,7 +13,7 @@
     </delete>
     <update id="updateUser" parameterType="User">
         update cityTownWeb.user
-        set uname=#{uname},uedu=#{uedu},usex=#{usex},utime=#{utime},uphone=#{uphone},uskill=#{uskill},uintro=#{uintro}
+        set uname=#{uname},uedu=#{uedu},usex=#{usex},utime=#{utime},uphone=#{uphone}
         where uid=#{uid};
     </update>
     <update id="updateUserSkill" parameterType="User">

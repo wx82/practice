@@ -13,7 +13,17 @@
     </delete>
     <update id="updateUser" parameterType="User">
         update cityTownWeb.user
-        set uname=#{uname},uedu=#{uedu},usex=#{usex},utime=#{utime},uskill=#{uskill},uintro=#{uintro}
+        set uname=#{uname},uedu=#{uedu},usex=#{usex},utime=#{utime},uphone=#{uphone}
+        where uid=#{uid};
+    </update>
+    <update id="updateUserSkill" parameterType="User">
+        update cityTownWeb.user
+        set uskill=#{uskill}
+        where uid=#{uid};
+    </update>
+    <update id="updateUserIntro" parameterType="User">
+        update cityTownWeb.user
+        set uintro=#{uintro}
         where uid=#{uid};
     </update>
     <select id="queryUser" resultType="User">

@@ -105,7 +105,20 @@ To change this template use File | Settings | File Templates.
 					type: 'POST',
 					dataType: 'json',
 					async: false,
-					data: $("#user-info-form").serialize() ,
+					// data: $("#user-info-form").serialize() ,
+					data:{
+						uid:7,
+						uname:$("input[name=uname]").val(),
+						usex:$("input[name=usex]:checked").val(),
+						uphone:$("input[name=uphone]").val(),
+						utime:$("input[name=utime]:checked").val(),
+						// uedu:$("select[name=uedu]:checked").val(),
+						uedu:$("#ueduid").val(),
+					},
+					success:function (res) {
+						console.log(res)
+						// console.log($("#user-info-form").serialize())
+					}
 				})
 				.done(function() {
 					console.log("success");
@@ -122,15 +135,21 @@ To change this template use File | Settings | File Templates.
 			});
 
 			//技能
-			$("#uskill").click(function(event) {
+			$("#uskill-btn").click(function(event) {
 				/* Act on the event */
 				$.ajax({
 					url: '/user/updateuserskill',
 					type: 'POST',
 					dataType: 'json',
 					async: false,
-					contentType: 'application/json;charset=UTF-8',
-					data: $("#uskill-form").serialize(),
+					// contentType: 'application/json;charset=UTF-8',
+					data: {
+						uid:$("input[name=uid]").val(),
+						uskill:$("#uskill1").val(),
+					},
+					success:function (res) {
+						console.log(res)
+					}
 				})
 				.done(function() {
 					console.log("success");
@@ -147,13 +166,19 @@ To change this template use File | Settings | File Templates.
 			});
 
 			//信息
-			$("#uintro").click(function(event) {
+			$("#uintro-btn").click(function(event) {
 				/* Act on the event */
 				$.ajax({
 					url: '/user/updateuserintro',
 					type: 'POST',
 					dataType: 'json',
-					data: $("#uintro-form").serialize() ,
+					data: {
+						uid:$("input[name=uid]").val(),
+						uintro:$("#uintroid").val(),
+					},
+					success:function (res) {
+						console.log(res)
+					}
 				})
 				.done(function() {
 					console.log("success");
@@ -239,7 +264,7 @@ To change this template use File | Settings | File Templates.
 							</li>
 							<li class="li-line"><span class="li-title">学历</span>
 								<!-- <span>餐饮</span> -->
-								<select class="inline-input form-control" name="uedu">
+								<select class="inline-input form-control" name="uedu" id="ueduid">
 									<option value="初中及以下">初中及以下</option>
 									<option value="中专">中专</option>
 									<option value="大专">大专</option>
@@ -305,9 +330,9 @@ To change this template use File | Settings | File Templates.
 							<span class="cube"></span> <span class="line-title">擅长技能</span><span id="cancel2" class="edit">取消</span>
 						</div>
 						
-						<textarea  class="form-control" class="text-input" name="uskill"></textarea>
+						<textarea  class="form-control" class="text-input" name="uskill" id="uskill1"></textarea>
 						<div>
-							<button id="uskill" class="sub">保存</button>
+							<button id="uskill-btn" class="sub">保存</button>
 						</div>
 						
 					</form>
@@ -318,9 +343,15 @@ To change this template use File | Settings | File Templates.
 					<div>
 						<span class="cube"></span> <span class="line-title">自我介绍</span><span id="edit3" class="edit">编辑</span>
 					</div>
-					<div>
-						<span id="uintro" class="grey-font">您还未添加介绍</span>
-					</div>	
+<%--					<div>--%>
+<%--						<span id="uintro" class="grey-font">您还未添加介绍</span>--%>
+<%--					</div>	--%>
+					<div class="li-line ">
+
+						<div>
+							<span id="uintro"></span>
+						</div>
+					</div>
 				</div>
 				<div id="edit-info-box3">
 					<form id="uintro-form">
@@ -329,9 +360,9 @@ To change this template use File | Settings | File Templates.
 							<span class="cube"></span> <span class="line-title">自我介绍</span><span id="cancel3" class="edit">取消</span>
 						</div>
 						
-						<textarea  class="form-control" class="text-input" name="uintro"></textarea>
+						<textarea  class="form-control" class="text-input" name="uintro" id="uintroid"></textarea>
 						<div>
-							<button id="uintro" class="sub">保存</button>
+							<button id="uintro-btn" class="sub">保存</button>
 						</div>
 						
 					</form>
