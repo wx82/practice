@@ -13,6 +13,10 @@ public interface userMapper {
     int delUserById(@Param("uid") int id);
     //修改用户
     int updateUser(User m);
+    //修改用户技能
+    int updateUserSkill(User m);
+    //修改用户介绍
+    int updateUserIntro(User m);
     //查找用户
     User queryUser(User user);
     //查找用户密码

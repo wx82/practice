@@ -22,5 +22,6 @@
 <a href="employee_account_manage.jsp">进入个人账号管理界面</a>
 <a href="employee_interested.jsp">进入个人感兴趣界面</a>
 <a href="employee_remark.jsp">进入个人评论界面</a>
+<a href="user_info.jsp">进入个人信息界面</a>
 </body>
 </html>

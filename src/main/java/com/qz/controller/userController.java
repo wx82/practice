@@ -71,11 +71,31 @@ public class userController {
     //修改基本信息
     @RequestMapping("/updateuser") ///updateuser/{id}
     @ResponseBody
-    public Object updateUser(@RequestBody User user) {
+    public Object updateUser(User user) {
 //        System.out.println("SSM接受到浏览器提交的json，并转换为User对象:"+user);
 //        int res = userService.updateUser(user);
         HashMap hashMap = new HashMap();
         hashMap.put("status",userService.updateUser(user));
+        return hashMap;
+    }
+    //修改技能
+    @RequestMapping("/updateuserskill") ///updateuser/{id}
+    @ResponseBody
+    public Object updateUserSkill(User user) {
+//        System.out.println("SSM接受到浏览器提交的json，并转换为User对象:"+user);
+//        int res = userService.updateUser(user);
+        HashMap hashMap = new HashMap();
+        hashMap.put("status",userService.updateUserSkill(user));
+        return hashMap;
+    }
+    //修改介绍
+    @RequestMapping("/updateuserintro") ///updateuser/{id}
+    @ResponseBody
+    public Object updateUserIntro(User user) {
+//        System.out.println("SSM接受到浏览器提交的json，并转换为User对象:"+user);
+//        int res = userService.updateUser(user);
+        HashMap hashMap = new HashMap();
+        hashMap.put("status",userService.updateUserIntro(user));
         return hashMap;
     }
     //修改手机号

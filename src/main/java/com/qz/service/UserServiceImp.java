@@ -27,6 +27,14 @@ public class UserServiceImp implements UserService{
     public int updateUser(User m) {
         return usermapper.updateUser(m);
     }
+    //修改用户技能
+    public int updateUserSkill(User m){
+        return usermapper.updateUserSkill(m);
+    }
+    //修改用户介绍
+    public int updateUserIntro(User m){
+        return usermapper.updateUserIntro(m);
+    }
 
     public User queryUser(User user) {
         return usermapper.queryUser(user);
