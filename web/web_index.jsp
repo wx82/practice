@@ -55,10 +55,11 @@
 					$("#choose-city").hide()
 					//发送更改信息
 					$.ajax({
-						url: '/job/getjobbycity',
+						url: '/path/to/file',
 						type: 'POST',
 						dataType: 'json',
-						data: {city: city},
+						contentType: 'application/json;charset=UTF-8',
+						data: JSON.stringify({city: city}),
 					})
 					.done(function() {
 						console.log("success");
@@ -81,7 +82,8 @@
 				url: '/job/getjobbycity',
 				type: 'POST',
 				dataType: 'json',
-				data: {jcity: jcity},
+				data: JSON.stringify({jcity: jcity}),
+				contentType: 'application/json;charset=UTF-8',
 				success:function (res) {
 					console.log(res)
 				}
@@ -132,6 +134,7 @@
 
 			$('.money-range').click(function(event) {
 				$(this).css('color', 'blue').siblings('.money-range').css('color', '#000');
+				console.log("==========salary=========")
 				console.log($(this).text())
 				jsalary = $(this).text()
 				/* Act on the event */
@@ -158,17 +161,19 @@
 				// 	var salary2 = $('#salary2').val()
 				// 	jsalary = salary1+'——'+salary2
 				// }
+				console.log("================筛选===============")
 				console.log(jsalary)
 				console.log(jedu)
 				console.log(jtime)
 				$.ajax({
 					//发送筛选信息
-					url: '/path/to/file',
+					url: '/job/getjobbyitems',
 					type: 'POST',
 					dataType: 'JSON',
-					data: {jsalary: jsalary,
+					contentType: 'application/json;charset=UTF-8',
+					data: JSON.stringify({jsalary: jsalary,
 						   jedu : jedu,
-						   jtime : jtime},
+						   jtime : jtime}),
 				})
 				.done(function() {
 					console.log("success");
@@ -244,13 +249,15 @@
 		</div>	
 		<ul class="choosen choice">
 				<li id="choosen-money" class="choosen-list">
-					<span class="money-range range">1000-2000元/月</span>
-					<span class="money-range range" >2000-3000元/月</span>
-					<span class="money-range range">3000-4000元/月</span>
-					<span class="money-range range">4000+元/月</span>
-					<span class="money-range range">50-100元/天</span>
-					<span class="money-range range">100-200元/天</span>
-					<span class="money-range range">200+元/天</span>
+					<span class="money-range range">按月支付</span>
+					<span class="money-range range">1000-2000</span>
+					<span class="money-range range" >2000-3000</span>
+					<span class="money-range range">3000-4000</span>
+					<span class="money-range range">4000+</span>
+					<span class="money-range range">按小时支付</span>
+					<span class="money-range range">50-100</span>
+					<span class="money-range range">100-200</span>
+					<span class="money-range range">200+</span>
 					
 <!-- 					<span class="money-range range">自定义</span> -->
 <!-- 					<span class="range">
