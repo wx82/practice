@@ -42,7 +42,7 @@
         set uphone=#{uphone}
         where uid=#{uid};
     </update>
-    <update id="updatePassword" parameterType="Map">
+    <update id="updatePassword" parameterType="map">
         update cityTownWeb.user
         set upassword=#{newpassword}
         where uid=#{uid};
