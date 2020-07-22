@@ -40,8 +40,8 @@ public class UserServiceImp implements UserService{
         return usermapper.queryUser(user);
     }
     //查找用户密码
-    public String queryPasswd(Integer id){
-        return usermapper.queryPasswd(id);
+    public String queryPassword(Integer id){
+        return usermapper.queryPassword(id);
     }
 
     public List<User> queryAllUser() {
@@ -57,8 +57,8 @@ public class UserServiceImp implements UserService{
 //    public int updatePasswd(Integer id, String newpasswd){
 //        return usermapper.updatePasswd(id, newpasswd);
 //    }
-    public int updatePasswd(HashMap map){
-    return usermapper.updatePasswd(map);
+    public int updatePassword(HashMap map){
+    return usermapper.updatePassword(map);
 }
 
     public User queryUserByUaccount(String uaccount){return usermapper.queryUserByUaccount(uaccount);}

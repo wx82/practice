@@ -28,7 +28,7 @@ $(document).ready(function() {
         data = { "cid": cid }
         $.ajax({
             // url: "http://39.102.38.113:3000/mock/11/merchant/delcomment",
-            url: "user/delcomment?cid="+cid,
+            url: "/user/delComment?cid="+cid,
             type: "POST",
             // headers:  { 'Content-Type':   'application/json' },
             contentType: "application/json;charset=UTF-8",

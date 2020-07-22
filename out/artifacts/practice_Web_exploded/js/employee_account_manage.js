@@ -3,10 +3,10 @@ $(document).ready(function() {
     //获得信息
     $.ajax({
         // url: "http://39.102.38.113:3000/mock/11/user/getuser",
-        url: "user/getuser",
+        url: "/user/getuser",
         type: "post",
         data: JSON.stringify({ "uid": uid }), //uid在html头部写了
-        headers:  { 'Content-Type':   'application/json' },
+        // headers:  { 'Content-Type':   'application/json' },
         contentType: "application/json;charset=UTF-8",
         datatype: "json",
         success: function(result) {
@@ -103,9 +103,9 @@ $(document).ready(function() {
             $.ajax({
                 type: "POST",
                 // url: 'http://39.102.38.113:3000/mock/11/user/updatepasswd', //求职者改密码的url
-                url: 'user/updatepasswd',
-                data: data,
-
+                url: '/user/updatepassword?uid='+uid+"&upassword="+upassword+"&newpassword="+newpassword,
+                data: {},
+                contentType: "application/json;charset=UTF-8",
                 dataType: 'json',
                 success: function(data) {
                     console.log(data);

@@ -145,6 +145,9 @@
 				console.log("==========salary=========")
 				console.log($(this).text())
 				jsalary = $(this).text()
+				if(jsalary=='不限'){
+					jsalary = null;
+				}
 				/* Act on the event */
 			});
 			$('.jedu').click(function(event) {
@@ -152,6 +155,9 @@
 				$(this).css('color', 'blue').siblings('span').css('color', '#000');
 				console.log($(this).text())
 				jedu = $(this).text()
+				if(jedu=='不限'){
+					jedu = null;
+				}
 
 			});
 			$('.jtime').click(function(event) {
@@ -159,6 +165,9 @@
 				$(this).css('color', 'blue').siblings('span').css('color', '#000');
 				console.log($(this).text())
 				jtime = $(this).text()
+				if(jtime=='不限'){
+					jtime = null;
+				}
 			});
 			
 			$('.put').click(function(event) {
@@ -262,6 +271,7 @@
 		</div>	
 		<ul class="choosen choice">
 				<li id="choosen-money" class="choosen-list">
+					<span class="money-range range">不限</span>
 					<span class="money-range range">按月支付</span>
 					<span class="money-range range">1000-2000</span>
 					<span class="money-range range" >2000-3000</span>
@@ -283,14 +293,14 @@
 					
 				</li>
 				<li id="choosen-time" class="choosen-list">
+					<span class="jtime range">不限</span>
 					<span class="jtime range">1-3小时</span>
 					<span class="jtime range">3-6小时</span>
 					<span class="jtime range">6-12小时</span>
 					<span class="jtime range">1周</span>
-					<span class="jtime range">1-3年</span>
-					<span class="jtime range">3-5年</span>
-					<span class="jtime range">5-10年</span>
-					<span class="jtime range">10年以上</span>
+					<span class="jtime range">1-3周</span>
+					<span class="jtime range">1月</span>
+					<span class="jtime range">1月以上</span>
 					<button class="put btn btn-info">确定</button>
 				</li>
 				<li id="choosen-edu" class="choosen-list">
@@ -361,59 +371,59 @@
 			<div id="urge" class="col-lg-9 col-md-9">
 				<!-- <div class="row"> -->
 
-					<div class="col-lg-3 col-md-3 urge-box">
-						<div class="row">
-							<div class="col-lg-10 col-md-10">
-								<span class="work">扫描员</span></div>
-						</div>
+<%--					<div class="col-lg-3 col-md-3 urge-box">--%>
+<%--						<div class="row">--%>
+<%--							<div class="col-lg-10 col-md-10">--%>
+<%--								<span class="work">扫描员</span></div>--%>
+<%--						</div>--%>
 
-						<div class="row main-info">
-							<div class="col-lg-8 col-md-8 main-info-font">
-								<span>吉首|</span><span>5星</span>
-							</div>
-							<div class="col-lg-4 col-md-4"><span class="money-font">100/天</span></div>
-						</div>
-						<div class="row">
-							<button class="property-box colg-4 col-md-4 btn">营业执照</button>
-							<button class="property-box col-lg-4 col-md-4 btn">日结</button>
-						</div>
-					</div>
+<%--						<div class="row main-info">--%>
+<%--							<div class="col-lg-8 col-md-8 main-info-font">--%>
+<%--								<span>吉首|</span><span>5星</span>--%>
+<%--							</div>--%>
+<%--							<div class="col-lg-4 col-md-4"><span class="money-font">100/天</span></div>--%>
+<%--						</div>--%>
+<%--						<div class="row">--%>
+<%--							<button class="property-box colg-4 col-md-4 btn">营业执照</button>--%>
+<%--							<button class="property-box col-lg-4 col-md-4 btn">日结</button>--%>
+<%--						</div>--%>
+<%--					</div>--%>
 
-					<div class="col-lg-3 urge-box">
-						<div class="row">
-							<div class="col-lg-10 col-md-10">
-								<span class="work">扫描员</span></div>
-						</div>
+<%--					<div class="col-lg-3 urge-box">--%>
+<%--						<div class="row">--%>
+<%--							<div class="col-lg-10 col-md-10">--%>
+<%--								<span class="work">扫描员</span></div>--%>
+<%--						</div>--%>
 
-						<div class="row main-info">
-							<div class="col-lg-8 col-md-8 main-info-font">
-								<span>吉首|</span><span>5星</span>
-							</div>
-							<div class="col-lg-3 col-md-3"><span class="money-font">100/天</span></div>
-						</div>
-						<div class="row">
-							<button class="property-box col-lg-4 col-md-4 btn">营业执照</button>
-							<button class="property-box col-lg-4 col-md-4 btn">日结</button>
-						</div>
-					</div>
+<%--						<div class="row main-info">--%>
+<%--							<div class="col-lg-8 col-md-8 main-info-font">--%>
+<%--								<span>吉首|</span><span>5星</span>--%>
+<%--							</div>--%>
+<%--							<div class="col-lg-3 col-md-3"><span class="money-font">100/天</span></div>--%>
+<%--						</div>--%>
+<%--						<div class="row">--%>
+<%--							<button class="property-box col-lg-4 col-md-4 btn">营业执照</button>--%>
+<%--							<button class="property-box col-lg-4 col-md-4 btn">日结</button>--%>
+<%--						</div>--%>
+<%--					</div>--%>
 
-					<div class="col-lg-3 col-md-3 urge-box">
-						<div class="row">
-							<div class="col-lg-10 col-md-10">
-								<span class="work">扫描员</span></div>
-						</div>
+<%--					<div class="col-lg-3 col-md-3 urge-box">--%>
+<%--						<div class="row">--%>
+<%--							<div class="col-lg-10 col-md-10">--%>
+<%--								<span class="work">扫描员</span></div>--%>
+<%--						</div>--%>
 
-						<div class="row main-info">
-							<div class="col-lg-8 col-md-8 main-info-font">
-								<span>吉首|</span><span>5星</span>
-							</div>
-							<div class="col-lg-4 col-md-4"><span class="money-font">100/天</span></div>
-						</div>
-						<div class="row">
-							<button class="property-box col-lg-4 col-md-4 btn">营业执照</button>
-							<button class="property-box col-lg-4 col-md-4 btn">日结</button>
-						</div>
-					</div>
+<%--						<div class="row main-info">--%>
+<%--							<div class="col-lg-8 col-md-8 main-info-font">--%>
+<%--								<span>吉首|</span><span>5星</span>--%>
+<%--							</div>--%>
+<%--							<div class="col-lg-4 col-md-4"><span class="money-font">100/天</span></div>--%>
+<%--						</div>--%>
+<%--						<div class="row">--%>
+<%--							<button class="property-box col-lg-4 col-md-4 btn">营业执照</button>--%>
+<%--							<button class="property-box col-lg-4 col-md-4 btn">日结</button>--%>
+<%--						</div>--%>
+<%--					</div>--%>
 
 
 

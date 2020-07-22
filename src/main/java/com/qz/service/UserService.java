@@ -19,7 +19,7 @@ public interface UserService {
     //查找用户
     User queryUser(User user);
     //查找用户密码
-    String queryPasswd(Integer id);
+    String queryPassword(Integer id);
     //查询所有用户
     List<User> queryAllUser();
     //修改手机号
@@ -27,7 +27,7 @@ public interface UserService {
     //passwd
 //    int updatePasswd(User user);
 //    int updatePasswd(Integer id, String newpasswd);
-    int updatePasswd(HashMap map);
+    int updatePassword(HashMap map);
     //根据用户名来查询用户
     User queryUserByUaccount(String uaccount);
     //注册时添加用户
