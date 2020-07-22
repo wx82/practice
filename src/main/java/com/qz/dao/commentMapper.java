@@ -13,7 +13,7 @@ public interface commentMapper {
     Integer addcomment(Comment cm);
     Integer comment(Comment comment) ;
     Integer updatecomment(Comment cm);
-    Integer delcomment(@Param("cid") Integer id);
+    Integer delcomment(Comment comment);
     Integer delMerC(@Param("cid") Integer id);
     Integer delMerComment(@Param("cid") Integer id);
     List<Comment> queryAllCommentByMid(@Param("mid") Integer id);

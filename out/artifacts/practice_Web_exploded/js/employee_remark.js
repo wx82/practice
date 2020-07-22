@@ -3,11 +3,12 @@ $(document).ready(function() {
     $.ajax({
         type: "post",
         // url: "http://39.102.38.113:3000/mock/11/merchant/queryAllComment",
-        url: "merchant/queryAllComment",
+        url: "/user/queryAllComment?uid="+uid,
         datatype: "json",
-        headers:  { 'Content-Type':   'application/json' },
+        // headers:  { 'Content-Type':   'application/json' },
         contentType: "application/json;charset=UTF-8",
-        data: JSON.stringify({ "uid": uid }),
+        // data: JSON.stringify({ "uid": uid }),
+        data:{},
         success: function(result) {
             // console.log(result);
             var comments = result.comments;
@@ -27,11 +28,12 @@ $(document).ready(function() {
         data = { "cid": cid }
         $.ajax({
             // url: "http://39.102.38.113:3000/mock/11/merchant/delcomment",
-            url: "merchant/delcomment",
-            type: "get",
-            headers:  { 'Content-Type':   'application/json' },
+            url: "user/delcomment?cid="+cid,
+            type: "POST",
+            // headers:  { 'Content-Type':   'application/json' },
             contentType: "application/json;charset=UTF-8",
-            data: JSON.stringify(data),
+            // data: JSON.stringify(data),
+            data:{},
             dataType: "json",
             success: function(result) {
                 var msg = result.status;

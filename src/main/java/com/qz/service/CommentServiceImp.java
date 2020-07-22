@@ -57,8 +57,8 @@ public class CommentServiceImp implements CommentService {
         return commentMapper.updatecomment(cm);
     }
     //用户删除评论（包含商家回复）
-    public Integer delcomment(Integer id) {
-        return commentMapper.delcomment(id);
+    public Integer delcomment(Comment comment) {
+        return commentMapper.delcomment(comment);
     }
     //    商家删除自己评论
     public Integer delMerComment(Integer id) {

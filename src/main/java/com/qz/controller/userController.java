@@ -148,9 +148,9 @@ public class userController {
     //删除评论
     @RequestMapping("/delComment")
     @ResponseBody
-    Object delcomment(Integer id) {
+    Object delcomment(Comment comment) {
         HashMap hashMap = new HashMap();
-        hashMap.put("status",commentService.delcomment(id));
+        hashMap.put("status",commentService.delcomment(comment));
         return hashMap;
 //        return commentService.delcomment(id);
     }

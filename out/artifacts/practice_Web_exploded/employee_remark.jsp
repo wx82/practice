@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/employee_remark.css">
     <script>
-        var uid = 3; //var mid =<%=session.getAttribute("mid")%>; 删前面
+        var uid = 1; <%--//var mid =<%=session.getAttribute("mid")%s>; 删前面 --%>
     </script>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

@@ -11,7 +11,7 @@ public interface CommentService {
     Integer addcomment(Comment cm);
     Integer updatecomment(Comment cm);
     Integer comment(Comment comment);
-    Integer delcomment(@Param("cid") Integer id) ;
+    Integer delcomment(Comment comment) ;
     Integer delMerComment(@Param("cid") Integer id);
     Integer delMerC(Integer cid);
     List<HashMap> queryAllCommentByUid(User user);
