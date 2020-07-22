@@ -320,6 +320,7 @@ public class merController {
     public Object queryMerchantById(int mid){
         System.out.println(mid);
         Merchant merchant = merService.queryMerById(mid);
+        System.out.println(merchant);
         HashMap hashmap = new HashMap();
         if(merchant!=null){
             //用户存在
@@ -338,6 +339,7 @@ public class merController {
     public Object queryMerchantByMname(String mname){
         System.out.println(mname);
         List<Merchant> merchants = merService.queryMerchantByMname(mname);
+        System.out.println(merchants);
         HashMap hashmap = new HashMap();
         if(!merchants.isEmpty()){
             //用户存在

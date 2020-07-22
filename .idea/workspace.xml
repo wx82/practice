@@ -6,27 +6,37 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="增加了userinfo界面的接口">
-      <change afterPath="$PROJECT_DIR$/web/admin_employee.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin_shop.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/admin_employee.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/admin_shop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/admin_employee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/admin_shop.js" afterDir="false" />
+    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/userController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/UserServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/merController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/merController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/userController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/UserServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Merchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/userController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/UserServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/admin_employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/admin_employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/admin_shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/admin_shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/shop_info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/shop_infor.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +90,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -206,7 +219,7 @@
       <workItem from="1595326980392" duration="2609000" />
       <workItem from="1595381253566" duration="3604000" />
       <workItem from="1595388507919" duration="4027000" />
-      <workItem from="1595398565001" duration="519000" />
+      <workItem from="1595398565001" duration="4463000" />
     </task>
     <task id="LOCAL-00001" summary="增加用户技能和介绍的更改">
       <created>1595309499522</created>
@@ -229,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595345707048</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加了后台管理功能">
+      <created>1595399261663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595399261663</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +288,8 @@
     <MESSAGE value="增加了userinfo界面的接口" />
     <MESSAGE value="增加了首页筛选、城市、全部工作的接口 （筛选可得到数据但无显示）" />
     <MESSAGE value="增加了感兴趣界面的接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了感兴趣界面的接口" />
+    <MESSAGE value="增加了后台管理功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了后台管理功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595388767763">

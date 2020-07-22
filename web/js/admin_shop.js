@@ -46,6 +46,7 @@ $(document).ready(function() {
                     merchants = data.merchants;
                     //console.log(merchants);
                     if (data.isExist) {
+                        console.log(merchants);
                         $("#shop_list").html('');
                         $.grep(merchants, function(shop) {
                             var mid = shop.mid;
@@ -89,6 +90,7 @@ $(document).ready(function() {
                 url: "/merchant/adminQueryMerchantById",
                 success: function(data) {
                     if (data.isExist) {
+                        console.log(data.merchant);
                         var mid = data.merchant.mid;
                         var name = data.merchant.mname;
                         var mstar = data.merchant.mstar;

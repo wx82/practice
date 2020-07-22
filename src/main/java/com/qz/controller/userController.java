@@ -223,6 +223,7 @@ public class userController {
     public Object queryUserById(int uid){
         System.out.println(uid);
         User user = userService.queryUserById(uid);
+        System.out.println(user);
         HashMap hashmap = new HashMap();
         if(user!=null){
             //用户存在
@@ -241,6 +242,7 @@ public class userController {
     public Object queryUserByUname(String uname){
         System.out.println(uname);
         List<User> users = userService.queryUserByUname(uname);
+        System.out.println(users);
         HashMap hashmap = new HashMap();
         if(!users.isEmpty()){
             //用户存在

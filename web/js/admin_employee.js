@@ -33,7 +33,10 @@ $(document).ready(function() {
                 contentType: "application/json;charset=UTF-8",
                 url: "/user/adminQueryUserById",
                 success: function(data) {
+                    //console.log(data);
                     if (data.isExist) {
+                        //console.log(data.user);
+                        //console.log("aaaaaaaaaa");
                         var id = data.user.uid;
                         var name = data.user.uname;
                         var code = "<tr class=\"employee\"><td><a class=\"employee_name\">" + name + "</a></td><td><span id=\"id\">id:" + id + "</span></td><td><button class=\"delet_button\" id=\"" + id + "\" >删除求职者</button></td></tr>";
