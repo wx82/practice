@@ -419,15 +419,19 @@
                 </div>
                 <!-- <div class="li-line grey-font">您还没有添加介绍</div> -->
                 <!-- <textarea  class="form-control" class="text-input" name="minfor"></textarea> -->
+                <form action="/merchant/updateLogo" method="post" enctype="multipart/form-data">
+                    <%--   填写mid  ${}--%>
+                    <input type="hidden" name="mid" value="1">
                 <div class="box">
                     <img src="">
-                    <input id="mlogo" type="file" name="mlicense" accept="image/gif, image/jpeg, image/png, image/jpg">
+                        <input id="mlogo" type="file" name="logo" accept="image/gif, image/jpeg, image/png, image/jpg">
+
                 </div>
                 <div>
-                    <button id="upmlogo" class="sub">上传</button>
+                    <button id="upmlogo" type="submit" class="sub">上传</button>
                 </div>
+                </form>
 
-                <!-- </form> -->
             </div>
 
         </div>
@@ -551,11 +555,15 @@
                     <img src="img/首页素材/个人中心.png">
                     <img src="img/首页素材/个人中心.png">
                 </div> -->
+                <form action="/merchant/addMpic" method="post" enctype="multipart/form-data">
+                    <%--   填写mid  ${}--%>
+                    <input type="hidden" name="mid" value="1">
                 <div class="box2">
                     <img src="">
-                    <input id="mpics" type="file" name="mpics" accept="image/gif, image/jpeg, image/png, image/jpg">
+                    <input id="mpics" type="file" name="pics" accept="image/gif, image/jpeg, image/png, image/jpg">
                 </div>
                 <button id="upmpics" type="submit" class="sub">上传</button>
+                </form>
             </div>
 
 
