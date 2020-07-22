@@ -1,5 +1,6 @@
 package com.qz.dao;
 
+import com.qz.pojo.Merchant;
 import com.qz.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
@@ -40,4 +41,6 @@ public interface userMapper {
     List<User> queryUserByUname(String uname);
     //根据id删除用户
     void deleteUserById(int uid);
+    //添加头像
+    Integer addUpic(User user);
 }

@@ -1,7 +1,10 @@
 package com.qz.service;
 
+import com.qz.pojo.Merchant;
 import com.qz.pojo.User;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,6 +15,8 @@ public interface UserService {
     int delUserById(int id);
     //修改用户信息
     int updateUser(User m);
+    //添加头像
+    Integer addUpic(CommonsMultipartFile upload, HttpSession session, User user);
     //修改用户技能
     int updateUserSkill(User m);
     //修改用户介绍

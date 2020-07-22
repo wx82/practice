@@ -10,13 +10,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 
@@ -77,6 +76,20 @@ public class userController {
         HashMap hashMap = new HashMap();
         hashMap.put("status",userService.updateUser(user));
         return hashMap;
+    }
+    //修改头像
+    @RequestMapping("/adduserpic")
+    String addUserPic(@RequestParam( value = "pic",required = false) CommonsMultipartFile file, HttpSession session, User user) {
+        System.out.println("add user pic");
+        System.out.println("file：" + file);
+        System.out.println(user.getUpic());
+        Integer i = userService.addUpic(file,session,user);
+        if(i == 1){
+            return "redirect:/employee_account_manage.jsp";
+        }else {
+            return "上传失败";
+        }
+
     }
     //修改技能
     @RequestMapping("/updateuserskill") ///updateuser/{id}

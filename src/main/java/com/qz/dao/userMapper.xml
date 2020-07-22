@@ -26,6 +26,10 @@
         set uintro=#{uintro}
         where uid=#{uid};
     </update>
+    <insert id="addUpic" parameterType="User">
+        insert into cityTownWeb.user(upic)
+        values (#{upic});
+    </insert>
     <select id="queryUser" resultType="User">
         select * from cityTownWeb.user
         where uid=#{uid}
