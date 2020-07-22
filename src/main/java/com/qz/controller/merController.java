@@ -190,6 +190,12 @@ public class merController {
     public Integer updateJob(Job job) {
         return jobService.updateJob(job);
     }
+    @RequestMapping("/updateAaw")
+    @ResponseBody
+    public Integer updateAaw(@RequestBody Job job){
+        System.out.println("修改年龄和福利"+job);
+        return jobService.updateAaw(job);
+    }
     //查看职位信息
     @RequestMapping("/queryJobByJid")
     @ResponseBody

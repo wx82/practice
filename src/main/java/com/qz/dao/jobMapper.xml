@@ -5,12 +5,17 @@
 
 <mapper namespace="com.qz.dao.jobMapper">
     <insert id="addJob" parameterType="Job">
-        insert into cityTownWeb.job(jname,jedu,jexperience,jage,jsalary)
-        values jname=#{jname},jedu=#{jedu},jexperience=#{jexperience},jage=#{jage},jsalary=#{jsalary};
+        insert into cityTownWeb.job(jname,jedu,jsalary,jrequire,jcontent,jtime,jintro)
+        values (#{jname},#{jedu},#{jage},#{jsalary}#{jrequire},#{jcontent},#{jtime},#{jintro});
     </insert>
     <update id="updateJob" parameterType="Job">
-        update cityTownWeb.job(jname,jedu,jexperience,jage,jsalary)
-        set jname=#{jname},jedu=#{jedu},jexperience=#{jexperience},jage=#{jage},jsalary=#{jsalary}
+        update cityTownWeb.job
+        set jname=#{jname},jedu=#{jedu},jsalary=#{jsalary},jrequire=#{jrequire},jcontent=#{jcontent},jtime=#{jtime},jintro=#{jintro}
+        where jid=#{jid};
+    </update>
+    <update id="updateAaw" parameterType="Job">
+        update cityTownWeb.job
+        set jage=#{jage},jtreatment=#{jtreatment}
         where jid=#{jid};
     </update>
     <delete id="delJob" parameterType="int">
