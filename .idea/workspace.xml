@@ -7,13 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="增加了userinfo界面的接口">
+      <change afterPath="$PROJECT_DIR$/web/admin_employee.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_shop.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/admin_employee.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/admin_shop.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/admin_employee.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/admin_shop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/CommentServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/CommentServiceImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/merController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/merController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/userController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/CommentServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/CommentServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/UserServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -73,23 +88,35 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\webProject\20200722\practice\web\css" />
-      <recent name="D:\webProject\20200722\practice\web" />
-      <recent name="E:\assignment\web\课设\ideal\versioncontrol\20200721\practice\web\WEB-INF\jsp" />
-      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
-      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web\WEB-INF" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.qz.pojo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
       <recent name="D:\ideaWorkspace\practice\web\css" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qz.pojo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hanmengru\Desktop\webcode3\practice\web" />
+      <recent name="C:\Users\hanmengru\Desktop\webcode3\practice\web\js" />
+      <recent name="C:\Users\hanmengru\Desktop\webcode3\practice\web\css" />
+      <recent name="D:\webProject\20200722\practice\web\css" />
+      <recent name="D:\webProject\20200722\practice\web" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.49" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.49" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="D:\Java\jdk\jre" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -179,6 +206,7 @@
       <workItem from="1595326980392" duration="2609000" />
       <workItem from="1595381253566" duration="3604000" />
       <workItem from="1595388507919" duration="4027000" />
+      <workItem from="1595398565001" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="增加用户技能和介绍的更改">
       <created>1595309499522</created>
@@ -205,14 +233,16 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -231,7 +261,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了几个页面的整合" />

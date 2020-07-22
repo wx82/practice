@@ -33,4 +33,11 @@ public interface userMapper {
     User queryUserByUaccount(String uaccount);
     //注册时添加用户
     void addUser2(User user);
+
+    //根据id查询用户
+    User queryUserById(int uid);
+    //根据uname查询用户列表
+    List<User> queryUserByUname(String uname);
+    //根据id删除用户
+    void deleteUserById(int uid);
 }

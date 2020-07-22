@@ -32,4 +32,10 @@ public interface UserService {
     User queryUserByUaccount(String uaccount);
     //注册时添加用户
     void addUser2(User user);
+    //通过id查询用户
+    User queryUserById(int uid);
+    //通过uname查询用户
+    List<User> queryUserByUname(String uname);
+    //通过id删除用户
+    void deleteUserById(int uid);
 }

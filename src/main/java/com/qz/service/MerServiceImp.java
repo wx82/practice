@@ -123,4 +123,8 @@ public class MerServiceImp implements MerService{
         return fileName;
     }
     public void addMerchant(Merchant merchant){mermapper.addMerchant(merchant);}
+
+    public List<Merchant> queryMerchantByMname(String mname){return mermapper.queryMerchantByMname(mname);};
+
+    public void deleteMerchantById(int mid){ mermapper.deleteMerchantById(mid);};
 }

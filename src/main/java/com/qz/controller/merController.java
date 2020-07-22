@@ -302,4 +302,62 @@ public class merController {
 //            return hashMap;
 //        }
 //    }
+
+    //后台管理查看所有商家
+    @RequestMapping("/adminGetMerchants")
+    @ResponseBody
+    public Object showMerchants(){
+        List<Merchant> list = merService.queryAllMer();
+        //System.out.println(list);
+        HashMap merchants = new HashMap();
+        merchants.put("merchants",list);
+        return merchants;
+    }
+
+    //后台管理通过id查找商家
+    @RequestMapping("/adminQueryMerchantById")
+    @ResponseBody
+    public Object queryMerchantById(int mid){
+        System.out.println(mid);
+        Merchant merchant = merService.queryMerById(mid);
+        HashMap hashmap = new HashMap();
+        if(merchant!=null){
+            //用户存在
+            hashmap.put("merchant",merchant);
+            hashmap.put("isExist",true);
+        }else{
+            //用户不存在
+            hashmap.put("isExist",false);
+        }
+        return hashmap;
+    }
+
+    //后台管理通过mname来查找商家
+    @RequestMapping("/adminQueryMerchantByMname")
+    @ResponseBody
+    public Object queryMerchantByMname(String mname){
+        System.out.println(mname);
+        List<Merchant> merchants = merService.queryMerchantByMname(mname);
+        HashMap hashmap = new HashMap();
+        if(!merchants.isEmpty()){
+            //用户存在
+            hashmap.put("merchants",merchants);
+            hashmap.put("isExist",true);
+        }else{
+            //用户不存在
+            hashmap.put("isExist",false);
+        }
+        return hashmap;
+    }
+
+    //后台管理根据id删除用户
+    @RequestMapping("/adminDeleteMerchantById")
+    @ResponseBody
+    public Object deleteMerchantById(int mid){
+        System.out.println(mid);
+        merService.deleteMerchantById(mid);
+        HashMap hashmap = new HashMap();
+        hashmap.put("isSuccessful",true);
+        return hashmap;
+    }
 }

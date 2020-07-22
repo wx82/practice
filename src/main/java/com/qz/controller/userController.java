@@ -206,5 +206,62 @@ public class userController {
         return hashMap;
         //returninterestedService.queryAllInterestedByUid(user);
     }
+
+    //后台管理查看所有求职者
+    @RequestMapping("/adminGetUsers")
+    @ResponseBody
+    public Object showUsers(){
+        List<User> list = userService.queryAllUser();
+        HashMap users = new HashMap();
+        users.put("users",userService.queryAllUser());
+        return users;
+    }
+
+    //后台管理通过id查找求职者
+    @RequestMapping("/adminQueryUserById")
+    @ResponseBody
+    public Object queryUserById(int uid){
+        System.out.println(uid);
+        User user = userService.queryUserById(uid);
+        HashMap hashmap = new HashMap();
+        if(user!=null){
+            //用户存在
+            hashmap.put("user",user);
+            hashmap.put("isExist",true);
+        }else{
+            //用户不存在
+            hashmap.put("isExist",false);
+        }
+        return hashmap;
+    }
+
+    //后台管理通过uname来查找求职者
+    @RequestMapping("/adminQueryUserByUname")
+    @ResponseBody
+    public Object queryUserByUname(String uname){
+        System.out.println(uname);
+        List<User> users = userService.queryUserByUname(uname);
+        HashMap hashmap = new HashMap();
+        if(!users.isEmpty()){
+            //用户存在
+            hashmap.put("users",users);
+            hashmap.put("isExist",true);
+        }else{
+            //用户不存在
+            hashmap.put("isExist",false);
+        }
+        return hashmap;
+    }
+
+    //后台管理根据id删除用户
+    @RequestMapping("/adminDeleteUserById")
+    @ResponseBody
+    public Object deleteUserById(int uid){
+        System.out.println(uid);
+        userService.deleteUserById(uid);
+        HashMap hashmap = new HashMap();
+        hashmap.put("isSuccessful",true);
+        return hashmap;
+    }
 }
 

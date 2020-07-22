@@ -45,4 +45,9 @@ public interface merMapper {
     Merchant queryMerByMaccount(String maccount);
 
     void addMerchant(Merchant merchant);
+
+    //根据uname查询用户列表
+    List<Merchant> queryMerchantByMname(String mname);
+    //根据id删除用户
+    void deleteMerchantById(int mid);
 }

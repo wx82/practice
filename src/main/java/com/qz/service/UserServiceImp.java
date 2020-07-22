@@ -66,4 +66,10 @@ public class UserServiceImp implements UserService{
     public void addUser2(User user){
         usermapper.addUser2(user);
     }
+
+    public User queryUserById(int uid){return usermapper.queryUserById(uid);};
+
+    public  List<User> queryUserByUname(String uname){return usermapper.queryUserByUname(uname);};
+
+    public void deleteUserById(int uid){ usermapper.deleteUserById(uid);};
 }

@@ -38,4 +38,8 @@ public interface MerService {
     Merchant queryMerByMaccount(String maccount);
     //注册时添加商家用户
     void addMerchant(Merchant merchant);
+    //通过mname查询用户
+    List<Merchant> queryMerchantByMname(String mname);
+    //通过id删除用户
+    void deleteMerchantById(int mid);
 }

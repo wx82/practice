@@ -81,4 +81,11 @@
         insert into cityTownWeb.merchant(maccount,mpassword)
         values (#{maccount},#{mpassword});
     </insert>
+    <select id="queryMerchantByMname" resultType="Merchant">
+        select * from cityTownWeb.merchant
+        where mname=#{mname}
+    </select>
+    <delete id="deleteMerchantById" parameterType="int">
+        delete from cityTownWeb.merchant where mid=#{mid}
+    </delete>
 </mapper>
