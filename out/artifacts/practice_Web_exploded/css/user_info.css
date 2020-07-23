@@ -2,38 +2,31 @@ body{
 	background-color: #fcfaf8;
 	color: #666;
 }
-ul{
-	padding: 0;
-}
-li{
-	list-style: none;
-}
-.head{
+.headline {
 	background-color: #fff;
-	padding:20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
 }
-.big-font{
-	position: relative;
-	color: #ff8357;
+
+.big-font {
 	font-size: 2em;
 	font-weight: 700;
-	/*left: 40px;*/
 }
-.small-font{
-	position: relative;
+
+.small-font {
+	font-size: 0.9em;
+}
+
+.top-font {
 	color: #ff8357;
-	font-size: 0.5em;
-	/*left: 40px;*/
 }
-.img-head{
-	height: 100px;
-	width: 100px;
-	margin: 0 auto;
-	border-radius: 50%;
-	border: 1px solid #e5e5e5;
-	text-align: center;
-	line-height: 100px;
+
+.center-font {
+	position: relative;
+	top: 16px;
 }
+
 .center-font{
 	color: #ff8357;
 	position: relative;
@@ -43,15 +36,66 @@ li{
 .main-box{
 	width: 1700px;
 }
-.choice-box{
+
+/* 左侧导航 */
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.choice-box {
 	background-color: #fcf5ef;
+	padding: 30px 0px;
 }
-.choice{
+
+.img-head {
+	height: 100px;
+	width: 100px;
+	margin: 0 auto;
+	border-radius: 50%;
+	border: 1px solid #e5e5e5;
 	text-align: center;
-	height: 30px;
-	color: #666;
-	margin: 30px;
+	line-height: 100px;
 }
+
+.head_image {
+	width: 100px;
+	height: 100px;
+}
+
+.user-name {
+	text-align: center;
+	color: #ff6531;
+	padding: 10px;
+}
+
+.choice {
+	text-align: center;
+	padding: 20px;
+	vertical-align: middle;
+}
+
+.choice a {
+	text-decoration: none;
+	color: #666;
+}
+
+.choice:hover>a {
+	color: #ff6531;
+}
+
+#chosen {
+	background-color: #fff;
+}
+
+#chosen>a {
+	color: #ff6531;
+}
+/*-----------*/
 .shop-name{
 	text-align: center;
 	color: #ff6531;

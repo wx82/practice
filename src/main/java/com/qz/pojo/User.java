@@ -49,14 +49,6 @@ public class User {
         this.upassword = upassword;
     }
 
-    public String getUpic() {
-        return upic;
-    }
-
-    public void setUpic(String upic) {
-        this.upic = upic;
-    }
-
     private String uskill;
     private String utime;
     private String uintro;

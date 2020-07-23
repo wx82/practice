@@ -8,7 +8,6 @@ import java.util.List;
 public interface jobMapper {
     Integer addJob(Job job);
     Integer updateJob(Job job);
-    Integer updateAaw(Job job);
     Integer delJob(@Param("jid") Integer id);
     List<Job> queryAllJobByMid(@Param("mid") Integer id);
     Job queryJobByJid(@Param("jid") Integer id);

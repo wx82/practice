@@ -14,11 +14,6 @@
         insert into cityTownWeb.merchant(mblicense)
         values (#{mblicense});
     </insert>
-    <update id="updateLogo" parameterType="Merchant">
-        update cityTownWeb.merchant
-        set mlogo=#{mlogo}
-        where mid=#{mid};
-    </update>
     <delete id="delMerById" parameterType="int">
         delete from cityTownWeb.merchant where mid = #{mid}
     </delete>
@@ -86,11 +81,4 @@
         insert into cityTownWeb.merchant(maccount,mpassword)
         values (#{maccount},#{mpassword});
     </insert>
-    <select id="queryMerchantByMname" resultType="Merchant">
-        select * from cityTownWeb.merchant
-        where mname=#{mname}
-    </select>
-    <delete id="deleteMerchantById" parameterType="int">
-        delete from cityTownWeb.merchant where mid=#{mid}
-    </delete>
 </mapper>

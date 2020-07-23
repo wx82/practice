@@ -16,8 +16,6 @@ public interface MerService {
     Integer addMer(Merchant m);
     //上传营业执照
     Integer addMblicense(CommonsMultipartFile upload, HttpSession session, Merchant m);
- //上传logo
- Integer updateLogo(CommonsMultipartFile upload, HttpSession session, Merchant m);
    // public Integer addMblicense(Merchant m);
 //    Integer addMblicense(MultipartFile file, Merchant m, ModelMap map);
     //删除商家
@@ -40,8 +38,4 @@ public interface MerService {
     Merchant queryMerByMaccount(String maccount);
     //注册时添加商家用户
     void addMerchant(Merchant merchant);
-    //通过mname查询用户
-    List<Merchant> queryMerchantByMname(String mname);
-    //通过id删除用户
-    void deleteMerchantById(int mid);
 }

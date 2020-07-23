@@ -315,23 +315,37 @@
 </head>
 <body>
 <!-- 头部 -->
-<div class="head">
-    <div class="big-font">C&T招聘网</div>
-    <div class="small-font">city and town recruitment</div>
+<div class="row headline top-font">
+    <!-- 左侧文字 -->
+    <div class="col-lg-2">
+        <div class="big-font">
+            C&T招聘网
+        </div>
+        <div class="small-font">
+            city and town recruitment
+        </div>
+    </div>
+    <!-- 占位 -->
+    <div class="col-lg-9">
+    </div>
+
+    <div class="col-lg-1 center-font">
+        <span>退出登录</span>
+    </div>
 </div>
 <!-- 主要内容 -->
 <div class="container main-box">
     <!-- 左侧选项 -->
-    <div class="col-lg-2 col-md-2 choice-box">
-        <div class="img-head">头像</div>
-        <div class="shop-name"> 嗦粉早餐店</div>
+    <div class="col-lg-3 choice-box">
+        <div class="img-head"><img class="head_image img-circle" src="img/bsPic.png"></div>
+        <div class="shop-name" id="shop_name"> 嗦粉早餐店</div>
         <ul>
-            <li class="click choice">商家资料</li>
-            <li class="choice">认证管理</li>
-            <li class="choice">修改密码</li>
-            <li class="choice">岗位管理</li>
-            <li class="choice">我的评论</li>
-            <li class="choice">我的消息</li>
+            <li class="choice" id="chosen"><a>商家资料</a></li>
+            <li class="choice"><a>认证管理</a></li>
+            <li class="choice" ><a>账号管理</a></li>
+            <li class="choice"><a>岗位管理</a></li>
+            <li class="choice"><a>我的评论</a></li>
+            <li class="choice"><a>我的消息</a></li>
         </ul>
     </div>
     <!-- 右侧内容 -->
@@ -419,19 +433,15 @@
                 </div>
                 <!-- <div class="li-line grey-font">您还没有添加介绍</div> -->
                 <!-- <textarea  class="form-control" class="text-input" name="minfor"></textarea> -->
-                <form action="/merchant/updateLogo" method="post" enctype="multipart/form-data">
-                    <%--   填写mid  ${}--%>
-                    <input type="hidden" name="mid" value="1">
                 <div class="box">
                     <img src="">
-                        <input id="mlogo" type="file" name="logo" accept="image/gif, image/jpeg, image/png, image/jpg">
-
+                    <input id="mlogo" type="file" name="mlicense" accept="image/gif, image/jpeg, image/png, image/jpg">
                 </div>
                 <div>
-                    <button id="upmlogo" type="submit" class="sub">上传</button>
+                    <button id="upmlogo" class="sub">上传</button>
                 </div>
-                </form>
 
+                <!-- </form> -->
             </div>
 
         </div>
@@ -555,15 +565,11 @@
                     <img src="img/首页素材/个人中心.png">
                     <img src="img/首页素材/个人中心.png">
                 </div> -->
-                <form action="/merchant/addMpic" method="post" enctype="multipart/form-data">
-                    <%--   填写mid  ${}--%>
-                    <input type="hidden" name="mid" value="1">
                 <div class="box2">
                     <img src="">
-                    <input id="mpics" type="file" name="pics" accept="image/gif, image/jpeg, image/png, image/jpg">
+                    <input id="mpics" type="file" name="mpics" accept="image/gif, image/jpeg, image/png, image/jpg">
                 </div>
                 <button id="upmpics" type="submit" class="sub">上传</button>
-                </form>
             </div>
 
 

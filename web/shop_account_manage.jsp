@@ -44,13 +44,12 @@
         <div class="img-head"><img class="head_image img-circle" src="img/bsPic.png"></div>
         <div class="shop-name" id="shop_name"> 嗦粉早餐店</div>
         <ul>
-            <li class="choice">商家资料</li>
-            <li class="choice">认证管理</li>
-            <li class="choice" id="chosen">账号管理</li>
-            <li class="choice">岗位管理</li>
-            <li class="choice">我的评论</li>
-            <li class="choice">我的消息</li>
-            <li class="choice">举报</li>
+            <li class="choice"><a href="shop_info.jsp">商家资料</a></li>
+            <li class="choice"><a href="">认证管理</a></li>
+            <li class="choice" id="chosen"><a>账号管理</a></li>
+            <li class="choice"><a href="">岗位管理</a></li>
+            <li class="choice"><a href="">我的评论</a></li>
+            <li class="choice"><a href="">我的消息</a></li>
         </ul>
     </div>
 

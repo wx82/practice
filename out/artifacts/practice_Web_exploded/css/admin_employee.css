@@ -1,0 +1,178 @@
+/* 白色标题栏 */
+
+body {
+    background-color: #fcfaf8;
+}
+
+.headline {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+.big-font {
+    font-size: 2em;
+}
+
+.small-font {
+    font-size: 0.9em;
+}
+
+.top-font {
+    color: #ff8357;
+}
+
+.center-font {
+    position: relative;
+    top: 16px;
+}
+
+.content {
+    margin-top: 20px;
+    width: 90%;
+}
+
+
+/* 左侧导航 */
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.choice-box {
+    background-color: #fcf5ef;
+    height: 500px;
+}
+
+.img-head {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 100px;
+}
+
+.employee-name {
+    text-align: center;
+    color: #ff6531;
+}
+
+.choice {
+    text-align: center;
+    height: 30px;
+    color: #666;
+    margin: 30px;
+}
+
+.chosen {
+    color: #ff6531;
+}
+
+
+/* 右侧内容 */
+
+
+/* 查询表单 */
+
+.search_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+input[type="text"] {
+    margin-top: 5px;
+    color: #666666;
+    height: 30px;
+    width: 200px;
+    border: none;
+    background-color: #fcfaf8;
+    padding-left: 10px;
+    height: 40px;
+}
+
+input[type="button"] {
+    background-color: #ff6531;
+    border: none;
+    color: #fff;
+    padding: 8px;
+    width: 120px;
+    margin: 1px;
+}
+
+.right-part {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+
+.line-title {
+    font-size: 1.3em;
+    color: #ff6531;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+/* 求职者 */
+
+.icon {
+    width: 15px;
+}
+
+.history {
+    padding: 0px;
+}
+
+.delet_button {
+    background-color: #999999;
+    border: none;
+    color: #fff;
+    padding: 8px;
+    width: 120px;
+    margin: 1px;
+}
+
+.employee_name {
+    font-size: 1.3em;
+    width: 300px;
+    display: inline-block;
+}
+
+#id {
+    color: #ff6531;
+    width: 250px;
+    display: inline-block;
+}
+
+
+/* 表格 */
+
+#employee_list td {
+    border-top: 10px solid #fff;
+    vertical-align: middle;
+}
+
+#employee_list tr {
+    margin-top: 20px;
+    height: 70px;
+}
+
+.employee {
+    background-color: #fcfaf8;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+    padding: 15px 25px;
+    margin: 10px 10px;
+    border: none;
+}
