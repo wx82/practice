@@ -35,22 +35,7 @@ public class MerServiceImp implements MerService{
         m.setMlicense(fileName);
         return mermapper.addMblicense(m);
     }
-   /* public Integer addMblicense(MultipartFile file, Merchant m, ModelMap map) {
-        //基础路径
-        String filePath = "";
-        // 获取原始图片的扩展名
-        String originalFilename = file.getOriginalFilename();
-        // 生成文件新的名字
-        String newFileName = UUID.randomUUID() + originalFilename;
-        // 封装上传文件位置的全路径
-        File targetFile = new File(filePath, newFileName);
-        try {
-            file.transferTo(targetFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return mermapper.addMblicense(m);
-    }*/
+
 
     public Integer delMerById(Integer id) {
         return mermapper.delMerById(id);

@@ -92,6 +92,20 @@ public class merController {
         return merService.updateMerPsw(m);
     }
 
+    //上传商家logo
+    @RequestMapping("/updateLogo")
+    String addLogo(@RequestParam( value = "logo",required = false) CommonsMultipartFile file, HttpSession session, Merchant m) {
+        System.out.println("调用添加logo");
+        System.out.println("文件：" + file);
+        System.out.println(m.getMid());
+        Integer i = merService.updateLogo(file, session, m);
+        if(i == 1){
+            return "redirect:/shop_info.jsp";
+        }else {
+            return "上传失败";
+        }
+
+    }
     //===========商铺展示图图片操作=================
     @Autowired
     //括号中填写-service中的beanID
@@ -99,8 +113,8 @@ public class merController {
     private MpicsService mpicsService = new MpicsServiceImp();
     //1、增加商铺展示图片
     @RequestMapping("/addMpic")
-    public int addMpic(MultipartFile file, Mpics mp, ModelMap map){
-        return mpicsService.addMpic(file, mp, map);
+    public int addMpic(@RequestParam( value = "pics",required = false) CommonsMultipartFile file, HttpSession session,Mpics mp){
+        return mpicsService.addMpic(file, session, mp);
     }
     @RequestMapping("/delMpic")
     Integer delMpic(Integer id){

@@ -18,6 +18,8 @@ public interface MerService {
     Integer addMblicense(CommonsMultipartFile upload, HttpSession session, Merchant m);
    // public Integer addMblicense(Merchant m);
 //    Integer addMblicense(MultipartFile file, Merchant m, ModelMap map);
+   //上传logo
+   Integer updateLogo(CommonsMultipartFile upload, HttpSession session, Merchant m);
     //删除商家
     Integer delMerById(Integer id);
     //修改商家
