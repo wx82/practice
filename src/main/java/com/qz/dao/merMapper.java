@@ -45,4 +45,6 @@ public interface merMapper {
     Merchant queryMerByMaccount(String maccount);
 
     void addMerchant(Merchant merchant);
+    //上传logo
+    Integer updateLogo(Merchant m);
 }

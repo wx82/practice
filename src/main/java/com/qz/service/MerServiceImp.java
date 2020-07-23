@@ -123,4 +123,39 @@ public class MerServiceImp implements MerService{
         return fileName;
     }
     public void addMerchant(Merchant merchant){mermapper.addMerchant(merchant);}
+
+
+
+    public Integer updateLogo(CommonsMultipartFile upload, HttpSession session, Merchant m) {
+        ServletContext servletContext = session.getServletContext();
+        String realPath = servletContext.getRealPath("/mlogo");
+        String fileName = uploadPic2(upload, session,realPath);  //上传文件
+        m.setMlogo("/mlogo/"+fileName);
+        return mermapper.updateLogo(m);
+    }
+
+    private String uploadPic2(CommonsMultipartFile upload, HttpSession session,String realPath){
+        /* 上传图片 */
+        //变成程序中的路径
+        File uploadPath = new File(realPath);
+        if(!uploadPath.exists()){
+            uploadPath.mkdirs();   //若文件夹不存在则创建文件夹
+        }
+        //确定最终上传路径
+        String uuid = UUID.randomUUID().toString();  //使用随机数
+        String str = upload.getOriginalFilename();  //获得文件后缀
+        String str1=str.substring(0, str.indexOf("."));
+        String str2=str.substring(str1.length(), str.length());
+        String fileName = uuid.replace("-", "") + str2;  //设置文件名
+        uploadPath = new File(uploadPath + "/" + fileName);
+        //开始上传
+        try {
+            upload.transferTo(uploadPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return fileName;
+    }
+
+
 }

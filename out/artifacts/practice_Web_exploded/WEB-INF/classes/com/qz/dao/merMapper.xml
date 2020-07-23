@@ -81,4 +81,9 @@
         insert into cityTownWeb.merchant(maccount,mpassword)
         values (#{maccount},#{mpassword});
     </insert>
+    <update id="updateLogo" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set mlogo=#{mlogo}
+        where mid=#{mid};
+    </update>
 </mapper>
