@@ -14,11 +14,16 @@
     <link rel="stylesheet" type="text/css" href="css/work_info.css">
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript">
+        <% String jid=request.getParameter("jid");
+        String mid=request.getParameter("mid"); %>
         $(function(){
-            var mid=1;//岗位对呀商家id
+            console.log("before"+jid);
+            var mid=<%=mid%>;//岗位对呀商家id
+            var jid = <%=jid%>;
+            console.log("after"+jid);
             //职业详情
             $.ajax({
-                url: 'merchant/queryJobByJid?jid='+1,//jid
+                url: 'merchant/queryJobByJid?jid='+jid,//jid
                 type: 'POST',
                 // dataType: 'json',
                 // data: {jid: 1},

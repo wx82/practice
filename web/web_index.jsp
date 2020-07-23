@@ -20,6 +20,7 @@
 			districts_start()
 
 			jcity = returnCitySN.cname//获取到到省市
+			jcity1 = returnCitySN.cname.split('省')[1] //获取到市 比较好查找
 			$("#city").append(jcity)
 
 			//筛选
@@ -69,8 +70,8 @@
 								jobs = result.jobs;
 								console.log(jobs);
 								$.grep(jobs,function(job){//重新添加子元素
-									$("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>				</div>')
-									//$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>					</div>  ')
+									$("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work"><a href="work_infor.jsp?jid='+job.jid+'&mid='+job.mid+'">'+job.jname+'</a></span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>				</div>')
+									//$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>					</div>  ')
 								})
 								console.log("success");
 							})
@@ -102,8 +103,8 @@
 								console.log("==========time=========")
 								console.log(jobs)
 								$.grep(jobs,function(job){
-									$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>					</div>  ')
-									// $("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>				</div>')
+									$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work"><a href="work_infor.jsp?jid='+job.jid+'&mid='+job.mid+'">'+job.jname+'</a></span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>					</div>  ')
+									// $("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>				</div>')
 								})
 								console.log("success");
 							})
@@ -124,7 +125,7 @@
 				url: '/job/getjobbycity',
 				type: 'POST',
 				dataType: 'json',
-				data: JSON.stringify({jcity: jcity}),
+				data: JSON.stringify({jcity: jcity1}),
 				contentType: 'application/json;charset=UTF-8',
 				success:function (res) {
 					console.log(res)
@@ -135,8 +136,8 @@
 						jobs = result.jobs;
 						console.log(jobs);
 						$.grep(jobs,function(job){
-							$("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>				</div>')
-							//$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>					</div>  ')
+							$("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work"><a href="work_infor.jsp?jid='+job.jid+'&mid='+job.mid+'">'+job.jname+'</a></span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>				</div>')
+							//$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>					</div>  ')
 						})
 						console.log("success");
 					})
@@ -157,7 +158,7 @@
 				url: '/job/getjobbytime',
 				type: 'POST',
 				dataType: 'json',
-				data: JSON.stringify({jcity: jcity}),
+				data: JSON.stringify({jcity: jcity1}),
 				contentType: 'application/json;charset=UTF-8',
 				success:function (res) {
 					console.log(res)
@@ -167,8 +168,8 @@
 						console.log(result)
 						jobs = result.jobs;
 						$.grep(jobs,function(job){
-							$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>					</div>  ')
-							// $("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>				</div>')
+							$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work"><a href="work_infor.jsp?jid='+job.jid+'&mid='+job.mid+'">'+job.jname+'</a></span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>					</div>  ')
+							// $("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>				</div>')
 						})
 						console.log("success");
 					})
@@ -243,8 +244,8 @@
 							jobs = result.jobs;
 							$("#urge").empty()
 							$.grep(jobs,function(job){
-								// $("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>				</div>')
-								$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jintro+'</span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">日结</button>						</div>					</div>  ')
+								// $("#all-work").append('<div class=" all-box">					<div class="row">							<div class="col-lg-10">								<span class="work">'+job.jname+'</span></div>													</div>												<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jaddress+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">营业执照</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>				</div>')
+								$("#urge").append(' <div class="col-lg-3 urge-box">						<div class="row">							<div class="col-lg-10">								<span class="work"><a href="work_infor.jsp?jid='+job.jid+'&mid='+job.mid+'">'+job.jname+'</a></span></div>													</div>						<div class="row main-info">							<div class="col-lg-8 main-info-font">								<span>'+job.jcity+'|</span><span>5星</span>							</div>							<div class="col-lg-4"><span class="money-font">'+job.jsalary+'</span></div>						</div>						<div class="row">							<button class="property-box col-lg-4 btn">'+job.jtreatment+'</button>							<button class="property-box col-lg-4 btn">'+job.jmethod+'</button>						</div>					</div>  ')
 							})
 							console.log("success");
 						})
@@ -405,7 +406,7 @@
 			</div>
 			<!-- 个人中心，我的资料 -->
 			<div class="row">
-				<div class="goto-self"> 去个人中心>> </div>
+				<div class="goto-self"> <a href="user_info.jsp?uid=">去个人中心>> </a></div>
 			</div>
 
 		</div>
@@ -433,7 +434,7 @@
 			<%--						</div>--%>
 			<%--						<div class="row">--%>
 			<%--							<button class="property-box colg-4 col-md-4 btn">营业执照</button>--%>
-			<%--							<button class="property-box col-lg-4 col-md-4 btn">日结</button>--%>
+			<%--							<button class="property-box col-lg-4 col-md-4 btn">'+job.jmethod+'</button>--%>
 			<%--						</div>--%>
 			<%--					</div>--%>
 
@@ -451,7 +452,7 @@
 			<%--						</div>--%>
 			<%--						<div class="row">--%>
 			<%--							<button class="property-box col-lg-4 col-md-4 btn">营业执照</button>--%>
-			<%--							<button class="property-box col-lg-4 col-md-4 btn">日结</button>--%>
+			<%--							<button class="property-box col-lg-4 col-md-4 btn">'+job.jmethod+'</button>--%>
 			<%--						</div>--%>
 			<%--					</div>--%>
 
@@ -469,7 +470,7 @@
 			<%--						</div>--%>
 			<%--						<div class="row">--%>
 			<%--							<button class="property-box col-lg-4 col-md-4 btn">营业执照</button>--%>
-			<%--							<button class="property-box col-lg-4 col-md-4 btn">日结</button>--%>
+			<%--							<button class="property-box col-lg-4 col-md-4 btn">'+job.jmethod+'</button>--%>
 			<%--						</div>--%>
 			<%--					</div>--%>
 
@@ -509,7 +510,7 @@
 		<%--						</div>--%>
 		<%--						<div class="row">--%>
 		<%--							<button class="property-box col-lg-4 col-md-4 btn">营业执照</button>--%>
-		<%--							<button class="property-box col-lg-4 col-md-4 btn">日结</button>--%>
+		<%--							<button class="property-box col-lg-4 col-md-4 btn">'+job.jmethod+'</button>--%>
 		<%--						</div>--%>
 		<%--				</div>--%>
 		<%--				--%>
