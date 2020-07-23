@@ -91,20 +91,7 @@ public class merController {
     Integer updateMerPsw(@RequestBody Merchant m){
         return merService.updateMerPsw(m);
     }
-    //上传商家logo
-    @RequestMapping("/updateLogo")
-    String addLogo(@RequestParam( value = "logo",required = false) CommonsMultipartFile file, HttpSession session, Merchant m) {
-        System.out.println("调用添加logo");
-        System.out.println("文件：" + file);
-        System.out.println(m.getMid());
-        Integer i = merService.updateLogo(file, session, m);
-        if(i == 1){
-            return "redirect:/shop_info.jsp";
-        }else {
-            return "上传失败";
-        }
 
-    }
     //===========商铺展示图图片操作=================
     @Autowired
     //括号中填写-service中的beanID
@@ -112,15 +99,9 @@ public class merController {
     private MpicsService mpicsService = new MpicsServiceImp();
     //1、增加商铺展示图片
     @RequestMapping("/addMpic")
-    String addMpic(@RequestParam( value = "pics",required = false) CommonsMultipartFile file, HttpSession session, Mpics m){
-        Integer i = mpicsService.addMpic(file,session,m);
-        if(i == 1){
-            return "redirect:/shop_info.jsp";
-        }else {
-            return "上传失败";
-        }
+    public int addMpic(MultipartFile file, Mpics mp, ModelMap map){
+        return mpicsService.addMpic(file, mp, map);
     }
-
     @RequestMapping("/delMpic")
     Integer delMpic(Integer id){
         return mpicsService.delMpic(id);
@@ -208,12 +189,6 @@ public class merController {
     @RequestMapping("/updateJob")
     public Integer updateJob(Job job) {
         return jobService.updateJob(job);
-    }
-    @RequestMapping("/updateAaw")
-    @ResponseBody
-    public Integer updateAaw(@RequestBody Job job){
-        System.out.println("修改年龄和福利"+job);
-        return jobService.updateAaw(job);
     }
     //查看职位信息
     @RequestMapping("/queryJobByJid")
@@ -327,64 +302,4 @@ public class merController {
 //            return hashMap;
 //        }
 //    }
-
-    //后台管理查看所有商家
-    @RequestMapping("/adminGetMerchants")
-    @ResponseBody
-    public Object showMerchants(){
-        List<Merchant> list = merService.queryAllMer();
-        //System.out.println(list);
-        HashMap merchants = new HashMap();
-        merchants.put("merchants",list);
-        return merchants;
-    }
-
-    //后台管理通过id查找商家
-    @RequestMapping("/adminQueryMerchantById")
-    @ResponseBody
-    public Object queryMerchantById(int mid){
-        System.out.println(mid);
-        Merchant merchant = merService.queryMerById(mid);
-        System.out.println(merchant);
-        HashMap hashmap = new HashMap();
-        if(merchant!=null){
-            //用户存在
-            hashmap.put("merchant",merchant);
-            hashmap.put("isExist",true);
-        }else{
-            //用户不存在
-            hashmap.put("isExist",false);
-        }
-        return hashmap;
-    }
-
-    //后台管理通过mname来查找商家
-    @RequestMapping("/adminQueryMerchantByMname")
-    @ResponseBody
-    public Object queryMerchantByMname(String mname){
-        System.out.println(mname);
-        List<Merchant> merchants = merService.queryMerchantByMname(mname);
-        System.out.println(merchants);
-        HashMap hashmap = new HashMap();
-        if(!merchants.isEmpty()){
-            //用户存在
-            hashmap.put("merchants",merchants);
-            hashmap.put("isExist",true);
-        }else{
-            //用户不存在
-            hashmap.put("isExist",false);
-        }
-        return hashmap;
-    }
-
-    //后台管理根据id删除用户
-    @RequestMapping("/adminDeleteMerchantById")
-    @ResponseBody
-    public Object deleteMerchantById(int mid){
-        System.out.println(mid);
-        merService.deleteMerchantById(mid);
-        HashMap hashmap = new HashMap();
-        hashmap.put("isSuccessful",true);
-        return hashmap;
-    }
 }

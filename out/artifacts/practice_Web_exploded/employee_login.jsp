@@ -25,13 +25,8 @@
         </div>
     </div>
     <!-- 占位 -->
-    <div class="col-lg-8">
+    <div class="col-lg-10">
 
-    </div>
-
-    <div class="col-lg-2 center-font">
-        <span>吉首市</span>
-        <span>[更换位置]</span>
     </div>
 
 </div>

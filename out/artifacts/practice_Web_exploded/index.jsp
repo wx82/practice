@@ -26,8 +26,5 @@
 <a href="user_show.jsp">进入个人信息查看界面</a>
 <a href="web_index.jsp">网站首页</a>
 <a href="jsp/websocket.jsp">聊天</a>
-<a href="admin_login.jsp">进入后台管理登录界面</a>
-<a href="admin_employee.jsp">进入后台管理求职者界面</a>
-<a href="admin_shop.jsp">进入后台管理商家界面</a>
 </body>
 </html>

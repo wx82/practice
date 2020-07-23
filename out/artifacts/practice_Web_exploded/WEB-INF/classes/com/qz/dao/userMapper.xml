@@ -55,15 +55,4 @@
         insert into cityTownWeb.user(uaccount,upassword)
         values (#{uaccount},#{upassword});
     </insert>
-    <select id="queryUserById" resultType="User">
-        select * from cityTownWeb.user
-        where uid=#{uid}
-    </select>
-    <select id="queryUserByUname" resultType="User">
-        select * from cityTownWeb.user
-        where uname=#{uname}
-    </select>
-    <delete id="deleteUserById" parameterType="int">
-        delete from cityTownWeb.user where uid=#{uid}
-    </delete>
 </mapper>

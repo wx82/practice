@@ -38,11 +38,24 @@
 </head>
 <body>
 	<!-- 头部 -->
-	<div class="head row headline top-font">
-		<div class="col-lg-2 col-md-2">
-			<div class="big-font">C&T招聘网</div>
-			<div class="small-font">city and town recruitment</div>
-		</div>		
+	<div class="row headline top-font">
+		<!-- 左侧文字 -->
+		<div class="col-lg-2">
+			<div class="big-font">
+				C&T招聘网
+			</div>
+			<div class="small-font">
+				city and town recruitment
+			</div>
+		</div>
+		<!-- 占位 -->
+		<div class="col-lg-9">
+		</div>
+
+		<div class="col-lg-1 center-font">
+			<span>退出登录</span>
+		</div>
+	</div>
 		
 		
 			
