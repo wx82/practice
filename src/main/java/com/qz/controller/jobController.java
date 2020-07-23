@@ -59,6 +59,13 @@ public class jobController {
         jobs.put("jobs",jobService.queryJobByitems(job));
         return jobs;
     }
+    @RequestMapping("/getjobbytime")
+    @ResponseBody
+    public Object queryJobBytime(@RequestBody Job job) {
+        HashMap jobs = new HashMap();
+        jobs.put("jobs",jobService.queryJobBytime(job));
+        return jobs;
+    }
 //    @RequestMapping("/getjobbyjid")
 //    @ResponseBody
 //    public Object queryJobByJid(@Param("jid") Integer id) {
