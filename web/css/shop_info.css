@@ -1,3 +1,4 @@
+/* 白色标题栏 */
 body{
 	background-color: #fcfaf8;
 	color: #666;
@@ -47,6 +48,11 @@ li{
 	color: #666;
 	padding:  30px;
 	line-height: 0px;
+}
+
+#chosen {
+	color: #ff6531;
+	background-color: #fff;
 }
 .shop-name{
 	text-align: center;

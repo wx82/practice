@@ -34,7 +34,7 @@
 <!--内容-->
 <div class="container content">
     <!-- 左侧选项 -->
-    <div class="col-lg-3 choice-box">
+    <div class="col-lg-3 col-md-2 choice-box">
         <div class="img-head">头像</div>
         <div class="shop-name"> 嗦粉早餐店</div>
         <ul>

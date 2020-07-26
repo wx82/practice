@@ -17,7 +17,7 @@
     <script type="text/javascript" src="js/main.js"></script>
 
     <script type="text/javascript">
-        $(function(){
+        $(function() {
 
             // $("#city").ProvinceCity();
             // $('#demo').citys({code:350206});
@@ -44,17 +44,17 @@
 
 
             $.ajax({
-                url: '/merchant/oneMer?mid='+1,//mid
+                url: '/merchant/oneMer?mid=' + 1,//mid
                 type: 'GET',
                 dataType: 'json',
             })
-                .done(function(result) {
+                .done(function (result) {
                     console.log("success");
-                    console.log(result)
+                    console.log(result);
                     $("#mname").append(result.mname)//商铺名字渲染
                     $("input[name='mname']").val(result.mname)//商铺名字对应的input
                     // console.log($("input[name='mname']"))
-                    $("#maddress").append(result.maddprovince+result.maddcity+result.maddcounty+result.maddress)
+                    $("#maddress").append(result.maddprovince + result.maddcity + result.maddcounty + result.maddress)
                     // $("#maddress").append(result.maddress)
                     $("input[name='maddress']").val(result.maddress)
                     $("#mstar").append(result.mstar)
@@ -65,11 +65,11 @@
                     $("textarea[name='minfo']").val(result.minfo)
                     // console.log(result.mwelfare)
                     allWelfare = result.mwelfare
-                    if(result.mwelfare != null){
+                    if (result.mwelfare != null) {
                         var welfare = result.mwelfare.split('，')
-                        $.grep(welfare,function(wel){
-                            $("#mwelfare").append('<span class="advan">'+wel+'</span>')
-                            $("#mwelfare2").append('<span class="advan">'+wel+'</span>')
+                        $.grep(welfare, function (wel) {
+                            $("#mwelfare").append('<span class="advan">' + wel + '</span>')
+                            $("#mwelfare2").append('<span class="advan">' + wel + '</span>')
                         })
                     }
 
@@ -77,240 +77,164 @@
                     $("input[name='dname']").val(result.dname)
                     $("#dphone").append(result.dphone)
                     $("input[name='dphone']").val(result.dphone)
+                    //设置logo
+                    $("#logo-img").attr("src", result.mlogo)
+                    $("#logo-img2").attr("src", result.mlogo)
 
-                    //省市区设置不了
-                    // result.mprovince = "河南省"
-                    // result.mcity = "新乡市"
-                    // result.marea = "红旗区"
-                    // $("select[name='mprovince']").val(result.mprovince)//省市区
-                    // $("select[name='mcity']").val(result.mcity)
-                    // $("select[name='marea']").val(result.marea)
-
-
-                })
-                .fail(function() {
-                    console.log("error");
-                })
-                .always(function() {
-                    console.log("complete");
-                });
-
-
-
-            // 编辑或取消的函数
-            var editFun = function(edit,cancel,infoBox,editBox){
-                edit.click(function(event) {
-                    infoBox.hide();
-                    editBox.show();
-                });
-                cancel.click(function(event) {
-                    /* Act on the event */
-                    infoBox.show();
-                    editBox.hide();
-                });
-            }
-
-            editFun($("#edit1"),$("#cancel1"),$("#info-box1"),$("#edit-info-box1"))
-            editFun($("#edit2"),$("#cancel2"),$("#info-box2"),$("#edit-info-box2"))
-            editFun($("#edit3"),$("#cancel3"),$("#info-box3"),$("#edit-info-box3"))
-            editFun($("#edit4"),$("#cancel4"),$("#info-box4"),$("#edit-info-box4"))
-            editFun($("#edit5"),$("#cancel5"),$("#info-box5"),$("#edit-info-box5"))
-            editFun($("#edit6"),$("#cancel6"),$("#info-box6"),$("#edit-info-box6"))
-
-
-            //基础资料
-            $("#updateMerBasic").click(function() {
-                alert("点击了");
-                /* Act on the event */
-                $.ajax({
-                    url: "/merchant/updateMerBasic",
-                    type: "post",
-                    dataType: 'text',
-                    data: $("#updateMerBasic-form").serialize(),
-                })
-                    .done(function() {
-                        console.log("success");
-                        alert('修改成功')
-                        window.location.reload();//刷新页面
+                    //
+                    // 设置商铺图片
+                    // <div id="mpics-box">
+                    $.grep(result.pics, function (pic) {
+                        $("#mpics-box").append('<img src=' + pic.mpaddr + ' width="128" height="128">')
+                        $("#box2").append('<img src=' + pic.mpaddr + ' width="128" height="128">')
+                        //省市区设置不了
+                        // result.mprovince = "河南省"
+                        // result.mcity = "新乡市"
+                        // result.marea = "红旗区"
+                        // $("select[name='mprovince']").val(result.mprovince)//省市区
+                        // $("select[name='mcity']").val(result.mcity)
+                        // $("select[name='marea']").val(result.marea)
+                        })
                     })
-                    .fail(function() {
-                        console.log("error");
-                    })
-                    .always(function() {
-                        console.log("complete");
+                        .fail(function () {
+                            console.log("error");
+                        })
+                        .always(function () {
+                            console.log("complete");
+                        });
+
+
+                    // 编辑或取消的函数
+                    var editFun = function (edit, cancel, infoBox, editBox) {
+                        edit.click(function (event) {
+                            infoBox.hide();
+                            editBox.show();
+                        });
+                        cancel.click(function (event) {
+                            /* Act on the event */
+                            infoBox.show();
+                            editBox.hide();
+                        });
+                    }
+
+                    editFun($("#edit1"), $("#cancel1"), $("#info-box1"), $("#edit-info-box1"))
+                    editFun($("#edit2"), $("#cancel2"), $("#info-box2"), $("#edit-info-box2"))
+                    editFun($("#edit3"), $("#cancel3"), $("#info-box3"), $("#edit-info-box3"))
+                    editFun($("#edit4"), $("#cancel4"), $("#info-box4"), $("#edit-info-box4"))
+                    editFun($("#edit5"), $("#cancel5"), $("#info-box5"), $("#edit-info-box5"))
+                    editFun($("#edit6"), $("#cancel6"), $("#info-box6"), $("#edit-info-box6"))
+
+
+                    //基础资料
+                    $("#updateMerBasic").click(function () {
+                        alert("点击了");
+                        /* Act on the event */
+                        $.ajax({
+                            url: "/merchant/updateMerBasic",
+                            type: "post",
+                            dataType: 'text',
+                            data: $("#updateMerBasic-form").serialize(),
+                        })
+                            .done(function () {
+                                console.log("success");
+                                alert('修改成功')
+                                window.location.reload();//刷新页面
+                            })
+                            .fail(function () {
+                                console.log("error");
+                            })
+                            .always(function () {
+                                console.log("complete");
+                            });
+
                     });
 
-            });
+                    //基本信息
+                    $("#updateMerInfor").click(function (event) {
+                        /* Act on the event */
+                        $.ajax({
+                            url: '/merchant/updateMerInfor',
+                            type: 'POST',
+                            dataType: 'text',
+                            data: $("#updateMerInfor-form").serialize(),
+                        })
+                            .done(function () {
+                                console.log("success");
+                            })
+                            .fail(function () {
+                                console.log("error");
+                            })
+                            .always(function () {
+                                console.log("complete");
+                            });
 
-            //基本信息
-            $("#updateMerInfor").click(function(event) {
-                /* Act on the event */
-                $.ajax({
-                    url: '/merchant/updateMerInfor',
-                    type: 'POST',
-                    dataType: 'text',
-                    data: $("#updateMerInfor-form").serialize() ,
-                })
-                    .done(function() {
-                        console.log("success");
-                    })
-                    .fail(function() {
-                        console.log("error");
-                    })
-                    .always(function() {
-                        console.log("complete");
+                    });
+                    //福利添加
+                    $("#add-welfare").click(function (event) {
+                        /* Act on the event */
+                        var wel = $("input[name='mwelfare']").val()
+                        if (allWelfare != null) {
+                            allWelfare = allWelfare + "，" + wel
+                        } else {
+                            allWelfare = wel
+                        }
+
+                        $("#mwelfare2").append('<span class="advan">' + wel + '</span>')
+                        $("input[name='mwelfare']").val("")
+                        console.log(allWelfare)
+                    });
+                    //福利提交
+                    $("#updateMerWel").click(function (event) {
+                        /* Act on the event */
+                        console.log(allWelfare)
+                        // alert('hello')
+                        var data = {
+                            "mid": 1,
+                            "mwelfare": allWelfare,
+                        };
+                        $.ajax({
+                            url: 'merchant/updateMerWel',
+                            type: 'POST',
+                            dataType: 'text',
+                            contentType: "application/json;charset=UTF-8",
+                            data: JSON.stringify(data),
+                        })
+                            .done(function () {
+                                console.log("success");
+                            })
+                            .fail(function () {
+                                console.log("error");
+                            })
+                            .always(function () {
+                                console.log("complete");
+                            });
+
                     });
 
-            });
-            //福利添加
-            $("#add-welfare").click(function(event) {
-                /* Act on the event */
-                var wel = $("input[name='mwelfare']").val()
-                if(allWelfare != null){
-                    allWelfare = allWelfare+"，"+wel
-                }else {
-                    allWelfare = wel
-                }
+                    //联系人及电话
+                    $("#updateMerD").click(function (event) {
+                        /* Act on the event */
+                        $.ajax({
+                            url: 'merchant/updateMerD',
+                            type: 'POST',
+                            dataType: 'text',
+                            data: $("#updateMerD-form").serialize(),
+                        })
+                            .done(function () {
+                                console.log("success");
+                            })
+                            .fail(function () {
+                                console.log("error");
+                            })
+                            .always(function () {
+                                console.log("complete");
+                            });
 
-                $("#mwelfare2").append('<span class="advan">'+wel+'</span>')
-                $("input[name='mwelfare']").val("")
-                console.log(allWelfare)
-            });
-            //福利提交
-            $("#updateMerWel").click(function(event) {
-                /* Act on the event */
-                console.log(allWelfare)
-                // alert('hello')
-                var data={
-                    "mid":1,
-                    "mwelfare":allWelfare,
-                };
-                $.ajax({
-                    url: 'merchant/updateMerWel',
-                    type: 'POST',
-                    dataType: 'text',
-                    contentType:"application/json;charset=UTF-8",
-                    data: JSON.stringify(data),
-                })
-                    .done(function() {
-                        console.log("success");
-                    })
-                    .fail(function() {
-                        console.log("error");
-                    })
-                    .always(function() {
-                        console.log("complete");
                     });
 
-            });
 
-            //联系人及电话
-            $("#updateMerD").click(function(event) {
-                /* Act on the event */
-                $.ajax({
-                    url: 'merchant/updateMerD',
-                    type: 'POST',
-                    dataType: 'text',
-                    data: $("#updateMerD-form").serialize()  ,
                 })
-                    .done(function() {
-                        console.log("success");
-                    })
-                    .fail(function() {
-                        console.log("error");
-                    })
-                    .always(function() {
-                        console.log("complete");
-                    });
 
-            });
-
-
-            //上传logo
-            mlogo = ""
-            $("#mlogo").change(function(){
-                var file = $("#mlogo")[0].files[0]; //如果后台用 MultipartFile处理，直接传给后台file
-                mlogo = file
-                if (window.FileReader) {
-                    var reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    //监听文件读取结束后事件
-                    // console.log(file)
-                    reader.onloadend = function (e) {
-                        $(".box").find('img').attr({
-                            "src": e.target.result,
-                            "height": '200px',
-                            "width":'200px'
-                        });    //e.target.result就是最后的路径地址(base 64)
-                    };
-                }
-            });
-
-            $("#upmlogo").click(function(event) {
-                /* Act on the event */
-                $.ajax({
-                    url: '/path/to/file',
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {mid:1,mlogo: mlogo},//mid需要改
-                })
-                    .done(function() {
-                        console.log("success");
-                    })
-                    .fail(function() {
-                        console.log("error");
-                    })
-                    .always(function() {
-                        console.log("complete");
-                    });
-
-            });
-
-
-
-            // 上传商铺图片
-            mpics = ""
-            $("#mpics").change(function(){
-                var file = $("#mpics")[0].files[0]; //如果后台用 MultipartFile处理，直接传给后台file
-                mpics = file
-                if (window.FileReader) {
-                    var reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    //监听文件读取结束后事件
-                    // console.log(file)
-                    reader.onloadend = function (e) {
-                        $(".box2").find('img').attr({
-                            "src": e.target.result,
-                            "height": '200px',
-                            "width":'200px'
-                        });    //e.target.result就是最后的路径地址(base 64)
-                    };
-                }
-            });
-
-            $("#upmlogo").click(function(event) {
-                /* Act on the event */
-                $.ajax({
-                    url: '/path/to/file',
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {mid:1,mpics: mlogo},//mid需要改（获取）
-                })
-                    .done(function() {
-                        console.log("success");
-                    })
-                    .fail(function() {
-                        console.log("error");
-                    })
-                    .always(function() {
-                        console.log("complete");
-                    });
-
-            });
-
-
-
-        });
     </script>
 </head>
 <body>
@@ -340,7 +264,7 @@
 <!-- 主要内容 -->
 <div class="container main-box">
     <!-- 左侧选项 -->
-    <div class="col-lg-2 col-md-2 choice-box">
+    <div class="col-lg-3 col-md-2 choice-box">
         <div class="img-head">头像</div>
         <div class="shop-name"> 嗦粉早餐店</div>
         <ul>
@@ -443,13 +367,16 @@
                 <div>
                     <span class="cube"></span> <span class="line-title">商家商标</span><span id="cancel6" class="edit">取消</span>
                 </div>
+                <div>
+                    <img id="logo-img" src="img/首页素材/个人中心.png" width="128" height="128">
+                </div>
                 <!-- <div class="li-line grey-font">您还没有添加介绍</div> -->
                 <!-- <textarea  class="form-control" class="text-input" name="minfor"></textarea> -->
                 <form action="/merchant/updateLogo" method="post" enctype="multipart/form-data">
                     <%--   填写mid  ${}--%>
                     <input type="hidden" name="mid" value="1">
                 <div class="box">
-                    <img src="">
+                    <img id="mlogo-img2" src="" width="128" height="128">
                         <input id="mlogo" type="file" name="logo" accept="image/gif, image/jpeg, image/png, image/jpg">
 
                 </div>
@@ -565,11 +492,14 @@
                 <div>
                     <span class="cube"></span> <span class="line-title">商铺展示</span><span id="edit5" class="edit">编辑</span>
                 </div>
-                <div>
+                <div id="mpics-box">
+                    <img src="img/首页素材/个人中心.png">
+                    <img src="img/首页素材/个人中心.png">
+                    <img src="img/首页素材/个人中心.png">
                     <!-- 图片应该是获取到到，这里没有改 -->
-                    <img src="img/首页素材/个人中心.png">
-                    <img src="img/首页素材/个人中心.png">
-                    <img src="img/首页素材/个人中心.png">
+                    <!-- <img src="" >
+                    <img src="" >
+                    <img src=""> -->
                 </div>
             </div>
             <div id="edit-info-box5">
@@ -585,7 +515,8 @@
                     <%--   填写mid  ${}--%>
                     <input type="hidden" name="mid" value="1">
                 <div class="box2">
-                    <img src="">
+                    <input type="hidden" name="mid" value="1">
+                    <img id="pre-img" src="">
                     <input id="mpics" type="file" name="pics" accept="image/gif, image/jpeg, image/png, image/jpg">
                 </div>
                 <button id="upmpics" type="submit" class="sub">上传</button>

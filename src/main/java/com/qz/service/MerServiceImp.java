@@ -32,7 +32,7 @@ public class MerServiceImp implements MerService{
     }
     public Integer addMblicense(CommonsMultipartFile upload, HttpSession session, Merchant m){
         String fileName = uploadPic(upload, session);  //上传文件
-        m.setMlicense(fileName);
+        m.setMlicense("/upload/"+fileName);
         return mermapper.addMblicense(m);
     }
     public Integer updateLogo(CommonsMultipartFile upload, HttpSession session, Merchant m) {
