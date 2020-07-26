@@ -33,7 +33,7 @@ public class UserServiceImp implements UserService{
     //添加头像
     public Integer addUpic(CommonsMultipartFile upload, HttpSession session, User user){
         String fileName = uploadPic(upload, session);  //上传文件
-        user.setUpic(fileName);
+        user.setUpic("/upic/"+fileName);
         return usermapper.addUpic(user);
     }
     /* 上传文件 */
@@ -41,7 +41,7 @@ public class UserServiceImp implements UserService{
         /* 上传图片 */
         //确定上传路径,获得服务器的路径
         ServletContext servletContext = session.getServletContext();
-        String realPath = servletContext.getRealPath("/upload");
+        String realPath = servletContext.getRealPath("/upic");
         //变成程序中的路径
         File uploadPath = new File(realPath);
         if(!uploadPath.exists()){
@@ -106,9 +106,9 @@ public class UserServiceImp implements UserService{
         usermapper.addUser2(user);
     }
 
-    public User queryUserById(int uid){return usermapper.queryUserById(uid);};
+    public User queryUserById(int uid){return usermapper.queryUserById(uid);}
 
-    public  List<User> queryUserByUname(String uname){return usermapper.queryUserByUname(uname);};
+    public  List<User> queryUserByUname(String uname){return usermapper.queryUserByUname(uname);}
 
-    public void deleteUserById(int uid){ usermapper.deleteUserById(uid);};
+    public void deleteUserById(int uid){ usermapper.deleteUserById(uid);}
 }
