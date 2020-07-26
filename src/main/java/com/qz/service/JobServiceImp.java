@@ -25,7 +25,9 @@ public class JobServiceImp implements JobService{
     public Integer updateJob(Job job) {
         return jobMapper.updateJob(job);
     }
-
+    public Integer updateAaw(Job job) {
+        return jobMapper.updateAaw(job);
+    }
     public Integer delJob(Integer id) {
         return jobMapper.delJob(id);
     }
@@ -50,8 +52,4 @@ public class JobServiceImp implements JobService{
     public List<Job> queryJobByitems(Job job) {
         return jobMapper.queryJobByitems(job);
     }
-    public List<Job> queryJobBytime(Job job){
-        return jobMapper.queryJobBytime(job);
-    }
-
 }

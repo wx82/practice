@@ -26,9 +26,10 @@ public class MpicsServiceImp implements MpicsService {
         ServletContext servletContext = session.getServletContext();
         String realPath = servletContext.getRealPath("/mpics");
         String fileName = uploadPic(upload, session,realPath);  //上传文件
-        m.setMpaddr("/mpics/"+fileName);
+        m.setMpaddr(fileName);
         return mpicsMapper.addMpic(m);
     }
+
     public Integer delMpic(Integer mpid) {
         return mpicsMapper.delMpic(mpid);
     }
@@ -51,13 +52,6 @@ public class MpicsServiceImp implements MpicsService {
         String str2=str.substring(str1.length(), str.length());
         String fileName = uuid.replace("-", "") + str2;  //设置文件名
         uploadPath = new File(uploadPath + "/" + fileName);
-        System.out.println(uploadPath.getPath());
-        System.out.println(uploadPath.getAbsolutePath());
-        try {
-            System.out.println(uploadPath.getCanonicalPath());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         //开始上传
         try {
             upload.transferTo(uploadPath);
