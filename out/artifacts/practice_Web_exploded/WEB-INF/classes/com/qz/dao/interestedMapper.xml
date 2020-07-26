@@ -11,12 +11,12 @@
     delete from cityTownWeb.interested where iid=#{iid}
     </delete>
     <select id="queryAllInterestedByUid" resultType="map">
-        select i.iid,j.jname,j.jsalary,j.jmethod,j.jrtime from cityTownWeb.interested as i,cityTownWeb.job as j
+        select i.iid,j.jintro,j.jsalary,j.jmethod,j.jrtime from cityTownWeb.interested as i,cityTownWeb.job as j
         where i.uid=#{uid} and i.jid=j.jid
     </select>
     <select id="queryAllInterestedNum" resultType="int">
         select count(*)from
         (select * from cityTownWeb.interested
-        where uid=#{uid}) as sum
+        where uid=#{uid})assum
     </select>
 </mapper>

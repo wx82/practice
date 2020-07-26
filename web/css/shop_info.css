@@ -39,12 +39,14 @@ li{
 }
 .choice-box{
 	background-color: #fcf5ef;
+	padding: 0px;
 }
 .choice{
 	text-align: center;
 	height: 30px;
 	color: #666;
-	margin: 30px;
+	padding:  30px;
+	line-height: 0px;
 }
 .shop-name{
 	text-align: center;
@@ -93,7 +95,7 @@ li{
 	padding: 5px;
 	border-radius: 5px;
 }
-#edit-info-box1 ,#edit-info-box2, #edit-info-box3, #edit-info-box4, #edit-info-box5 {
+#edit-info-box1 ,#edit-info-box2, #edit-info-box3, #edit-info-box4, #edit-info-box5, #edit-info-box6{
 	display: none;
 }
 .inline-input{
@@ -118,4 +120,12 @@ li{
 .text-input{
 	width: 600px;
 	height: 150px;
+}
+.click{
+	background-color: #fff;
+	color: #ff8357;
+}
+.city{
+	display: inline-block;
+	width: 16.5%;
 }

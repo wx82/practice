@@ -46,7 +46,6 @@ li {
 
 .choice-box {
     background-color: #fcf5ef;
-    padding: 30px 0px;
 }
 
 .img-head {
@@ -59,38 +58,16 @@ li {
     line-height: 100px;
 }
 
-.head_image {
-    width: 100px;
-    height: 100px;
-}
-
-.user-name {
+.shop-name {
     text-align: center;
     color: #ff6531;
-    padding: 10px;
 }
 
 .choice {
     text-align: center;
-    padding: 20px;
-    vertical-align: middle;
-}
-
-.choice a {
-    text-decoration: none;
+    height: 30px;
     color: #666;
-}
-
-.choice:hover>a {
-    color: #ff6531;
-}
-
-#chosen {
-    background-color: #fff;
-}
-
-#chosen>a {
-    color: #ff6531;
+    margin: 30px;
 }
 
 

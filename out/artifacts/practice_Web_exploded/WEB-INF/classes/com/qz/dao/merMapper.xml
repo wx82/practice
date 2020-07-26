@@ -10,10 +10,14 @@
         values (#{mname});
     </insert>
 <!--    上传营业执照-->
-    <update id="addMblicense" parameterType="Merchant">
+    <insert id="addMblicense" parameterType="Merchant">
+        insert into cityTownWeb.merchant(mblicense)
+        values (#{mblicense});
+    </insert>
+    <update id="updateLogo" parameterType="Merchant">
         update cityTownWeb.merchant
-        set mlicense=#{mlicense}
-        where mid = #{mid};
+        set mlogo=#{mlogo}
+        where mid=#{mid};
     </update>
     <delete id="delMerById" parameterType="int">
         delete from cityTownWeb.merchant where mid = #{mid}
@@ -23,14 +27,9 @@
 <!--        set mname=#{mnickname}-->
 <!--        where mid=#{mid};-->
 <!--    </update>-->
-    <update id="updateLogo" parameterType="Merchant">
-        update cityTownWeb.merchant
-        set mlogo=#{mlogo}
-        where mid=#{mid};
-    </update>
     <update id="updateMerBasic" parameterType="Merchant">
         update cityTownWeb.merchant
-        set mname=#{mname},mscale=#{mscale} ,maddcity=#{maddcity},maddcounty=#{maddcounty},maddtown=#{maddtown},maddress=#{maddress}
+        set mname=#{mname},mscale=#{mscale} maddcity=#{maddcity},maddcounty=#{maddcounty},maddtown=#{maddtown},maddress=#{maddress}
         where mid=#{mid};
     </update>
     <update id="updateMerInfor" parameterType="Merchant">
@@ -87,14 +86,11 @@
         insert into cityTownWeb.merchant(maccount,mpassword)
         values (#{maccount},#{mpassword});
     </insert>
-    <update id="updateMerMinputPic" parameterType="Merchant">
-        update cityTownWeb.merchant
-        set minputpic=#{minputpic}
-        where mid=#{mid};
-    </update>
-    <update id="updateMerLis" parameterType="Merchant">
-        update cityTownWeb.merchant
-        set minputpic=#{minputpic},isverifyfail=#{isverifyfail},mtag=#{mtag},failreason=#{failreason}
-        where mid=#{mid};
-    </update>
+    <select id="queryMerchantByMname" resultType="Merchant">
+        select * from cityTownWeb.merchant
+        where mname=#{mname}
+    </select>
+    <delete id="deleteMerchantById" parameterType="int">
+        delete from cityTownWeb.merchant where mid=#{mid}
+    </delete>
 </mapper>

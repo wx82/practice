@@ -15,7 +15,6 @@ To change this template use File | Settings | File Templates.
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 	<script type="text/javascript">
-		<% String uid=request.getParameter("uid"); %>
 		$(function(){
 			// $.$.ajax({
 			// 	url: '/path/to/file',
@@ -34,13 +33,13 @@ To change this template use File | Settings | File Templates.
 			// });
 			jcity = returnCitySN.cname//获取到到省市
 			$("#city").append(jcity)
-			var uid = <%=uid%>;  //获取uid
+
 			$.ajax({
 				url: '/user/getuser',
 				type: 'POST',
 				dataType: 'json',
 				contentType: 'application/json;charset=UTF-8',
-				data: JSON.stringify({uid: uid}),
+				data: JSON.stringify({uid: 7}),
 			})
 			.done(function(result) {
 				console.log(result)
@@ -108,7 +107,7 @@ To change this template use File | Settings | File Templates.
 					async: false,
 					// data: $("#user-info-form").serialize() ,
 					data:{
-						uid:uid,
+						uid:7,
 						uname:$("input[name=uname]").val(),
 						usex:$("input[name=usex]:checked").val(),
 						uphone:$("input[name=uphone]").val(),
@@ -204,36 +203,33 @@ To change this template use File | Settings | File Templates.
 </head>
 <body>
 	<!-- 头部 -->
-	<div class="row headline top-font">
-		<!-- 左侧文字 -->
-		<div class="col-lg-2">
-			<div class="big-font">
-				C&T招聘网
+	<div class="head row headline top-font">
+		<div class="col-lg-2 col-md-2">
+			<div class="big-font">C&T招聘网</div>
+			<div class="small-font">city and town recruitment</div>
+		</div>		
+		<div class="col-lg-7 col-md-7"></div>
+		<div class="col-lg-2 col-md-2 center-font">
+				<span id="city"><!-- 吉首市 --></span>
+				<span>[更换位置]</span>
 			</div>
-			<div class="small-font">
-				city and town recruitment
-			</div>
-		</div>
-		<!-- 占位 -->
-		<div class="col-lg-9">
-		</div>
-
-		<div class="col-lg-1 center-font">
-			<span>退出登录</span>
-		</div>
+			<div class="col-lg-1 col-md-1 center-font">
+				<span>allo,退出登录</span>
+			</div>	
 	</div>
 	<!-- 主要内容 -->
 	<div class="container main-box">
 		<!-- 左侧选项 -->
-		<div class="col-lg-3 choice-box">
-			<div class="img-head"><img class="head_image img-circle" src="./img/默认头像.png"></div>
-			<div class="user-name" id="user_name"> allo</div>
+		<div class="col-lg-2 col-md-2 choice-box">
+			<div class="img-head">头像</div>
+			<div class="shop-name"> 名称</div>
 			<ul>
-				<li class="choice"  id="chosen"><a href="user_info.jsp">个人资料</a></li>
-				<li class="choice" ><a href="employee_account_manage.jsp">账号管理</a></li>
-				<li class="choice" ><a href="employee_interested.jsp">我感兴趣</a></li>
-				<li class="choice" ><a href="employee_remark.jsp">我的评论</a></li>
-				<li class="choice"><a>我的消息</a></li>
+				<li class="click choice">个人资料</li>
+				<li class="choice">账号管理</li>
+				<li class="choice">我感兴趣</li>
+				<li class="choice">我的评论</li>				
+				<li class="choice">我的消息</li>
+				<li class="choice">举报</li>
 			</ul>
 		</div>
 		<!-- 右侧内容 -->
@@ -261,7 +257,7 @@ To change this template use File | Settings | File Templates.
 						<span id="cancel1" class="edit">取消</span> 
 					</div>
 					<form name="user-info-form">
-							<input type="hidden" name="uid" value=uid>
+							<input type="hidden" name="uid" value="7">
 							<ul>
 							<li class="li-line"><span class="li-title">名称</span>
 							<input class="inline-input form-control" type="text" name="uname">
@@ -329,7 +325,7 @@ To change this template use File | Settings | File Templates.
 				</div>
 				<div id="edit-info-box2">
 					<form id="uskill-form">
-						<input type="hidden" name="uid" value=uid>
+						<input type="hidden" name="uid" value="7">
 						<div>
 							<span class="cube"></span> <span class="line-title">擅长技能</span><span id="cancel2" class="edit">取消</span>
 						</div>
@@ -359,7 +355,7 @@ To change this template use File | Settings | File Templates.
 				</div>
 				<div id="edit-info-box3">
 					<form id="uintro-form">
-						<input type="hidden" name="uid" value=uid>
+						<input type="hidden" name="uid" value="7">
 						<div>
 							<span class="cube"></span> <span class="line-title">自我介绍</span><span id="cancel3" class="edit">取消</span>
 						</div>

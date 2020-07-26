@@ -8,29 +8,22 @@ ul{
 li{
 	list-style: none;
 }
-.headline {
+.head{
 	background-color: #fff;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 50px;
+	padding:20px;
 }
-
-.big-font {
+.big-font{
+	position: relative;
+	color: #ff8357;
 	font-size: 2em;
 	font-weight: 700;
+	/*left: 40px;*/
 }
-
-.small-font {
-	font-size: 0.9em;
-}
-
-.top-font {
-	color: #ff8357;
-}
-
-.center-font {
+.small-font{
 	position: relative;
-	top: 16px;
+	color: #ff8357;
+	font-size: 0.5em;
+	/*left: 40px;*/
 }
 .img-head{
 	height: 100px;
