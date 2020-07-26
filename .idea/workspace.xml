@@ -7,42 +7,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="logo和展示图片整合">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/licenseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/licenseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/licenseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/pojo/License.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/LicenseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/LicenseServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_license.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/certify_manager.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/admin_license.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/admin_license.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/merController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/merController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MpicsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MpicsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MpicsServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MpicsServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/user_show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/user_show.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Merchant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MpicsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MpicsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MpicsServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MpicsServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/shop_info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MpicsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MpicsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MpicsServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MpicsServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/shop_info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/shop_infor.jsp" beforeDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +108,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/qz/dao" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -117,23 +120,38 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\webProject\20200722\practice\web\css" />
-      <recent name="D:\webProject\20200722\practice\web" />
-      <recent name="E:\assignment\web\课设\ideal\versioncontrol\20200721\practice\web\WEB-INF\jsp" />
-      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
-      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web\WEB-INF" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.qz.pojo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
       <recent name="D:\ideaWorkspace\practice\web\css" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qz.service" />
+      <recent name="com.qz.pojo" />
+      <recent name="com.qz.dao" />
+      <recent name="com.qz.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hanmengru\Desktop\webcodenewnew\practice\src\main\java\com\qz\dao" />
+      <recent name="C:\Users\hanmengru\Desktop\webcodenewnew\practice\web\css" />
+      <recent name="C:\Users\hanmengru\Desktop\webcodenewnew\practice\web\js" />
+      <recent name="C:\Users\hanmengru\Desktop\webcodenewnew\practice\web" />
+      <recent name="D:\webProject\20200722\practice\web\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.49" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.49" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -225,6 +243,7 @@
       <workItem from="1595388507919" duration="4027000" />
       <workItem from="1595503462803" duration="2731000" />
       <workItem from="1595506674838" duration="355000" />
+      <workItem from="1595747198611" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="增加用户技能和介绍的更改">
       <created>1595309499522</created>
@@ -251,14 +270,16 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -277,7 +298,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了几个页面的整合" />

@@ -47,4 +47,8 @@ public interface merMapper {
     void addMerchant(Merchant merchant);
     //上传logo
     Integer updateLogo(Merchant m);
+    //更新minputpic
+    Integer updateMerMinputPic(Merchant merchant);
+
+    void updateMerLis(Merchant merchant);
 }

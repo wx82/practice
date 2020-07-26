@@ -86,5 +86,14 @@
         insert into cityTownWeb.merchant(maccount,mpassword)
         values (#{maccount},#{mpassword});
     </insert>
-
+    <update id="updateMerMinputPic" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set minputpic=#{minputpic}
+        where mid=#{mid};
+    </update>
+    <update id="updateMerLis" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set minputpic=#{minputpic},isverifyfail=#{isverifyfail},mtag=#{mtag},failreason=#{failreason}
+        where mid=#{mid};
+    </update>
 </mapper>

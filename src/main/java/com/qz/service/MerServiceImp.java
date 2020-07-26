@@ -141,6 +141,8 @@ public class MerServiceImp implements MerService{
         }
         return fileName;
     }
+    public Integer updateMerMinputPic(Merchant merchant){return mermapper.updateMerMinputPic(merchant);};
 
+    public void updateMerLis(Merchant merchant){ mermapper.updateMerLis(merchant);};
 
 }

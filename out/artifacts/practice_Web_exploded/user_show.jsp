@@ -9,12 +9,13 @@
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
+			var uid = 7;
 			$.ajax({
 				url: '/user/getuser',
 				type: 'POST',
 				dataType: 'json',
 				contentType: 'application/json;charset=UTF-8',
-				data: JSON.stringify({uid: 7}),
+				data: JSON.stringify({uid: uid}),
 			})
 			.done(function(result) {
 				console.log(result)

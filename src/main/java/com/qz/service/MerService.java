@@ -40,4 +40,8 @@ public interface MerService {
     Merchant queryMerByMaccount(String maccount);
     //注册时添加商家用户
     void addMerchant(Merchant merchant);
+    //更新minputpic
+    Integer updateMerMinputPic(Merchant merchant);
+
+    void updateMerLis(Merchant merchant);
 }
