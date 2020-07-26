@@ -50,6 +50,7 @@
             <li class="choice"><a href="shop_offer_manage.jsp">岗位管理</a></li>
             <li class="choice"><a href=shop_remark.jsp">我的评论</a></li>
             <li class="choice"><a href="">我的消息</a></li>
+
         </ul>
     </div>
 

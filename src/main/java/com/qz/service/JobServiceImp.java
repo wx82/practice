@@ -25,7 +25,9 @@ public class JobServiceImp implements JobService{
     public Integer updateJob(Job job) {
         return jobMapper.updateJob(job);
     }
-
+    public Integer updateAaw(Job job) {
+        return jobMapper.updateAaw(job);
+    }
     public Integer delJob(Integer id) {
         return jobMapper.delJob(id);
     }
