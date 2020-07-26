@@ -24,7 +24,7 @@
             city and town recruitment
         </div>
     </div>
-    <<!-- 占位 -->
+    <!-- 占位 -->
     <div class="col-lg-10">
 
     </div>

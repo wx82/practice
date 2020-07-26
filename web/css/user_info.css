@@ -34,7 +34,8 @@ body{
 }
 
 .main-box{
-	width: 1700px;
+	width: 90%;
+	margin-top: 20px;
 }
 
 /* 左侧导航 */

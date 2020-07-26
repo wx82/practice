@@ -17,7 +17,7 @@
     <script type="text/javascript" src="js/main.js"></script>
 
     <script type="text/javascript">
-        $(function() {
+        $(function(){
 
             // $("#city").ProvinceCity();
             // $('#demo').citys({code:350206});
@@ -264,12 +264,12 @@
         <div class="img-head"><img class="head_image img-circle" src="img/bsPic.png"></div>
         <div class="shop-name" id="shop_name"> 嗦粉早餐店</div>
         <ul>
-            <li class="choice" id="chosen" ><a href="shop_info.jsp">商家资料</a></li>
-            <li class="choice"><a href="">认证管理</a></li>
-            <li class="choice" ><a href="shop_account_manage.jsp"> 账号管理</a></li>
-            <li class="choice"><a href="shop_offer_manage.jsp">岗位管理</a></li>
-            <li class="choice"><a href="shop_remark.jsp">我的评论</a></li>
-            <%--            <li class="choice "><a>我的消息</a></li>--%>
+            <li class="choice" id="chosen"><a>商家资料</a></li>
+            <li class="choice"><a>认证管理</a></li>
+            <li class="choice" ><a>账号管理</a></li>
+            <li class="choice"><a>岗位管理</a></li>
+            <li class="choice"><a>我的评论</a></li>
+            <li class="choice"><a>我的消息</a></li>
         </ul>
     </div>
     <!-- 右侧内容 -->
@@ -348,15 +348,15 @@
                 <div>
                     <span class="cube"></span> <span class="line-title">商家商标</span><span id="edit6" class="edit">编辑</span>
                 </div>
+                <div>
+                    <img id="logo-img" src="img/首页素材/个人中心.png" width="128" height="128">
+                </div>
                 <!-- <div id="minfor" class="li-line "> --><!-- 您还没有添加介绍 --><!-- </div> -->
             </div>
             <div id="edit-info-box6">
                 <!-- <form id="updateMerInfor-form"> -->
                 <div>
                     <span class="cube"></span> <span class="line-title">商家商标</span><span id="cancel6" class="edit">取消</span>
-                </div>
-                <div>
-                    <img id="logo-img" src="img/首页素材/个人中心.png" width="128" height="128">
                 </div>
                 <!-- <div class="li-line grey-font">您还没有添加介绍</div> -->
                 <!-- <textarea  class="form-control" class="text-input" name="minfor"></textarea> -->

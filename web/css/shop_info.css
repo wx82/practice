@@ -28,7 +28,9 @@ body{
 	top: 16px;
 }
 .main-box{
-	width: 1700px;
+	/*width: 1700px;*/
+	margin-top: 20px;
+	width: 90%;
 }
 
 /* 左侧导航 */
