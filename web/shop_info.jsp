@@ -17,7 +17,7 @@
     <script type="text/javascript" src="js/main.js"></script>
 
     <script type="text/javascript">
-        $(function() {
+        $(function(){
 
             // $("#city").ProvinceCity();
             // $('#demo').citys({code:350206});
@@ -239,7 +239,6 @@
 </head>
 <body>
 <!-- 头部 -->
-<!-- 白色商家标题栏 -->
 <div class="row headline top-font">
     <!-- 左侧文字 -->
     <div class="col-lg-2">
@@ -253,36 +252,25 @@
     <!-- 占位 -->
     <div class="col-lg-9">
     </div>
+
     <div class="col-lg-1 center-font">
-        <span>allo,退出登录</span>
+        <span>退出登录</span>
     </div>
 </div>
-<%--<div class="head">--%>
-<%--    <div class="big-font">C&T招聘网</div>--%>
-<%--    <div class="small-font">city and town recruitment</div>--%>
-<%--</div>--%>
 <!-- 主要内容 -->
 <div class="container main-box">
     <!-- 左侧选项 -->
-    <div class="col-lg-3 col-md-2 choice-box">
-        <div class="img-head">头像</div>
-        <div class="shop-name"> 嗦粉早餐店</div>
+    <div class="col-lg-3 choice-box">
+        <div class="img-head"><img class="head_image img-circle" src="img/bsPic.png"></div>
+        <div class="shop-name" id="shop_name"> 嗦粉早餐店</div>
         <ul>
-            <li class="choice" id="chosen" ><a href="shop_info.jsp">商家资料</a></li>
-            <li class="choice"><a href="">认证管理</a></li>
-            <li class="choice" ><a href="shop_account_manage.jsp"> 账号管理</a></li>
-            <li class="choice"><a href="shop_offer_manage.jsp">岗位管理</a></li>
-            <li class="choice"><a href="shop_remark.jsp">我的评论</a></li>
-            <%--            <li class="choice "><a>我的消息</a></li>--%>
+            <li class="choice" id="chosen"><a>商家资料</a></li>
+            <li class="choice"><a>认证管理</a></li>
+            <li class="choice" ><a>账号管理</a></li>
+            <li class="choice"><a>岗位管理</a></li>
+            <li class="choice"><a>我的评论</a></li>
+            <li class="choice"><a>我的消息</a></li>
         </ul>
-<%--        <ul>--%>
-<%--            <li class="click choice">商家资料</li>--%>
-<%--            <li class="choice">认证管理</li>--%>
-<%--            <li class="choice">修改密码</li>--%>
-<%--            <li class="choice">岗位管理</li>--%>
-<%--            <li class="choice">我的评论</li>--%>
-<%--            <li class="choice">我的消息</li>--%>
-<%--        </ul>--%>
     </div>
     <!-- 右侧内容 -->
     <div class="col-lg-9 col-md-9">

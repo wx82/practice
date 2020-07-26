@@ -35,12 +35,7 @@
         </div>
     </div>
     <!-- 占位 -->
-    <div class="col-lg-7">
-    </div>
-
-    <div class="col-lg-2 center-font">
-        <span>吉首市</span>
-        <span>[更换位置]</span>
+    <div class="col-lg-9">
     </div>
 
     <div class="col-lg-1 center-font">
@@ -52,17 +47,14 @@
 <div class="container content">
     <!-- 左侧选项 -->
     <div class="col-lg-3 choice-box">
-        <div class="img-head"><img class="head_image img-circle" src="img/默认头像.png"></div>
-        <!--------------->
+        <div class="img-head"><img class="head_image img-circle" src="./img/默认头像.png"></div>
         <div class="user-name" id="user_name"> allo</div>
-        <!--------------->
         <ul>
-            <li class="choice">个人资料</li>
-            <li class="choice" id="chosen">账号管理</li>
-            <!--------------->
-            <li class="choice">我感兴趣</li>
-            <li class="choice">我的评论</li>
-            <li class="choice">我的消息</li>
+            <li class="choice" ><a href="user_info.jsp">个人资料</a></li>
+            <li class="choice" id="chosen"><a href="employee_account_manage.jsp">账号管理</a></li>
+            <li class="choice" ><a href="employee_interested.jsp">我感兴趣</a></li>
+            <li class="choice"><a href="employee_remark.jsp">我的评论</a></li>
+            <li class="choice"><a>我的消息</a></li>
         </ul>
     </div>
 
@@ -73,15 +65,9 @@
             <div class="col-lg-2"><img class="head_image img-circle" src="./img/默认头像.png"></div>
             <div class="col-lg-10" style="height:100px;position: relative;top:45px"><span id="account_msg">账号：</span></div>
         </div>
-<%--        <form>--%>
-<%--            <a href="javascript:;" class="upload">选择文件</a>--%>
-<%--            <input class="change" type="file" multiple="multiple" />--%>
-<%--        </form>--%>
-        <form action="/user/adduserpic" method="post" enctype="multipart/form-data" id="pic">
-
-            <input type="hidden" name="uid" value="5">
-            <input type="file" name="pic">
-            <input type="submit" value="提交" id="sub">
+        <form>
+            <a href="javascript:;" class="upload">选择文件</a>
+            <input class="change" type="file" multiple="multiple" />
         </form>
 
         <span class="line-title" style="margin-top:20px">修改密码</span>

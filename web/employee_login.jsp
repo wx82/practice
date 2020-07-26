@@ -24,6 +24,10 @@
             city and town recruitment
         </div>
     </div>
+    <!-- 占位 -->
+    <div class="col-lg-10">
+
+    </div>
 
 </div>
 
@@ -86,7 +90,7 @@
         </div>
 
         <div class="center-block text-center">
-            <button class="submit" onclick="window.location.href='shop_login.jsp'">
+            <button class="submit" onclick="window.open('shop_login.jsp')">
                 我要招聘>>
             </button>
         </div>
