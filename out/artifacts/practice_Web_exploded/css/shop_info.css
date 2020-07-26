@@ -1,52 +1,32 @@
+/* 白色标题栏 */
 body{
 	background-color: #fcfaf8;
 	color: #666;
 }
-
-.headline {
-	background-color: #fff;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 50px;
-}
-
-.big-font {
-	font-size: 2em;
-	font-weight: 700;
-}
-
-.small-font {
-	font-size: 0.9em;
-}
-
-.top-font {
-	color: #ff8357;
-}
-
-.center-font {
-	position: relative;
-	top: 16px;
-}
-.main-box{
-	width: 1700px;
-}
-
-/* 左侧导航 */
-
-ul {
+ul{
 	padding: 0;
 }
-
-li {
+li{
 	list-style: none;
 }
-
-.choice-box {
-	background-color: #fcf5ef;
-	padding: 30px 0px;
+.head{
+	background-color: #fff;
+	padding:20px;
 }
-
-.img-head {
+.big-font{
+	position: relative;
+	color: #ff8357;
+	font-size: 2em;
+	font-weight: 700;
+	/*left: 40px;*/
+}
+.small-font{
+	position: relative;
+	color: #ff8357;
+	font-size: 0.5em;
+	/*left: 40px;*/
+}
+.img-head{
 	height: 100px;
 	width: 100px;
 	margin: 0 auto;
@@ -55,41 +35,29 @@ li {
 	text-align: center;
 	line-height: 100px;
 }
-
-.head_image {
-	width: 100px;
-	height: 100px;
+.main-box{
+	width: 1700px;
 }
-
-.shop-name {
+.choice-box{
+	background-color: #fcf5ef;
+	padding: 0px;
+}
+.choice{
 	text-align: center;
-	color: #ff6531;
-	padding: 10px;
-}
-
-.choice {
-	text-align: center;
-	padding: 20px;
-	vertical-align: middle;
-}
-.choice a {
-	text-decoration: none;
+	height: 30px;
 	color: #666;
-}
-.choice:hover>a {
-	color: #ff6531;
+	padding:  30px;
+	line-height: 0px;
 }
 
 #chosen {
+	color: #ff6531;
 	background-color: #fff;
 }
-#chosen>a {
+.shop-name{
+	text-align: center;
 	color: #ff6531;
 }
-
-/*----------------------------*/
-
-
 .show-info{
 	background-color: #fff;
 	margin: 10px;
@@ -133,7 +101,7 @@ li {
 	padding: 5px;
 	border-radius: 5px;
 }
-#edit-info-box1 ,#edit-info-box2, #edit-info-box3, #edit-info-box4, #edit-info-box5 {
+#edit-info-box1 ,#edit-info-box2, #edit-info-box3, #edit-info-box4, #edit-info-box5, #edit-info-box6{
 	display: none;
 }
 .inline-input{
@@ -158,4 +126,12 @@ li {
 .text-input{
 	width: 600px;
 	height: 150px;
+}
+.click{
+	background-color: #fff;
+	color: #ff8357;
+}
+.city{
+	display: inline-block;
+	width: 16.5%;
 }

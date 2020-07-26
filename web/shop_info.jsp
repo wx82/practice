@@ -18,7 +18,31 @@
 
     <script type="text/javascript">
         $(function() {
+
+            // $("#city").ProvinceCity();
+            // $('#demo').citys({code:350206});
+
             districts_start()
+
+
+            //输入框中填充数据
+            // $.ajax({
+            // 	url: '/path/to/file',
+            // 	type: 'default GET (Other values: POST)',
+            // 	dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+            // 	data: {param1: 'value1'},
+            // })
+            // .done(function() {
+            // 	console.log("success");
+            // })
+            // .fail(function() {
+            // 	console.log("error");
+            // })
+            // .always(function() {
+            // 	console.log("complete");
+            // });
+
+
             $.ajax({
                 url: '/merchant/oneMer?mid=' + 1,//mid
                 type: 'GET',
@@ -26,7 +50,7 @@
             })
                 .done(function (result) {
                     console.log("success");
-                    console.log(result)
+                    console.log(result);
                     $("#mname").append(result.mname)//商铺名字渲染
                     $("input[name='mname']").val(result.mname)//商铺名字对应的input
                     // console.log($("input[name='mname']"))
@@ -39,7 +63,6 @@
                     $("select[name='mscale']").val(result.mscale)
                     $('#minfor').append(result.minfo)
                     $("textarea[name='minfo']").val(result.minfo)
-
                     // console.log(result.mwelfare)
                     allWelfare = result.mwelfare
                     if (result.mwelfare != null) {
@@ -71,8 +94,7 @@
                         // $("select[name='mprovince']").val(result.mprovince)//省市区
                         // $("select[name='mcity']").val(result.mcity)
                         // $("select[name='marea']").val(result.marea)
-
-
+                        })
                     })
                         .fail(function () {
                             console.log("error");
@@ -211,12 +233,13 @@
                     });
 
 
-                });
-        })
+                })
+
     </script>
 </head>
 <body>
 <!-- 头部 -->
+<!-- 白色商家标题栏 -->
 <div class="row headline top-font">
     <!-- 左侧文字 -->
     <div class="col-lg-2">
@@ -230,25 +253,36 @@
     <!-- 占位 -->
     <div class="col-lg-9">
     </div>
-
     <div class="col-lg-1 center-font">
-        <span>退出登录</span>
+        <span>allo,退出登录</span>
     </div>
 </div>
+<%--<div class="head">--%>
+<%--    <div class="big-font">C&T招聘网</div>--%>
+<%--    <div class="small-font">city and town recruitment</div>--%>
+<%--</div>--%>
 <!-- 主要内容 -->
 <div class="container main-box">
     <!-- 左侧选项 -->
-    <div class="col-lg-3 choice-box">
-        <div class="img-head"><img class="head_image img-circle" src="img/bsPic.png"></div>
-        <div class="shop-name" id="shop_name"> 嗦粉早餐店</div>
+    <div class="col-lg-3 col-md-2 choice-box">
+        <div class="img-head">头像</div>
+        <div class="shop-name"> 嗦粉早餐店</div>
         <ul>
-            <li class="choice" id="chosen"><a>商家资料</a></li>
-            <li class="choice"><a>认证管理</a></li>
-            <li class="choice" ><a>账号管理</a></li>
-            <li class="choice"><a>岗位管理</a></li>
-            <li class="choice"><a>我的评论</a></li>
-            <li class="choice"><a>我的消息</a></li>
+            <li class="choice" id="chosen" ><a href="shop_info.jsp">商家资料</a></li>
+            <li class="choice"><a href="">认证管理</a></li>
+            <li class="choice" ><a href="shop_account_manage.jsp"> 账号管理</a></li>
+            <li class="choice"><a href="shop_offer_manage.jsp">岗位管理</a></li>
+            <li class="choice"><a href="shop_remark.jsp">我的评论</a></li>
+            <%--            <li class="choice "><a>我的消息</a></li>--%>
         </ul>
+<%--        <ul>--%>
+<%--            <li class="click choice">商家资料</li>--%>
+<%--            <li class="choice">认证管理</li>--%>
+<%--            <li class="choice">修改密码</li>--%>
+<%--            <li class="choice">岗位管理</li>--%>
+<%--            <li class="choice">我的评论</li>--%>
+<%--            <li class="choice">我的消息</li>--%>
+<%--        </ul>--%>
     </div>
     <!-- 右侧内容 -->
     <div class="col-lg-9 col-md-9">
@@ -326,10 +360,10 @@
                 <div>
                     <span class="cube"></span> <span class="line-title">商家商标</span><span id="edit6" class="edit">编辑</span>
                 </div>
-                <!-- <div id="minfor" class="li-line "> --><!-- 您还没有添加介绍 --><!-- </div> -->
                 <div>
                     <img id="logo-img" src="img/首页素材/个人中心.png" width="128" height="128">
                 </div>
+                <!-- <div id="minfor" class="li-line "> --><!-- 您还没有添加介绍 --><!-- </div> -->
             </div>
             <div id="edit-info-box6">
                 <!-- <form id="updateMerInfor-form"> -->
@@ -339,16 +373,18 @@
                 <!-- <div class="li-line grey-font">您还没有添加介绍</div> -->
                 <!-- <textarea  class="form-control" class="text-input" name="minfor"></textarea> -->
                 <form action="/merchant/updateLogo" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="mid" value="1">
+                    <%--   填写mid  ${}--%>
+                    <input type="hidden" name="mid" value="1">
                 <div class="box">
                     <img id="mlogo-img2" src="" width="128" height="128">
-                    <input id="mlogo" type="file" name="logo" accept="image/gif, image/jpeg, image/png, image/jpg">
+                        <input id="mlogo" type="file" name="logo" accept="image/gif, image/jpeg, image/png, image/jpg">
+
                 </div>
                 <div>
-                    <button id="upmlogo" class="sub">上传</button>
+                    <button id="upmlogo" type="submit" class="sub">上传</button>
                 </div>
                 </form>
-                <!-- </form> -->
+
             </div>
 
         </div>
@@ -476,6 +512,8 @@
                     <img src="img/首页素材/个人中心.png">
                 </div> -->
                 <form action="/merchant/addMpic" method="post" enctype="multipart/form-data">
+                    <%--   填写mid  ${}--%>
+                    <input type="hidden" name="mid" value="1">
                 <div class="box2">
                     <input type="hidden" name="mid" value="1">
                     <img id="pre-img" src="">

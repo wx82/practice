@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor  //有参构造
-//@NoArgsConstructor   //无参构造
+@NoArgsConstructor   //无参构造
 public class Merchant {
     private Integer mid;
     private String mname;//公司名称
@@ -25,41 +25,11 @@ public class Merchant {
     private String mwelfare;//福利
     private String minfo;//店铺信息
     private String dname;//负责人
-
-    public String getDphone() {
-        return dphone;
-    }
-
-    public void setDphone(String dphone) {
-        this.dphone = dphone;
-    }
-
     private String dphone;//负责人电话
     private float mstar;//星级
     private String mlicense;//营业执照
     private Boolean minputpic;//是否提交营业执照
     private List<Mpics> mpic;//店铺展示 一个店铺拥有多个展示图片
-
-    public Merchant() { }
-
-    public Boolean getIsverifyfail() {
-        return isverifyfail;
-    }
-
-    public void setIsverifyfail(Boolean isverifyfail) {
-        this.isverifyfail = isverifyfail;
-    }
-
-    public String getFailreason() {
-        return failreason;
-    }
-
-    public void setFailreason(String failreason) {
-        this.failreason = failreason;
-    }
-
-    private Boolean isverifyfail;
-    private String failreason;
 
     public String getMaccount() {
         return maccount;
@@ -191,6 +161,13 @@ public class Merchant {
         this.dname = dname;
     }
 
+    public String getDphone() {
+        return dphone;
+    }
+
+    public void setDphone(String dphone) {
+        this.dphone = dphone;
+    }
 
     public float getMstar() {
         return mstar;

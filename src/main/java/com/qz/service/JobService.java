@@ -8,11 +8,11 @@ import java.util.List;
 public interface JobService {
     Integer addJob(Job job);
     Integer updateJob(Job job);
+    Integer updateAaw(Job job);
     Integer delJob(Integer jid);
     List<Job> queryAllJobByMid(Integer mid);
     Job queryJobByJid(Integer jid);
     List<Job> queryAllJob();
     List<Job> queryJobBycity(Job job);
     List<Job> queryJobByitems(Job job);
-    List<Job> queryJobBytime(Job job);
 }

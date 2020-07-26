@@ -46,7 +46,7 @@ li {
 
 .choice-box {
     background-color: #fcf5ef;
-    padding: 30px 0px;
+    padding-top: 30px;
 }
 
 .img-head {
@@ -67,30 +67,18 @@ li {
 .shop-name {
     text-align: center;
     color: #ff6531;
-    padding: 10px;
 }
 
 .choice {
     text-align: center;
-    padding: 20px;
-    vertical-align: middle;
-}
-.choice a {
-    text-decoration: none;
+    height: 30px;
     color: #666;
-}
-.choice:hover>a {
-    color: #ff6531;
+    margin: 30px;
 }
 
 #chosen {
-    background-color: #fff;
-}
-#chosen>a {
     color: #ff6531;
 }
-
-/*----------------------------*/
 
 
 /* 右侧内容 */

@@ -14,16 +14,11 @@
     <link rel="stylesheet" type="text/css" href="css/work_info.css">
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript">
-        <% String jid=request.getParameter("jid");
-        String mid=request.getParameter("mid"); %>
         $(function(){
-            console.log("before"+jid);
-            var mid=<%=mid%>;//岗位对呀商家id
-            var jid = <%=jid%>;
-            console.log("after"+jid);
+            var mid=1;//岗位对呀商家id
             //职业详情
             $.ajax({
-                url: 'merchant/queryJobByJid?jid='+jid,//jid
+                url: 'merchant/queryJobByJid?jid='+1,//jid
                 type: 'POST',
                 // dataType: 'json',
                 // data: {jid: 1},
@@ -106,22 +101,15 @@
 </head>
 <body>
 <!-- 头部 -->
-<div class="row headline top-font">
-    <!-- 左侧文字 -->
-    <div class="col-lg-2">
-        <div class="big-font">
-            C&T招聘网
-        </div>
-        <div class="small-font">
-            city and town recruitment
-        </div>
-    </div>
-    <!-- 占位 -->
-    <div class="col-lg-9">
+<div class="head row">
+    <div class="col-lg-10">
+        <div class="big-font">C&T招聘网</div>
+        <div class="small-font">city and town recruitment</div>
     </div>
 
+
     <div class="col-lg-1 center-font">
-        <span>退出登录</span>
+        <span>嗦粉早餐店,退出</span>
     </div>
 </div>
 <!-- 主要内容 -->

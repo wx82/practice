@@ -166,6 +166,7 @@ $(document).ready(function() {
                     console.log(data);
                     if (data.isSuccess) {
                         alert("登录成功");
+                        window.location.href="shop_info.jsp";
                         return;
                     }
                     if (!data.isAccountExist) {
@@ -229,6 +230,7 @@ $(document).ready(function() {
                     console.log(data);
                     if (data.isSuccess) {
                         alert("注册成功");
+                        window.location.href="shop_form.jsp";
                         return;
                     }
                     if (data.isAccountExist) {
