@@ -13,7 +13,9 @@ public interface merMapper {
     Integer addMblicense(Merchant m);
     //删除商家
     Integer delMerById(@Param("mid") int id);
-
+    //上传logo
+    Integer updateLogo(Merchant m);
+    Integer addInfor(Merchant m);
     Integer updateMerBasic(Merchant m);
     Integer updateMerInfor(Merchant m);
     Integer updateMerWel(Merchant m);
@@ -45,4 +47,9 @@ public interface merMapper {
     Merchant queryMerByMaccount(String maccount);
 
     void addMerchant(Merchant merchant);
+
+    //根据uname查询用户列表
+    List<Merchant> queryMerchantByMname(String mname);
+    //根据id删除用户
+    void deleteMerchantById(int mid);
 }

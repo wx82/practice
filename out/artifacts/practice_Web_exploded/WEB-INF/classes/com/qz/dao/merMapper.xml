@@ -14,6 +14,11 @@
         insert into cityTownWeb.merchant(mblicense)
         values (#{mblicense});
     </insert>
+    <update id="updateLogo" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set mlogo=#{mlogo}
+        where mid=#{mid};
+    </update>
     <delete id="delMerById" parameterType="int">
         delete from cityTownWeb.merchant where mid = #{mid}
     </delete>
@@ -22,6 +27,11 @@
 <!--        set mname=#{mnickname}-->
 <!--        where mid=#{mid};-->
 <!--    </update>-->
+    <update id="addInfor" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set mname=#{mname},mscale=#{mscale} maddcity=#{maddcity},maddcounty=#{maddcounty},maddtown=#{maddtown},maddress=#{maddress},dname=#{dname},dphone=#{dphone},minfor=#{minfor}
+        where mid=#{mid};
+    </update>
     <update id="updateMerBasic" parameterType="Merchant">
         update cityTownWeb.merchant
         set mname=#{mname},mscale=#{mscale} maddcity=#{maddcity},maddcounty=#{maddcounty},maddtown=#{maddtown},maddress=#{maddress}

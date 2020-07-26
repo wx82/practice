@@ -38,12 +38,11 @@
         <div class="img-head"><img class="head_image img-circle" src="img/bsPic.png"></div>
         <div class="shop-name" id="shop_name"> 嗦粉早餐店</div>
         <ul>
-            <li class="choice"><a>商家资料</a></li>
+            <li class="choice"><a href="shop_info.jsp">商家资料</a></li>
             <li class="choice"><a>认证管理</a></li>
-            <li class="choice" ><a>账号管理</a></li>
-            <li class="choice" id="chosen"><a>岗位管理</a></li>
-            <li class="choice"><a>我的评论</a></li>
-            <li class="choice"><a>我的消息</a></li>
+            <li class="choice" ><a href="shop_account_manage.jsp">账号管理</a></li>
+            <li class="choice" id="chosen"><a href="shop_offer_manage.jsp">岗位管理</a></li>
+            <li class="choice"><a href="shop_remark.jsp">我的评论</a></li>
         </ul>
     </div>
     <!-- 右侧内容 -->

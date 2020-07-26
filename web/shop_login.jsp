@@ -47,7 +47,7 @@
         </div>
 
         <div class="center-block text-center">
-            <button onclick="window.open('employee_login.jsp')" class="submit">
+            <button onclick="window.location.href='employee_login.jsp'" class="submit">
                 我要求职>>
             </button>
         </div>

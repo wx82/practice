@@ -166,6 +166,7 @@ $(document).ready(function() {
                     //console.log(data);
                     if (data.isSuccess) {
                         alert("登录成功");
+                        window.location.href="web_index.jsp";
                         return;
                     }
                     if (!data.isAccountExist) {

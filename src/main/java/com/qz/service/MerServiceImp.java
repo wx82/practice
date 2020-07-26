@@ -32,33 +32,26 @@ public class MerServiceImp implements MerService{
     }
     public Integer addMblicense(CommonsMultipartFile upload, HttpSession session, Merchant m){
         String fileName = uploadPic(upload, session);  //上传文件
-        m.setMlicense(fileName);
+        m.setMlicense("/upload/"+fileName);
         return mermapper.addMblicense(m);
     }
-   /* public Integer addMblicense(MultipartFile file, Merchant m, ModelMap map) {
-        //基础路径
-        String filePath = "";
-        // 获取原始图片的扩展名
-        String originalFilename = file.getOriginalFilename();
-        // 生成文件新的名字
-        String newFileName = UUID.randomUUID() + originalFilename;
-        // 封装上传文件位置的全路径
-        File targetFile = new File(filePath, newFileName);
-        try {
-            file.transferTo(targetFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return mermapper.addMblicense(m);
-    }*/
+    public Integer updateLogo(CommonsMultipartFile upload, HttpSession session, Merchant m) {
+        ServletContext servletContext = session.getServletContext();
+        String realPath = servletContext.getRealPath("/mlogo");
+        String fileName = uploadPic2(upload, session,realPath);  //上传文件
+        m.setMlogo("/mlogo/"+fileName);
+        return mermapper.updateLogo(m);
+    }
+    public Integer addInfor(Merchant m) {
+        return mermapper.addInfor(m);
+    }
+
 
     public Integer delMerById(Integer id) {
         return mermapper.delMerById(id);
     }
 
-    public Integer delMerById(int id) {
-        return mermapper.delMerById(id);
-    }
+
 
 
     public Integer updateMerBasic(Merchant m) {
@@ -94,7 +87,28 @@ public class MerServiceImp implements MerService{
     public List<Merchant> queryAllMer() {
         return mermapper.queryAllMer();
     }
-
+    private String uploadPic2(CommonsMultipartFile upload, HttpSession session,String realPath){
+        /* 上传图片 */
+        //变成程序中的路径
+        File uploadPath = new File(realPath);
+        if(!uploadPath.exists()){
+            uploadPath.mkdirs();   //若文件夹不存在则创建文件夹
+        }
+        //确定最终上传路径
+        String uuid = UUID.randomUUID().toString();  //使用随机数
+        String str = upload.getOriginalFilename();  //获得文件后缀
+        String str1=str.substring(0, str.indexOf("."));
+        String str2=str.substring(str1.length(), str.length());
+        String fileName = uuid.replace("-", "") + str2;  //设置文件名
+        uploadPath = new File(uploadPath + "/" + fileName);
+        //开始上传
+        try {
+            upload.transferTo(uploadPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return fileName;
+    }
     public Merchant queryMerByMaccount(String maccount){return mermapper.queryMerByMaccount(maccount);}
     /* 上传文件 */
     private String uploadPic(CommonsMultipartFile upload, HttpSession session){
@@ -123,4 +137,8 @@ public class MerServiceImp implements MerService{
         return fileName;
     }
     public void addMerchant(Merchant merchant){mermapper.addMerchant(merchant);}
+
+    public List<Merchant> queryMerchantByMname(String mname){return mermapper.queryMerchantByMname(mname);};
+
+    public void deleteMerchantById(int mid){ mermapper.deleteMerchantById(mid);};
 }
