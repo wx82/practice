@@ -15,6 +15,7 @@ public interface merMapper {
     Integer delMerById(@Param("mid") int id);
     //上传logo
     Integer updateLogo(Merchant m);
+    Integer addInfor(Merchant m);
     Integer updateMerBasic(Merchant m);
     Integer updateMerInfor(Merchant m);
     Integer updateMerWel(Merchant m);

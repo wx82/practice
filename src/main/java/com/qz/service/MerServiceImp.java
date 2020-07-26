@@ -42,6 +42,9 @@ public class MerServiceImp implements MerService{
         m.setMlogo("/mlogo/"+fileName);
         return mermapper.updateLogo(m);
     }
+    public Integer addInfor(Merchant m) {
+        return mermapper.addInfor(m);
+    }
 
 
     public Integer delMerById(Integer id) {
