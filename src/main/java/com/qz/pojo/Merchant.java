@@ -25,7 +25,16 @@ public class Merchant {
     private String mwelfare;//福利
     private String minfo;//店铺信息
     private String dname;//负责人
-    private int dphone;//负责人电话
+
+    public String getDphone() {
+        return dphone;
+    }
+
+    public void setDphone(String dphone) {
+        this.dphone = dphone;
+    }
+
+    private String dphone;//负责人电话
     private float mstar;//星级
     private String mlicense;//营业执照
     private Boolean minputpic;//是否提交营业执照
@@ -182,13 +191,6 @@ public class Merchant {
         this.dname = dname;
     }
 
-    public int getDphone() {
-        return dphone;
-    }
-
-    public void setDphone(int dphone) {
-        this.dphone = dphone;
-    }
 
     public float getMstar() {
         return mstar;

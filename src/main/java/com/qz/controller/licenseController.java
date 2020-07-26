@@ -56,6 +56,7 @@ public class licenseController {
     @RequestMapping("/getLicenseInfo")
     @ResponseBody
     public Object getLicense(){
+        System.out.println("getLicenseInfo");
         HashMap hashMap = new HashMap();
         List<Merchant> merchants = merService.queryAllMer();
         List<License> licenses=licenseService.queryAllLis();
@@ -68,6 +69,7 @@ public class licenseController {
     @RequestMapping("/setLicenseResult")
     @ResponseBody
     public Object setLicenseResult(int mid,Boolean isvarifyfail, String failreason){
+        System.out.println("setLicenseInfo");
         HashMap hashMap = new HashMap();
         Merchant merchant = new Merchant();
         merchant.setMid(mid);

@@ -22,7 +22,7 @@ $(document).ready(function() {
                         license_list.push(license);
                         merchant_list.push(merchant);
                         count=count+1;
-                        var murl = "license/"+merchant.mlicense;
+                        var murl = merchant.mlicense;
                         var mid = license.mid;
                         var cnum = license.cnum;
                         var rnum = license.rnum;

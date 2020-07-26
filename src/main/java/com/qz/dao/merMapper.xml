@@ -10,10 +10,11 @@
         values (#{mname});
     </insert>
 <!--    上传营业执照-->
-    <insert id="addMblicense" parameterType="Merchant">
-        insert into cityTownWeb.merchant(mblicense)
-        values (#{mblicense});
-    </insert>
+    <update id="addMblicense" parameterType="Merchant">
+        update cityTownWeb.merchant
+        set mlicense=#{mlicense}
+        where mid = #{mid};
+    </update>
     <delete id="delMerById" parameterType="int">
         delete from cityTownWeb.merchant where mid = #{mid}
     </delete>
@@ -29,7 +30,7 @@
     </update>
     <update id="updateMerBasic" parameterType="Merchant">
         update cityTownWeb.merchant
-        set mname=#{mname},mscale=#{mscale} maddcity=#{maddcity},maddcounty=#{maddcounty},maddtown=#{maddtown},maddress=#{maddress}
+        set mname=#{mname},mscale=#{mscale} ,maddcity=#{maddcity},maddcounty=#{maddcounty},maddtown=#{maddtown},maddress=#{maddress}
         where mid=#{mid};
     </update>
     <update id="updateMerInfor" parameterType="Merchant">

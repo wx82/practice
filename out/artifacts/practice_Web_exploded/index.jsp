@@ -26,5 +26,6 @@
 <a href="user_show.jsp">进入个人信息查看界面</a>
 <a href="web_index.jsp">网站首页</a>
 <a href="jsp/websocket.jsp">聊天</a>
+<a href="certify_manager.jsp">商家认证界面</a>
 </body>
 </html>
