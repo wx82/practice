@@ -150,7 +150,8 @@ System.out.println(uid);%>
 					async: false,
 					// contentType: 'application/json;charset=UTF-8',
 					data: {
-						uid:$("input[name=uid]").val(),
+						// uid:$("input[name=uid]").val(),
+						uid:uid,
 						uskill:$("#uskill1").val(),
 					},
 					success:function (res) {
@@ -179,7 +180,8 @@ System.out.println(uid);%>
 					type: 'POST',
 					dataType: 'json',
 					data: {
-						uid:$("input[name=uid]").val(),
+						// uid:$("input[name=uid]").val(),
+						uid:uid,
 						uintro:$("#uintroid").val(),
 					},
 					success:function (res) {
