@@ -28,6 +28,7 @@
 <a href="show_work_infor.jsp">进入求职者查看职位详情界面</a>
 <a href="work_infor.jsp">进入商家查看职位详情界面</a>
 <a href="shop_form.jsp">进入商家注册表单</a>
+<a href="certify_manager.jsp">进入商家认证界面</a>
 <br>
 <h3>个人界面</h3>
 <a href="employee_account_manage.jsp">进入个人账号管理界面</a>
@@ -44,5 +45,6 @@
 <a href="admin_login.jsp">进入后台管理登录界面</a>
 <a href="admin_employee.jsp">进入后台管理求职者界面</a>
 <a href="admin_shop.jsp">进入后台管理商家界面</a>
+<a href="admin_license.jsp">进入后台管理认证界面</a>
 </body>
 </html>

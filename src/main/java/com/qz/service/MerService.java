@@ -44,6 +44,10 @@ public interface MerService {
     List<Merchant> queryMerchantByMname(String mname);
     //通过id删除用户
     void deleteMerchantById(int mid);
- //注册后填写信息
- Integer addInfor(Merchant m);
+   //注册后填写信息
+   Integer addInfor(Merchant m);
+   //更新minputpic
+   Integer updateMerMinputPic(Merchant merchant);
+
+   void updateMerLis(Merchant merchant);
 }

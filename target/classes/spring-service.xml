@@ -41,6 +41,10 @@
     <bean id="ManagerServiceImp" class="com.qz.service.ManagerServiceImp">
         <property name="managerMapper" ref="managerMapper"/>
     </bean>
+    <!--LicenseServiceImpl注入到IOC容器中-->
+    <bean id="LicenseServiceImp" class="com.qz.service.LicenseServiceImp">
+        <property name="licenseMapper" ref="licenseMapper"/>
+    </bean>
 
 
     <!-- 配置事务管理器 -->
