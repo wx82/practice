@@ -21,7 +21,7 @@
         <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
        int mid = merchant.getMid();
        %>
-        var mid = mid;
+        var mid = <%=mid%>;
         $(function () {
             //城市选择插件调用
             districts_start();

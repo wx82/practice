@@ -20,7 +20,7 @@
         <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
 int mid = merchant.getMid();
 %>
-        var mid = mid;
+        var mid = <%=mid%>;
         $(function() {
 
             // $("#city").ProvinceCity();
@@ -363,7 +363,7 @@ int mid = merchant.getMid();
                     <span class="cube"></span> <span class="line-title">商家商标</span><span id="cancel6" class="edit">取消</span>
                 </div>
                 <!-- <div class="li-line grey-font">您还没有添加介绍</div> -->
-                <!-- <textarea  class="form-control" class="text-input" name="minfor"></textarea> -->
+                <!-- <textarea  class="form-cmontrol" class="text-input" name="minfor"></textarea> -->
                 <form action="/merchant/updateLogo" method="post" enctype="multipart/form-data">
                     <%--   填写mid  ${}--%>
                     <input type="hidden" name="mid" value=mid>

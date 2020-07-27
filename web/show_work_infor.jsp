@@ -18,7 +18,7 @@
         <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
 int mid = merchant.getMid();
 %>
-        var mid = mid;
+        var mid = <%=mid%>;
         $(function(){
             window.mid=mid;//岗位对呀商家id
             //职业详情

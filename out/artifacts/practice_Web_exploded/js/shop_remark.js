@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     //获得所有评论
     $.ajax({
-        url: "merchant/allMerComment?mid="+1,
+        url: "merchant/allMerComment?mid="+mid,
         type: "post",
         // data: { mid: mid },整合后记得改
         //data: { mid: 4 },

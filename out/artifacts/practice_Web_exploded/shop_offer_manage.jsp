@@ -18,7 +18,7 @@
     <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
 int mid = merchant.getMid();
 %>
-    var mid = mid;
+    var mid = <%=mid%>;
 </script>
 <!-- 白色商家标题栏 -->
 <div class="row headline top-font">
