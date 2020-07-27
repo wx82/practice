@@ -4495,7 +4495,7 @@ function get_districts() {
     }
   };
 
-  
+
   return ChineseDistricts;
 
 }

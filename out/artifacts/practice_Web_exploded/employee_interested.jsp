@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.qz.pojo.User" %><%--
   Created by IntelliJ IDEA.
   User: aaa
   Date: 2020/7/20
@@ -15,7 +15,13 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/employee_interested.css">
     <script>
-        var uid = 1; <%--//var mid =<%=session.getAttribute("mid")%>; 删前面--%>
+        <%--var uid = 1; &lt;%&ndash;//var mid =<%=session.getAttribute("mid")%>; 删前面&ndash;%&gt;--%>
+        <% System.out.println("================manager===========");
+    User user = (User) session.getAttribute("user_session");
+    String uid = Integer.toString(user.getUid());
+    System.out.println("user_managepage:"+user);
+    System.out.println(uid);%>
+        var uid = <%=uid%>;
     </script>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

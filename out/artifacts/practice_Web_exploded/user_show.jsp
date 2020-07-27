@@ -1,3 +1,4 @@
+<%@ page import="com.qz.pojo.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <html lang="en">
@@ -8,13 +9,19 @@
 	<link rel="stylesheet" type="text/css" href="css/user_show.css">
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript">
+		<% System.out.println("================manager===========");
+User user = (User) session.getAttribute("user_session");
+String uid = Integer.toString(user.getUid());
+System.out.println("user_managepage:"+user);
+System.out.println(uid);%>
+		var uid = <%=uid%>;
 		$(function(){
 			$.ajax({
 				url: '/user/getuser',
 				type: 'POST',
 				dataType: 'json',
 				contentType: 'application/json;charset=UTF-8',
-				data: JSON.stringify({uid: 7}),
+				data: JSON.stringify({uid: uid}),
 			})
 			.done(function(result) {
 				console.log(result)

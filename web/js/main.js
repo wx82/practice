@@ -97,7 +97,7 @@ function distpicker_city_list(obj){
 				}
 			});
 		}
-		
+
 	}else{
 		//这里是其他模式的click事件选择省逻辑和上面一样
 		obj.find(".distpicker_province "+data_style).unbind().click(function(){
@@ -125,7 +125,7 @@ function distpicker_city_list(obj){
 			eval(eventdispather + "(obj)");
 		}
 	}
-	
+
 }
 /**
  * 这里是区的逻辑
@@ -146,26 +146,26 @@ function distpicker_district_list(obj){
 	if(data_style == 'option'){
 		var codeid = obj.find(".distpicker_city").find(':selected').attr("data-code");
 	}else{
-	    var codeid = obj.find(".distpicker_city").find(data_style+'[selected="selected"]').attr("data-code");
+		var codeid = obj.find(".distpicker_city").find(data_style+'[selected="selected"]').attr("data-code");
 	}
 	if(typeof(codeid) === 'undefined'){
 		var codeid = false;
 	}
 	if(data_style == 'option'){
-        if(status_count == 1){
-        	obj.find(".distpicker_city").change(function(){
-    			var codeid = jQuery(this).find(':selected').attr("data-code");
-    			var list = get_distpicker_options(codeid,data_style,data_placeholder_district,selectedcid);
-    			obj.find(".distpicker_district").html(list).attr("data-district","0");
-    			selectedcid = false;
-    			distpicker_district_list_choose_back(obj);
-    			var eventdispather = jQuery(this).attr("data-choose-back-fun");
-    			if(typeof(eventdispather) !== 'undefined' && eventdispather !=''){
-    				eval(eventdispather + "(obj)");
-    			}
-    		});
-        }
-		
+		if(status_count == 1){
+			obj.find(".distpicker_city").change(function(){
+				var codeid = jQuery(this).find(':selected').attr("data-code");
+				var list = get_distpicker_options(codeid,data_style,data_placeholder_district,selectedcid);
+				obj.find(".distpicker_district").html(list).attr("data-district","0");
+				selectedcid = false;
+				distpicker_district_list_choose_back(obj);
+				var eventdispather = jQuery(this).attr("data-choose-back-fun");
+				if(typeof(eventdispather) !== 'undefined' && eventdispather !=''){
+					eval(eventdispather + "(obj)");
+				}
+			});
+		}
+
 	}else{
 		obj.find(".distpicker_city "+data_style).unbind().click(function(){
 			obj.find(".distpicker_city").find(data_style+'[selected="selected"]').removeAttr("selected").removeClass("selected");
@@ -181,7 +181,7 @@ function distpicker_district_list(obj){
 			}
 		});
 	}
-	
+
 	var list = get_distpicker_options(codeid,data_style,data_placeholder_district,selectedcid);
 	obj.find(".distpicker_district").html(list).attr("data-district","0");
 	distpicker_district_list_choose_back(obj);
@@ -210,7 +210,7 @@ function distpicker_district_list_choose_back(obj){
 			});
 			status_count = 0;
 		}
-		
+
 	}else{
 		obj.find(".distpicker_district "+data_style).unbind().click(function(){
 			obj.find(".distpicker_district").find(data_style+'[selected="selected"]').removeAttr("selected").removeClass("selected");
@@ -221,7 +221,7 @@ function distpicker_district_list_choose_back(obj){
 			}
 		});
 	}
-	
+
 }
 /**
  * 这个就是组成选项的列表了参数上面已经说过了
@@ -247,7 +247,7 @@ function get_distpicker_options(id,data_style,placeholder,selectedcid){
 				}
 			}
 			optionlist +=  '<' + data_style + str + '>' + n + '</' + data_style + '>';
-	      });
+		});
 	}
 	return optionlist;
 }
