@@ -26,7 +26,7 @@ $(document).ready(function() {
                 // "jmethod": "magna",
                 // "jrtime": "eiusmod"
 
-                var code = "<tr class=\"offer\"><td><a class=\"employee_name\">" + job.jintro + "</a></td><td><span class=\"person_number small-text\">" + job.jsalary + "/" + job.jmethod + "</span></td><td><div class=\"small-text\">发布于:" + job.jrtime + "</div></td><td><button class=\"delet_button\" id=\"" + job.iid + "\">不再感兴趣</button></td></tr>";
+                var code = "<tr class=\"offer\"><td><a class=\"employee_name\">" + job.jname + "</a></td><td><span class=\"person_number small-text\">" + job.jsalary + "/" + job.jmethod + "</span></td><td><div class=\"small-text\">发布于:" + job.jrtime + "</div></td><td><button class=\"delet_button\" id=\"" + job.iid + "\">不再感兴趣</button></td></tr>";
                 $("#offer_list").append(code);
             });
         }

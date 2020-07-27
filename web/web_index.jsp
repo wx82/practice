@@ -17,12 +17,20 @@
 	<script type="text/javascript">
 		<%--		<%User user = (User)session.getAttribute("user_session");--%>
 		<%--		int uid = user.getUid();%>--%>
-		<% User user = (User) session.getAttribute("user_session");
-		System.out.println("===========================");
-		System.out.println("user:"+user);
-//		System.out.println("type:"+user.getClass());
-//		System.out.println("uid:"+user.getUid());
-		int uid = user.getUid();%>
+<%--		<% User user = (User) session.getAttribute("user_session");--%>
+<%--		System.out.println("===========================");--%>
+<%--		System.out.println("user:"+user);--%>
+<%--//		System.out.println("type:"+user.getClass());--%>
+<%--//		System.out.println("uid:"+user.getUid());--%>
+<%--		int uid = user.getUid();%>--%>
+		<%User user=(User)session.getAttribute("user_session");
+System.out.println("===========================");
+System.out.println("user:"+user);
+//System.out.println("type:"+user.getClass());
+//System.out.println("uid:"+user.getUid());
+int uid=user.getUid();
+String uname=user.getUname();%>
+		varuname=<%=uname%>;
 		$(function(){
 
 			// console.log(remote_ip_info["province"] + "省" + ',' + remote_ip_info["city"] + "市")
@@ -388,7 +396,7 @@
 			<div class="row center-block">
 				<div class="col-lg-3 col-md-3"></div>
 				<div class="photo col-lg-3 col-md-3">头像</div>
-				<div class="person-name col-lg-3 col-md-3">未登录</div>
+				<div class="person-name col-lg-3 col-md-3"><%=uname%></div>
 			</div>
 			<!-- 消息栏 -->
 			<div class="row center-block">
