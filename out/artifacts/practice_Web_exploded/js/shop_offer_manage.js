@@ -9,7 +9,7 @@ $(document).ready(function() {
         url: "/merchant/mAllJob",
         type: "get",
         dataType: "json",
-        data: {mid:1},
+        data: {mid:mid},
         success: function(result) {
             console.log(result);
             jobs = result.jobs;

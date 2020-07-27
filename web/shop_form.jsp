@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.qz.pojo.Merchant" %><%--
   Created by IntelliJ IDEA.
   User: lenovo
   Date: 2020/7/26
@@ -18,6 +18,10 @@
 
 
     <script type="text/javascript">
+        <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
+       int mid = merchant.getMid();
+       %>
+        var mid = mid;
         $(function () {
             //城市选择插件调用
             districts_start();
@@ -85,7 +89,7 @@
 <!-- 主要内容 -->
 <div class="container main-box">
     <form id="form-box">
-        <input type="hidden" name="mid" value="9">
+        <input type="hidden" name="mid" value=mid>
         <div class="col-lg-12">
             <div class="row show-info">
                 <div class="edit-info">

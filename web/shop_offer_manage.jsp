@@ -1,3 +1,4 @@
+<%@ page import="com.qz.pojo.Merchant" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <% String basePath = request.getScheme() + "://"+ request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/";    %>
 <base href="<%=basePath %>">
@@ -13,6 +14,12 @@
 </head>
 
 <body>
+<script type="text/javascript">
+    <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
+int mid = merchant.getMid();
+%>
+    var mid = mid;
+</script>
 <!-- 白色商家标题栏 -->
 <div class="row headline top-font">
     <!-- 左侧文字 -->

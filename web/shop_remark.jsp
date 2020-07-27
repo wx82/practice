@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.qz.pojo.Merchant" %><%--
   Created by IntelliJ IDEA.
   User: lenovo
   Date: 2020/7/16
@@ -15,7 +15,11 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/shop_remark.css">
     <script>
-        var mid = 3; //var mid =<%=session.getAttribute("mid")%>; 删前面
+        <%--var mid = 3; //var mid =<%=session.getAttribute("mid")%>; 删前面--%>
+        <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
+int mid = merchant.getMid();
+%>
+        var mid = mid;
     </script>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

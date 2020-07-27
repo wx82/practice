@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.qz.pojo.Merchant" %><%--
   Created by IntelliJ IDEA.
   User: lenovo
   Date: 2020/7/21
@@ -17,6 +17,10 @@
     <script type="text/javascript" src="js/main.js"></script>
 
     <script type="text/javascript">
+        <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
+int mid = merchant.getMid();
+%>
+        var mid = mid;
         $(function() {
 
             // $("#city").ProvinceCity();
@@ -44,7 +48,7 @@
 
 
             $.ajax({
-                url: '/merchant/oneMer?mid=' + 1,//mid
+                url: '/merchant/oneMer?mid=' + mid,//mid
                 type: 'GET',
                 dataType: 'json',
             })
@@ -189,7 +193,7 @@
                         console.log(allWelfare)
                         // alert('hello')
                         var data = {
-                            "mid": 1,
+                            "mid": mid,
                             "mwelfare": allWelfare,
                         };
                         $.ajax({
@@ -299,7 +303,7 @@
 
                     <ul>
                         <li class="li-line"> <%--   填写mid  ${}--%>
-                            <input type="hidden" name="mid" value="1">
+                            <input type="hidden" name="mid" value=mid>
                         </li>
                         <li class="li-line"><span class="li-title">商店名称</span>
                             <input class="inline-input form-control" type="text" name="mname">
@@ -362,7 +366,7 @@
                 <!-- <textarea  class="form-control" class="text-input" name="minfor"></textarea> -->
                 <form action="/merchant/updateLogo" method="post" enctype="multipart/form-data">
                     <%--   填写mid  ${}--%>
-                    <input type="hidden" name="mid" value="1">
+                    <input type="hidden" name="mid" value=mid>
                 <div class="box">
                     <img id="mlogo-img2" src="" width="128" height="128">
                         <input id="mlogo" type="file" name="logo" accept="image/gif, image/jpeg, image/png, image/jpg">
@@ -389,7 +393,7 @@
             <div id="edit-info-box2">
                 <form id="updateMerInfor-form">
                     <%--   填写mid  ${}--%>
-                    <input type="hidden" name="mid" value="1">
+                    <input type="hidden" name="mid" value=mid>
                     <div>
                         <span class="cube"></span> <span class="line-title">商家介绍</span><span id="cancel2" class="edit">取消</span>
                     </div>
@@ -427,7 +431,7 @@
                 </div>
                 <form id="updateMerWel-form">
 <%--                   < %--   填写mid  ${}&ndash;%&gt;--%>
-                    <input type="hidden" name="mid" value="1">
+                    <input type="hidden" name="mid" value=mid>
                     <div class="add-box input-group">
                         <input type="text" class="form-control" placeholder="2-15个字，不能输入特殊字符" name="mwelfare">
                         <span class="input-group-btn">
@@ -459,7 +463,7 @@
                 </div>
                 <form id="updateMerD-form">
                     <%--   填写mid  ${}--%>
-                    <input type="hidden" name="mid" value="1">
+                    <input type="hidden" name="mid" value=mid>
                     <div class="li-line">
                         <span class="li-title">联系人</span>
 
@@ -501,9 +505,9 @@
                 </div> -->
                 <form action="/merchant/addMpic" method="post" enctype="multipart/form-data">
                     <%--   填写mid  ${}--%>
-                    <input type="hidden" name="mid" value="1">
+                    <input type="hidden" name="mid" value=mid>
                 <div class="box2">
-                    <input type="hidden" name="mid" value="1">
+                    <input type="hidden" name="mid" value=mid>
                     <img id="pre-img" src="">
                     <input id="mpics" type="file" name="pics" accept="image/gif, image/jpeg, image/png, image/jpg">
                 </div>

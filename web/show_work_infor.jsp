@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.qz.pojo.Merchant" %><%--
   Created by IntelliJ IDEA.
   User: lenovo
   Date: 2020/7/17
@@ -15,8 +15,12 @@
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
+        <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
+int mid = merchant.getMid();
+%>
+        var mid = mid;
         $(function(){
-            window.mid=1;//岗位对呀商家id
+            window.mid=mid;//岗位对呀商家id
             //职业详情
             $.ajax({
                 url: 'merchant/queryJobByJid?jid='+1,//jid

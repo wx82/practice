@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.qz.pojo.Merchant" %><%--
   Created by IntelliJ IDEA.
   User: lenovo
   Date: 2020/7/19
@@ -15,11 +15,15 @@
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
+        <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
+       int mid = merchant.getMid();
+       %>
+        var mid = mid;
         $(function(){
 
             // 商家介绍
             $.ajax({
-                url: 'merchant/oneMer?mid='+1,
+                url: 'merchant/oneMer?mid='+mid,
                 type: 'post',
                 dataType: 'json',
             })
@@ -55,7 +59,7 @@
 
             // 用户评论
             $.ajax({
-                url: 'merchant/allComment?mid='+1,
+                url: 'merchant/allComment?mid='+mid,
                 type: 'GET',
                 dataType: 'json',
                 //data: {mid: 1},
@@ -237,7 +241,7 @@
             einfor = $('#content').val()
             mstar = $("input[name='mstar']:checked").val()
             var data={
-                mid:1,//获取页面时填写
+                mid:mid,//获取页面时填写
                 einfor: einfor,
                 uid:1,//获取页面时填写
                 mstar: mstar,
