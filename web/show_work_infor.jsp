@@ -17,6 +17,7 @@
     <script type="text/javascript">
         <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
 int mid = merchant.getMid();
+String mname = merchant.getMname();
 %>
         var mid = <%=mid%>;
         $(function(){

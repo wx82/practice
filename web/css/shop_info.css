@@ -135,7 +135,7 @@ li {
 	padding: 5px;
 	border-radius: 5px;
 }
-#edit-info-box1 ,#edit-info-box2, #edit-info-box3, #edit-info-box4, #edit-info-box5 {
+#edit-info-box1 ,#edit-info-box2, #edit-info-box3, #edit-info-box4, #edit-info-box5,#edit-info-box6 {
 	display: none;
 }
 .inline-input{

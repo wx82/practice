@@ -1,4 +1,4 @@
-<%@ page import="com.qz.pojo.Merchant" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: hanmengru
   Date: 2020/7/22
@@ -16,11 +16,6 @@
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
     <script type="text/javascript">
-        <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
-     int mid = merchant.getMid();
-     String mname = merchant.getMname();
-     %>
-        var mid = mid;
         $(function(){
             //上传图片显示
             $("#box3").hide();
@@ -31,7 +26,7 @@
                 url: '/merchant/oneMer',
                 type: 'GET',
                 dataType: 'json',
-                data: {"mid": mid},//mid需要修改
+                data: {"mid": 3},//mid需要修改
             })
                 .done(function(result) {
                     console.log(result)
@@ -178,7 +173,7 @@
             <div class="certify-info">
                 <span>上传凭证</span>
                 <form enctype="multipart/form-data" method="post" action="${pageContext.request.contextPath}/merchant/addMblicense" id="license">
-                    <input type="hidden" name="mid" value="mid">
+                    <input type="hidden" name="mid" value="3">
                     <div class="box"><!-- 选择上传 -->
                         <img src="" >
                         <input class="license" type="file" name="license" accept="image/gif, image/jpeg, image/png, image/jpg">
@@ -187,7 +182,7 @@
                     <input type="submit" value="上传图片" class="sub">
                 </form>
                 <form id="certy-form" >
-                    <input type="hidden" name="mid" value="mid">
+                    <input type="hidden" name="mid" value="3">
                     <ul>
                         <li class="li-line"><span>注册号</span><input class="inline-input form-control" type="text" name="rnum" style="width: 500px;"></li>
                         <li class="li-line"><span>社会信用代码</span><input class="inline-input form-control" type="text" name="cnum" style="width: 500px;"></li>
