@@ -52,4 +52,7 @@ public class JobServiceImp implements JobService{
     public List<Job> queryJobByitems(Job job) {
         return jobMapper.queryJobByitems(job);
     }
+    public List<Job> queryJobBytime(Job job){
+        return jobMapper.queryJobBytime(job);
+    }
 }

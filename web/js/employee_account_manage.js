@@ -111,7 +111,7 @@ $(document).ready(function() {
                     console.log(data);
                     if (data.status == 0) {
                         alert("修改成功！");
-                        return;
+                        return window.location.href="employee_account_manage.jsp";
                     }
                     if (data.status == 1) {
                         alert("原密码错误，修改失败");

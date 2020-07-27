@@ -15,4 +15,5 @@ public interface JobService {
     List<Job> queryAllJob();
     List<Job> queryJobBycity(Job job);
     List<Job> queryJobByitems(Job job);
+    List<Job> queryJobBytime(Job job);
 }

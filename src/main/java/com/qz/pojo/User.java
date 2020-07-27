@@ -15,6 +15,13 @@ public class User {
     private String uedu;
     private String uphone;
 
+    public void setUid(int uid){
+        this.uid = uid;
+    }
+    public int getUid(){
+        return uid;
+    }
+
     public String getUaccount() {
         return uaccount;
     }

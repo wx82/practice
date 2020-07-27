@@ -15,4 +15,5 @@ public interface jobMapper {
     List<Job> queryJobBycity(Job job);
     List<Job> queryAllJob();
     List<Job> queryJobByitems(Job job);
+    List<Job> queryJobBytime(Job job);
 }
