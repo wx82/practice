@@ -32,7 +32,7 @@ public class MerServiceImp implements MerService{
     }
     public Integer addMblicense(CommonsMultipartFile upload, HttpSession session, Merchant m){
         String fileName = uploadPic(upload, session);  //上传文件
-        m.setMlicense("/upload/"+fileName);
+        m.setMlicense("/license/"+fileName);
         return mermapper.addMblicense(m);
     }
     public Integer updateLogo(CommonsMultipartFile upload, HttpSession session, Merchant m) {
@@ -115,7 +115,7 @@ public class MerServiceImp implements MerService{
         /* 上传图片 */
         //确定上传路径,获得服务器的路径
         ServletContext servletContext = session.getServletContext();
-        String realPath = servletContext.getRealPath("/upload");
+        String realPath = servletContext.getRealPath("/license");
         //变成程序中的路径
         File uploadPath = new File(realPath);
         if(!uploadPath.exists()){
@@ -141,4 +141,8 @@ public class MerServiceImp implements MerService{
     public List<Merchant> queryMerchantByMname(String mname){return mermapper.queryMerchantByMname(mname);};
 
     public void deleteMerchantById(int mid){ mermapper.deleteMerchantById(mid);};
+
+    public Integer updateMerMinputPic(Merchant merchant){return mermapper.updateMerMinputPic(merchant);};
+
+    public void updateMerLis(Merchant merchant){ mermapper.updateMerLis(merchant);};
 }

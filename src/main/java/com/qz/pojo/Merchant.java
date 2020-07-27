@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor  //有参构造
-@NoArgsConstructor   //无参构造
+//@NoArgsConstructor   //无参构造
 public class Merchant {
     private Integer mid;
     private String mname;//公司名称
@@ -30,6 +30,27 @@ public class Merchant {
     private String mlicense;//营业执照
     private Boolean minputpic;//是否提交营业执照
     private List<Mpics> mpic;//店铺展示 一个店铺拥有多个展示图片
+
+    public Boolean getIsverifyfail() {
+        return isverifyfail;
+    }
+
+    public void setIsverifyfail(Boolean isverifyfail) {
+        this.isverifyfail = isverifyfail;
+    }
+
+    public String getFailreason() {
+        return failreason;
+    }
+
+    public void setFailreason(String failreason) {
+        this.failreason = failreason;
+    }
+
+    private Boolean isverifyfail;//是否认证失败
+    private String failreason;//认证失败原因
+
+    public Merchant() { }
 
     public String getMaccount() {
         return maccount;

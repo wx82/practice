@@ -70,6 +70,7 @@ public class merController {
     @RequestMapping("/updateMerInfor")
     @ResponseBody
     Integer updateMerInfor(Merchant m){
+        m.setMtag(false);
         return merService.updateMerInfor(m);
     }
 

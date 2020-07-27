@@ -52,4 +52,8 @@ public interface merMapper {
     List<Merchant> queryMerchantByMname(String mname);
     //根据id删除用户
     void deleteMerchantById(int mid);
+    //更新minputpic
+    Integer updateMerMinputPic(Merchant merchant);
+
+    void updateMerLis(Merchant merchant);
 }
