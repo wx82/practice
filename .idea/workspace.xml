@@ -6,41 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="用户头像修改，在upic文件夹下">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/licenseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/licenseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/licenseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/pojo/License.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/LicenseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/LicenseServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin_license.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/certify_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/admin_license.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/商家认证素材/营业执照默认图片.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/admin_license.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/merMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/pojo/Merchant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/pojo/Merchant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/spring-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/merController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/merController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/dao/merMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/pojo/Merchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/service/MerServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/merMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/pojo/Merchant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/pojo/Merchant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/MerServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+    <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="修复了认证失败的提示问题">
+      <change beforePath="$PROJECT_DIR$/web/certify_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/certify_manager.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -259,6 +226,7 @@
       <workItem from="1595754662112" duration="2446000" />
       <workItem from="1595759301100" duration="2448000" />
       <workItem from="1595816886461" duration="2214000" />
+      <workItem from="1595821990458" duration="176000" />
     </task>
     <task id="LOCAL-00001" summary="增加用户技能和介绍的更改">
       <created>1595309499522</created>

@@ -34,29 +34,30 @@
                     var minputpic = result.minputpic;//判断是否提交营业执照
                     var isverifyfail = result.isverifyfail;//判断是否认证失败
                     var failreason = result.failreason;//认证失败原因
-                    //console.log(mtag);
+                   // console.log(mtag);
                     //console.log(typeof mtag);
                     //console.log(minputpic);
                     //console.log(isverifyfail);
-                    //console.log(failreason);
+
                     //console.log(typeof minputpic);
 
                     if(mtag == true){//通过了
                         $("#box3").show();
                         $("#box2").hide();
                         $("#box1").hide();
-                    }else if(mtag == false && minputpic == 0 ){//没提交
-                        $("#box1").show();
-                        $("#box2").hide();
-                        $("#box3").hide();
-                    }else if(mtag == false && minputpic==0 && isverifyfail == true){//认证失败
+                    }else if(mtag == false && minputpic==false && isverifyfail == true){//认证失败
                         //console.log("success");
                         var code = "<h3  style=\"left: 20px;top: 5px;\">&nbsp&nbsp&nbsp&nbsp认证失败："+failreason+"</h3>";
                         $("#verifyInfo").html(code);
                         $("#box1").show();
                         $("#box2").hide();
                         $("#box3").hide();
-                    }else if(mtag == false && minputpic == 1 ) {//提交审核中
+                        console.log(failreason);
+                    }else if(mtag == false && minputpic == false ){//没提交
+                        $("#box1").show();
+                        $("#box2").hide();
+                        $("#box3").hide();
+                    } else if(mtag == false && minputpic == true ) {//提交审核中
                         $("#box2").show();
                         $("#box1").hide();
                         $("#box3").hide();
@@ -89,16 +90,16 @@
                 }
             });
 
-           //表单提交后返回的数据
-           //  $(".license").ajaxForm(function (data) {
-           //          console.log(data);
-           //          // if(data == 1){
-           //          //     alert("营业执照上传成功")
-           //          // }else{
-           //          //     alert("营业执照上传失败")
-           //          // }
-           //      }
-           //  );
+            //表单提交后返回的数据
+            //  $(".license").ajaxForm(function (data) {
+            //          console.log(data);
+            //          // if(data == 1){
+            //          //     alert("营业执照上传成功")
+            //          // }else{
+            //          //     alert("营业执照上传失败")
+            //          // }
+            //      }
+            //  );
 
 
 
@@ -195,7 +196,7 @@
 
                 </form>
                 <button id="submit" class="sub" >提交并保存信息</button>
-<%--                <input type="submit" class="sub" value="提交并保存信息"/> --%>
+                <%--                <input type="submit" class="sub" value="提交并保存信息"/> --%>
 
 
             </div>
