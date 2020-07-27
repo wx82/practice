@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    //session存在直接跳到后台管理界面
+    if(sessionStorage.getItem("MANAGER_NAME")!=null){
+        window.location.href="admin_shop.jsp";
+    }
+
     function check_name(where) {
         //判断账号是否为空
         var value = $(where).val();
@@ -59,7 +64,7 @@ $(document).ready(function() {
                     console.log(data);
                     if (data.isSuccess) {
                         alert("登录成功");
-                        window.location.href="shop_info.jsp";
+                        window.location.href="admin_shop.jsp";
                         return;
                     }
                     if (!data.isAccountExist) {

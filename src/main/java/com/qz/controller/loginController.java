@@ -8,11 +8,15 @@ import com.qz.service.MerService;
 import com.qz.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.HashMap;
 
 @Controller
@@ -91,7 +95,7 @@ public class loginController {
     //管理员登录
     @RequestMapping("/adminLogin")
     @ResponseBody
-    public Object adminLogin(String maname,String mapassword){
+    public Object adminLogin(String maname,String mapassword,HttpSession session){
         System.out.println(maname);
         System.out.println(mapassword);
 
@@ -104,6 +108,7 @@ public class loginController {
                 //登录成功
                 hashMap.put("isSuccess",true);
                 hashMap.put("isPasswordCorrect",true);
+                session.setAttribute("manager_session",manager);
                 return hashMap;
             }else{
                 //密码错误
@@ -118,5 +123,28 @@ public class loginController {
             hashMap.put("isPasswordCorrect",false);
             return hashMap;
         }
+    }
+
+    //管理员商家详情跳转
+    @RequestMapping("/adminOneMerchant")
+    @ResponseBody
+    public Object adminOneMerchant(int mid, HttpSession session) {
+        Merchant merchant = merService.queryMerById(mid);
+        session.setAttribute("merchant_session", merchant);
+        System.out.println(merchant);
+        HashMap hashMap = new HashMap();
+        hashMap.put("isSuccess",true);
+        return hashMap;
+    }
+
+    //管理员用户详情跳转
+    @RequestMapping("/adminOneUser")
+    @ResponseBody
+    public Object adminOneUser(int uid, HttpSession session) {
+        User user = userService.queryUserById(uid);
+        session.setAttribute("user_session", user);
+        HashMap hashMap = new HashMap();
+        hashMap.put("isSuccess",true);
+        return hashMap;
     }
 }

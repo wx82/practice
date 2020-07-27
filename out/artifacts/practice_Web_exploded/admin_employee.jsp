@@ -35,8 +35,10 @@
     </div>
 
 
-    <div class="col-lg-1 center-font">
-        <span>退出</span>
+    <div class="col-lg-1 center-font" style="width: 150px;margin-left: 850px;">
+        <span>欢迎</span>
+        <span id="manager_name"></span>
+        <a id="exit">退出</a>
     </div>
 </div>
 
@@ -45,9 +47,9 @@
     <!-- 左侧选项 -->
     <div class="col-lg-3 choice-box">
         <ul>
-            <li class="choice" id="amdin_shop">商家管理</li>
-            <li class="choice chosen" id="amdin_employee">求职者管理</li>
-<%--            <li class="choice" id="amdin_report">举报管理</li>--%>
+            <li class="choice" id="amdin_shop"><a href="admin_shop.jsp">商家管理</a></li>
+            <li class="choice chosen" id="amdin_employee"><a href="admin_employee.jsp">求职者管理</a></li>
+            <li class="choice" id="amdin_license"><a href="admin_license.jsp">认证管理</a></li>
         </ul>
     </div>
 

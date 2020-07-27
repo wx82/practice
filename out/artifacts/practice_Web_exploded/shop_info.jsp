@@ -267,7 +267,7 @@ String mname = merchant.getMname();
     <!-- 左侧选项 -->
     <div class="col-lg-3 choice-box">
         <div class="img-head"><img class="head_image img-circle" src="img/bsPic.png"></div>
-        <div class="shop-name" id="shop_name"> 嗦粉早餐店</div>
+        <div class="shop-name" id="shop_name"> <%=mname%></div>
         <ul>
             <li class="choice" id="chosen" ><a href="shop_info.jsp">商家资料</a></li>
             <li class="choice"><a href="certify_manager.jsp">认证管理</a></li>

@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+    //将MANAGER_NAME传入manager_name
+     $("#manager_name").text(sessionStorage.getItem('MANAGER_NAME'));
+
+     //退出登录删除MANAGER_NAME
+     $("#exit").click(function () {
+         sessionStorage.removeItem("MANAGER_NAME");
+         window.location.href="admin_login.jsp";
+     });
+
     //请求营业执照信息
     var license_list = new Array();
     var merchant_list = new Array();

@@ -7,74 +7,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="916e44a4-e0fc-4248-a607-abfb1f433382" name="Default Changelist" comment="修复了认证失败的提示问题">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/licenseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/licenseMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/dao/licenseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/pojo/License.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/LicenseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/LicenseServiceImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/admin_license.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/certify_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/admin_license.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/img/商家认证素材/营业执照默认图片.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_license.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/licenseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/licenseMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/dao/licenseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/pojo/License.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/service/LicenseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/qz/service/LicenseServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/controller/merController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/WEB-INF/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/shop_info.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/shop_info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/admin_employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/admin_employee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/admin_license.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/admin_license.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/admin_shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/admin_shop.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/certify_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/certify_manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/admin_employee.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/admin_employee.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/admin_license.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/admin_license.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/admin_shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/admin_shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/certify_manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css/certify_manager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_license.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_license.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/js/admin_shop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_account_manage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_account_manage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_info.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_infor.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_offer_manage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_offer_manage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_remark.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/shop_remark.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/controller/merController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qz/service/JobServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qz/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qz/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_employee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_license.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_license.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_shop.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/certify_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/certify_manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/shop_info.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/shop_info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop_account_manage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/shop_account_manage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop_info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/shop_info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop_infor.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop_offer_manage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/shop_offer_manage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop_remark.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/shop_remark.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/show_work_infor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/show_work_infor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/admin_employee.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/admin_employee.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/admin_license.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/admin_license.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/admin_shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/admin_shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/certify_manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/certify_manager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/admin_employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/admin_employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/admin_license.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/admin_license.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/admin_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/admin_login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/admin_shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/admin_shop.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,18 +69,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>choice-box</find>
-      <find>shop-name</find>
-      <find>chosen</find>
-      <find>ul</find>
-      <find>img-head</find>
-      <find>choice</find>
-      <find>head_image</find>
-      <find>main</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
@@ -130,7 +83,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven/apache-maven-3.5.4" />
+        <option name="mavenHome" value="$USER_HOME$/maven/apache-maven-3.5.4" />
         <option name="userSettingsFile" value="D:\maven\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -152,7 +105,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/practice_Web_exploded/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -164,9 +117,12 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
-      <recent name="D:\ideaWorkspace\practice\web\css" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hanmengru\Desktop\webcodenew\practice\out\artifacts\practice_Web_exploded\css" />
+      <recent name="C:\Users\hanmengru\Desktop\webcodenew\practice\web\css" />
+      <recent name="C:\Users\hanmengru\Desktop\webcodenewnewnew\practice\out\artifacts\practice_Web_exploded\img\商家认证素材" />
+      <recent name="C:\Users\hanmengru\Desktop\webcodenewnewnew\practice\web\img\商家认证素材" />
+      <recent name="C:\Users\hanmengru\Desktop\webcodenewnewnew\practice\web" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.qz.service" />
@@ -174,16 +130,25 @@
       <recent name="com.qz.dao" />
       <recent name="com.qz.controller" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hanmengru\Desktop\webcodenewnewnew\practice\out\artifacts\practice_Web_exploded\img\商家认证素材" />
-      <recent name="C:\Users\hanmengru\Desktop\webcodenewnewnew\practice\web\img\商家认证素材" />
-      <recent name="C:\Users\hanmengru\Desktop\webcodenewnewnew\practice\web" />
-      <recent name="C:\Users\hanmengru\Desktop\webcodenewnewnew\practice\web\css" />
-      <recent name="C:\Users\hanmengru\Desktop\webcodenewnewnew\practice\web\js" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\assignment\web\课设\ideal\versioncontrol\2020072002\practice\web" />
+      <recent name="D:\ideaWorkspace\practice\web\css" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.49" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.49" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -281,6 +246,7 @@
       <workItem from="1595816886461" duration="2214000" />
       <workItem from="1595821990458" duration="176000" />
       <workItem from="1595834343121" duration="3051000" />
+      <workItem from="1595838184884" duration="11425000" />
     </task>
     <task id="LOCAL-00001" summary="增加用户技能和介绍的更改">
       <created>1595309499522</created>
@@ -342,14 +308,16 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -368,7 +336,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了几个页面的整合" />

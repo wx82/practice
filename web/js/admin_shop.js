@@ -1,4 +1,14 @@
 $(document).ready(function() {
+
+    //将manager_name存入session
+    sessionStorage.setItem('MANAGER_NAME',document.getElementById("manager_name").innerHTML);
+
+    //退出登录删除MANAGER_NAME
+    $("#exit").click(function () {
+        sessionStorage.removeItem("MANAGER_NAME");
+        window.location.href="admin_login.jsp";
+    });
+
     //请求商家信息
     $.ajax({
         type: "get",
@@ -13,20 +23,39 @@ $(document).ready(function() {
                 var mstar = shop.mstar;
                 if (shop.mtag) {
                     var mtag = "已认证";
-                    var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\">" + name + "</a></td><td> <span class=\"label label-success\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
+                    var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\" id=\"shop_name"+mid.toString()+"\">" + name + "</a></td><td> <span class=\"label label-success\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
 
                 } else {
                     var mtag = "未认证";
-                    var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\">" + name + "</a></td><td> <span class=\"label label-default\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
+                    var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\" id=\"shop_name"+mid.toString()+"\">" + name + "</a></td><td> <span class=\"label label-default\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
                 }
                 $("#shop_list").append(code);
-            })
+
+                var shop_name_id ="shop_name"+mid.toString();
+                $(document).on('click','#'+shop_name_id,function () {
+                    //console.log(mid);
+                    var data = {"mid":mid};
+                    $.ajax({
+                        type: "get",
+                        datatype: "json",
+                        data:data,
+                        url:'/adminOneMerchant',
+                        success:function(){
+                            //console.log(name);
+                            alert("进入"+name+"的详情页面");
+                            window.location.href="shop_info.jsp";
+                        }
+                    })
+                });
+            });
+
 
         },
         error:function(){
             alert("ajaxfailure");
         }
     });
+
 
     // 通过名称查找
     $("#search_name_button").click(function() {
@@ -54,13 +83,14 @@ $(document).ready(function() {
                             var mstar = shop.mstar;
                             if (shop.mtag) {
                                 var mtag = "已认证";
-                                var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\">" + name + "</a></td><td> <span class=\"label label-success\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
+                                var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\" id=\"shop_name"+mid.toString()+"\">" + name + "</a></td><td> <span class=\"label label-success\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
 
                             } else {
                                 var mtag = "未认证";
-                                var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\">" + name + "</a></td><td> <span class=\"label label-default\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
+                                var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\" id=\"shop_name"+mid.toString()+"\">" + name + "</a></td><td> <span class=\"label label-default\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
                             }
                             $("#shop_list").append(code);
+
                         })
                     } else {
                         var code = "<div class=\"text-center\" style=\"padding-top:20px;font-size:1.2em;\">没有搜到相应名称的商家</div>";
@@ -96,16 +126,17 @@ $(document).ready(function() {
                         var mstar = data.merchant.mstar;
                         if (data.merchant.mtag) {
                             var mtag = "已认证";
-                            var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\">" + name + "</a></td><td> <span class=\"label label-success\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
+                            var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\" id=\"shop_name"+mid.toString()+"\">" + name + "</a></td><td> <span class=\"label label-success\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
 
                         } else {
                             var mtag = "未认证";
-                            var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\">" + name + "</a></td><td> <span class=\"label label-default\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
+                            var code = "<tr class=\"shop\"><td><a class=\"shop_name col-lg-1\" id=\"shop_name"+mid.toString()+"\">" + name + "</a></td><td> <span class=\"label label-default\">" + mtag + "</span></td><td><span class=\"label label-danger\">" + mstar + "星</span></td><td><span id=\"id\">id:" + mid + "</span></td><td><button class=\"delet_button\" id= " + mid + ">删除商家</button></td></tr>";
                         }
                     } else {
                         var code = "<div class=\"text-center\" style=\"padding-top:20px;font-size:1.2em;\">没有搜到相应id的商家</div>";
                     }
                     $("#shop_list").html(code);
+
                 }
             });
             $("#search_id").val('');

@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.qz.pojo.Merchant" %><%--
   Created by IntelliJ IDEA.
   User: hanmengru
   Date: 2020/7/22
@@ -16,6 +16,12 @@
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
     <script type="text/javascript">
+        <% Merchant merchant = (Merchant) session.getAttribute("merchant_session");
+        int mid = merchant.getMid();
+        String mname = merchant.getMnname();
+        %>
+        var mid =<%=mid%>;
+        console.log(mid);
         $(function(){
             //上传图片显示
             $("#box3").hide();
@@ -26,7 +32,7 @@
                 url: '/merchant/oneMer',
                 type: 'GET',
                 dataType: 'json',
-                data: {"mid": 3},//mid需要修改
+                data: {"mid": mid},//mid需要修改
             })
                 .done(function(result) {
                     console.log(result)
@@ -47,7 +53,7 @@
                         $("#box1").hide();
                     }else if(mtag == false && minputpic==false && isverifyfail == true){//认证失败
                         //console.log("success");
-                        var code = "<h3  style=\"left: 20px;top: 5px;\">&nbsp&nbsp&nbsp&nbsp认证失败："+failreason+"</h3>";
+                        var code = "<h3  style=\"left: 20px;top: 5px;\">&nbsp&nbsp&nbsp&nbsp认证失败："+failreason+",请重新提交营业执照图片和信息"</h3>";
                         $("#verifyInfo").html(code);
                         $("#box1").show();
                         $("#box2").hide();
@@ -139,26 +145,35 @@
 </head>
 <body>
 <!-- 头部 -->
-<div class="head row">
-    <div class="col-lg-10 col-md-10">
-        <div class="big-font">C&T招聘网</div>
-        <div class="small-font">city and town recruitment</div>
+<body>
+<!-- 头部 -->
+<div class="row headline top-font">
+    <!-- 左侧文字 -->
+    <div class="col-lg-2">
+        <div class="big-font">
+            C&T招聘网
+        </div>
+        <div class="small-font">
+            city and town recruitment
+        </div>
     </div>
-    <div class="admin col-lg-2 col-md-2">
-        <span>早餐店，</span>
-        <span>退出</span>
+    <!-- 占位 -->
+    <div class="col-lg-9">
     </div>
-
+    <div class="col-lg-1 center-font">
+        <span>退出登录</span>
+    </div>
 </div>
 
-<div class="main-box container">
+<!--内容-->
+<div class="container content">
     <!-- 左侧选项 -->
-    <div class="col-lg-2 col-md-2 choice-box">
-        <div class="img-head">头像</div>
-        <div class="shop-name"> 嗦粉早餐店</div>
+    <div class="col-lg-3 choice-box">
+        <div class="img-head"><img class="head_image img-circle" src="img/bsPic.png"></div>
+        <div class="shop-name" id="shop_name"> 嗦粉早餐店</div>
         <ul>
             <li class="choice"><a href="shop_info.jsp">商家资料</a></li>
-            <li class="click choice"><a href="certify_manager.jsp">认证管理</a> </li>
+            <li class="click choice" id="chosen"><a href="certify_manager.jsp">认证管理</a> </li>
             <li class="choice"><a href="shop_account_manage.jsp">账号管理</a> </li>
             <li class="choice"><a href="shop_offer_manage.jsp>">岗位管理</a></li>
             <li class="choice"><a href="shop_remark.jsp">我的评论</a></li>
@@ -173,7 +188,7 @@
             <div class="certify-info">
                 <span>上传凭证</span>
                 <form enctype="multipart/form-data" method="post" action="${pageContext.request.contextPath}/merchant/addMblicense" id="license">
-                    <input type="hidden" name="mid" value="3">
+                    <input type="hidden" name="mid" value=<%=mid%>>
                     <div class="box"><!-- 选择上传 -->
                         <img src="" >
                         <input class="license" type="file" name="license" accept="image/gif, image/jpeg, image/png, image/jpg">
@@ -182,7 +197,7 @@
                     <input type="submit" value="上传图片" class="sub">
                 </form>
                 <form id="certy-form" >
-                    <input type="hidden" name="mid" value="3">
+                    <input type="hidden" name="mid" value=<%=mid%>>
                     <ul>
                         <li class="li-line"><span>注册号</span><input class="inline-input form-control" type="text" name="rnum" style="width: 500px;"></li>
                         <li class="li-line"><span>社会信用代码</span><input class="inline-input form-control" type="text" name="cnum" style="width: 500px;"></li>

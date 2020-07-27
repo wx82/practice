@@ -1,4 +1,14 @@
 $(document).ready(function() {
+
+    //将MANAGER_NAME传入manager_name
+    $("#manager_name").text(sessionStorage.getItem('MANAGER_NAME'));
+
+    //退出登录删除MANAGER_NAME
+    $("#exit").click(function () {
+        sessionStorage.removeItem("MANAGER_NAME");
+        window.location.href="admin_login.jsp";
+    });
+
     //请求求职者信息
     $.ajax({
         type: "get",
@@ -10,8 +20,25 @@ $(document).ready(function() {
             $.grep(users, function(user) {
                 var id = user.uid;
                 var name = user.uname;
-                var code = "<tr class=\"employee\"><td><a class=\"employee_name\">" + name + "</a></td><td><span id=\"id\">id:" + id + "</span></td><td><button class=\"delet_button\" id=\"" + id + "\" >删除求职者</button></td></tr>";
+                var code = "<tr class=\"employee\"><td><a class=\"employee_name\" id=\"user_name"+id.toString()+"\">" + name + "</a></td><td><span id=\"id\">id:" + id + "</span></td><td><button class=\"delet_button\" id=\"" + id + "\" >删除求职者</button></td></tr>";
                 $("#employee_list").append(code);
+
+                var user_name_id ="user_name"+id.toString();
+                $(document).on('click','#'+user_name_id,function () {
+                    //console.log(mid);
+                    var data = {"uid":id};
+                    $.ajax({
+                        type: "get",
+                        datatype: "json",
+                        data:data,
+                        url:'/adminOneUser',
+                        success:function(){
+                            //console.log(name);
+                            alert("进入"+name+"的详情页面");
+                            window.location.href="user_info.jsp";
+                        }
+                    })
+                });
             })
 
         }
@@ -39,7 +66,7 @@ $(document).ready(function() {
                         //console.log("aaaaaaaaaa");
                         var id = data.user.uid;
                         var name = data.user.uname;
-                        var code = "<tr class=\"employee\"><td><a class=\"employee_name\">" + name + "</a></td><td><span id=\"id\">id:" + id + "</span></td><td><button class=\"delet_button\" id=\"" + id + "\" >删除求职者</button></td></tr>";
+                        var code = "<tr class=\"employee\"><td><a class=\"employee_name\" id=\"user_name"+id.toString()+"\">" + name + "</a></td><td><span id=\"id\">id:" + id + "</span></td><td><button class=\"delet_button\" id=\"" + id + "\" >删除求职者</button></td></tr>";
                     } else {
                         var code = "<div class=\"text-center\" style=\"padding-top:20px;font-size:1.2em;\">没有搜到相应id的求职者</div>";
                     }
@@ -77,7 +104,7 @@ $(document).ready(function() {
                         $.grep(users, function(user) {
                             var id = user.uid;
                             var name = user.uname;
-                            var code = "<tr class=\"employee\"><td><a class=\"employee_name\">" + name + "</a></td><td><span id=\"id\">id:" + id + "</span></td><td><button class=\"delet_button\" id=\"" + id + "\" >删除求职者</button></td></tr>";
+                            var code = "<tr class=\"employee\"><td><a class=\"employee_name\" id=\"user_name"+id.toString()+"\">" + name + "</a></td><td><span id=\"id\">id:" + id + "</span></td><td><button class=\"delet_button\" id=\"" + id + "\" >删除求职者</button></td></tr>";
                             $("#employee_list").append(code);
                         })
                     }else{

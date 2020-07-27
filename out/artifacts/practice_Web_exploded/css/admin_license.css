@@ -1,4 +1,7 @@
 /* 白色标题栏 */
+a:hover{
+    cursor: pointer;
+}
 
 body {
     background-color: #fcfaf8;
@@ -35,6 +38,9 @@ body {
 
 
 /* 左侧导航 */
+.chosen a {
+    color: #ff6531;
+}
 
 ul {
     padding: 0;
